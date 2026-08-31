@@ -56,31 +56,31 @@ export default function ContactPage() {
             DIRECT LEADERSHIP ACCESS
           </div>
 
-          <h1 className="mt-8 max-w-4xl text-[38px] font-extrabold text-[#09090b] leading-[1.1] tracking-tight sm:text-[58px]">
+          <h1 className="mt-8 max-w-4xl text-[30px] sm:text-[48px] lg:text-[58px] font-extrabold text-[#09090b] leading-[1.1] tracking-tight">
             <span>Connect with GreatCampus</span>{" "}
             <span className="accent-shimmer">Leadership.</span>
           </h1>
 
-          <p className="mt-6 max-w-3xl text-[17px] text-[#52525b] leading-relaxed sm:text-[19px]">
+          <p className="mt-5 sm:mt-6 max-w-3xl text-[16px] sm:text-[19px] text-[#52525b] leading-relaxed">
             Whether you are hiring 10 people or 10,000, preparing university students, or building workforce capability, reach out directly to schedule an executive consultation.
           </p>
         </div>
       </section>
 
       {/* -------------------- CONTACT & FORM GRID -------------------- */}
-      <section className="bg-[#fafafa] py-20 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+      <section className="bg-[#fafafa] py-16 sm:py-28 border-b border-[#e4e4e7]">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
             {/* Leadership Card */}
-            <div className="md:col-span-6 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-8 sm:p-12 flex flex-col justify-between shadow-2xl">
+            <div className="md:col-span-6 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-6 sm:p-10 lg:p-12 flex flex-col justify-between shadow-2xl">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-[11px] font-mono text-[#a1a1aa] mb-5">
                   STRATEGIC PARTNERSHIPS
                 </div>
-                <h2 className="text-[32px] font-extrabold text-white">
+                <h2 className="text-[26px] sm:text-[32px] font-extrabold text-white">
                   Maninder Singh
                 </h2>
-                <p className="text-sm text-[#a1a1aa] mt-1.5">
+                <p className="text-xs sm:text-sm text-[#a1a1aa] mt-1.5">
                   Head of Strategic Partnerships & Institutional Growth · GreatCampus
                 </p>
 

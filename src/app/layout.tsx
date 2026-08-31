@@ -13,7 +13,9 @@ export const metadata: Metadata = {
   description:
     "AI-powered talent solutions to identify the right people, make better hiring decisions, and continuously develop talent. From assessment to interview to development, GreatCampus helps organizations build a smarter, faster and more measurable talent journey.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/greatcampus-logo-cropped.png",
+    shortcut: "/greatcampus-logo-cropped.png",
+    apple: "/greatcampus-logo-cropped.png",
   },
 };
 

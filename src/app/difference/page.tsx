@@ -39,16 +39,16 @@ export default function DifferencePage() {
             Hiring and development have been treated as separate, disconnected silos for decades. GreatCampus bridges the gap with a single integrated AI talent architecture.
           </p>
 
-          <div className="mt-9 flex flex-col sm:flex-row items-center gap-4">
+          <div className="mt-9 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-7 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-7 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
             >
               Book an Architecture Briefing
             </Link>
             <Link
               href="/pricing"
-              className="inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
             >
               See Pricing & ROI →
             </Link>
@@ -232,7 +232,7 @@ export default function DifferencePage() {
           <div className="pt-2">
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-colors shadow-md"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-colors shadow-md"
             >
               Book an Executive Walkthrough
             </Link>

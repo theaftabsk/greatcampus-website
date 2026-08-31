@@ -43,16 +43,16 @@ export default function InterviewPage() {
             First-round interviews can consume enormous amounts of recruiter time — especially when hundreds or thousands of candidates apply. GreatCampus enables organizations to conduct AI-powered structured interviews at scale.
           </p>
 
-          <div className="mt-9 flex flex-col sm:flex-row items-center gap-4">
+          <div className="mt-9 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-7 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-7 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
             >
               Experience an AI Interview
             </Link>
             <Link
               href="/develop"
-              className="inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
             >
               Explore Next Step: 03 Develop →
             </Link>
@@ -194,16 +194,16 @@ export default function InterviewPage() {
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#52525b] leading-relaxed">
             Take the shortlisted candidates and feed their interview insights directly into Pillar 03 Develop for continuous post-hire microlearning.
           </p>
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-all"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-all"
             >
               Book an AI Interview Demo
             </Link>
             <Link
               href="/develop"
-              className="inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-sm font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-sm font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
             >
               See Pillar 03: Develop →
             </Link>

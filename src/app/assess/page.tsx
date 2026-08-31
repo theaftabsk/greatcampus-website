@@ -42,16 +42,16 @@ export default function AssessPage() {
             GreatCampus enables organizations to conduct structured digital assessments that measure the capabilities that truly matter for a role.
           </p>
 
-          <div className="mt-9 flex flex-col sm:flex-row items-center gap-4">
+          <div className="mt-9 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-7 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-7 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
             >
               Configure an Assessment
             </Link>
             <Link
               href="/interview"
-              className="inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
             >
               Explore Next Step: 02 Interview →
             </Link>
@@ -308,16 +308,16 @@ export default function AssessPage() {
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#52525b] leading-relaxed">
             Move candidates with verified performance straight into structured AI interviews, without recruiters reading hundreds of unvetted resumes.
           </p>
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-all"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-all"
             >
               Book an Assessment Consultation
             </Link>
             <Link
               href="/interview"
-              className="inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-sm font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-sm font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
             >
               See Pillar 02: AI Interviews →
             </Link>

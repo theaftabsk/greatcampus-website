@@ -256,7 +256,7 @@ export default function SolutionsPage() {
           <div className="pt-2">
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-colors shadow-md"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-colors shadow-md"
             >
               Book an Executive Walkthrough
             </Link>
