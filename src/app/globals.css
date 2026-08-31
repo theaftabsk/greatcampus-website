@@ -144,3 +144,157 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #71717a;
 }
+
+/* ==========================================================
+   PREMIUM LUXURY MICRO-ANIMATIONS & INTERACTION EFFECTS
+   ========================================================== */
+
+/* Smooth Floating Element */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-subtle {
+  animation: floatSlow 3.5s ease-in-out infinite;
+}
+
+/* Breathing Ambient Glow Sphere */
+@keyframes ambientGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08) translate3d(0, -8px, 0);
+  }
+}
+
+.animate-ambient-glow {
+  animation: ambientGlow 8s ease-in-out infinite;
+}
+
+/* Radar Pulse / Ping Animation */
+@keyframes radarRing {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(9, 9, 11, 0.35);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(9, 9, 11, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(9, 9, 11, 0);
+  }
+}
+
+.animate-radar {
+  animation: radarRing 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes radarRingLight {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.55);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.animate-radar-light {
+  animation: radarRingLight 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Continuous Animated Gradient Shimmer on Text */
+@keyframes textShimmerFlow {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.text-shimmer-flow {
+  background: linear-gradient(
+    90deg,
+    #09090b 0%,
+    #71717a 25%,
+    #09090b 50%,
+    #a1a1aa 75%,
+    #09090b 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textShimmerFlow 6s linear infinite;
+}
+
+/* Interactive Card Hover Lift */
+.card-hover-lift {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.09);
+  border-color: #09090b;
+}
+
+/* Dark Card Hover Lift */
+.card-dark-lift {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.card-dark-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px -12px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Button Luxury Glass / Gleam Sweep on Hover */
+.btn-gleam {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gleam::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -80%;
+  width: 45%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gleam:hover::after {
+  left: 140%;
+}

@@ -134,6 +134,9 @@ export default function Home() {
 
       {/* -------------------- HERO SECTION -------------------- */}
       <section className="relative overflow-hidden bg-white pt-14 pb-20 sm:pt-20 sm:pb-28 border-b border-[#e4e4e7] bg-grid-pattern">
+        {/* Ambient Floating Glow Backdrop */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[360px] bg-gradient-to-tr from-black/[0.03] via-zinc-400/[0.07] to-transparent rounded-full blur-3xl pointer-events-none animate-ambient-glow" />
+
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
           {/* Positioning Pill */}
           <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[12px] font-semibold tracking-wide text-white shadow-sm">
@@ -160,7 +163,7 @@ export default function Home() {
             <button
               type="button"
               onClick={() => setDemoModalOpen(true)}
-              className="group inline-flex h-12 sm:h-13 items-center justify-center gap-2 rounded-xl bg-[#09090b] px-8 text-[15px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all hover:scale-[1.02] border border-[#09090b] cursor-pointer w-full sm:w-auto"
+              className="btn-gleam group inline-flex h-12 sm:h-13 items-center justify-center gap-2 rounded-xl bg-[#09090b] px-8 text-[15px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all hover:scale-[1.02] border border-[#09090b] cursor-pointer w-full sm:w-auto"
             >
               Book a Demo
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -523,7 +526,7 @@ export default function Home() {
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Challenge 1 */}
-            <div className="rounded-2xl border border-[#e4e4e7] bg-white p-7 shadow-sm hover:border-[#09090b] transition-all flex flex-col justify-between">
+            <div className="card-hover-lift rounded-2xl border border-[#e4e4e7] bg-white p-7 shadow-sm transition-all flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="h-12 w-12 rounded-xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base">
                   01
@@ -541,7 +544,7 @@ export default function Home() {
             </div>
 
             {/* Challenge 2 */}
-            <div className="rounded-2xl border border-[#e4e4e7] bg-white p-7 shadow-sm hover:border-[#09090b] transition-all flex flex-col justify-between">
+            <div className="card-hover-lift rounded-2xl border border-[#e4e4e7] bg-white p-7 shadow-sm transition-all flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="h-12 w-12 rounded-xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base">
                   02
@@ -559,7 +562,7 @@ export default function Home() {
             </div>
 
             {/* Challenge 3 */}
-            <div className="rounded-2xl border border-[#e4e4e7] bg-white p-7 shadow-sm hover:border-[#09090b] transition-all flex flex-col justify-between">
+            <div className="card-hover-lift rounded-2xl border border-[#e4e4e7] bg-white p-7 shadow-sm transition-all flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="h-12 w-12 rounded-xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base">
                   03
@@ -618,7 +621,7 @@ export default function Home() {
 
           <div className="space-y-14">
             {/* ----------------- PILLAR 01: ASSESS ----------------- */}
-            <article className="rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-12 shadow-sm hover:border-[#09090b] transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <article className="card-hover-lift rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-12 shadow-sm transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               <div className="lg:col-span-6 space-y-6">
                 <div>
                   <span className="rounded-full bg-[#09090b] text-white px-3 py-1 font-mono font-bold text-[11px] uppercase tracking-wider">
@@ -813,7 +816,7 @@ export default function Home() {
             </article>
 
             {/* ----------------- PILLAR 02: INTERVIEW ----------------- */}
-            <article className="rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-12 shadow-sm hover:border-[#09090b] transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <article className="card-hover-lift rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-12 shadow-sm transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               <div className="lg:col-span-6 space-y-6">
                 <div>
                   <span className="rounded-full bg-[#09090b] text-white px-3 py-1 font-mono font-bold text-[11px] uppercase tracking-wider">
@@ -932,7 +935,7 @@ export default function Home() {
             </article>
 
             {/* ----------------- PILLAR 03: DEVELOP ----------------- */}
-            <article className="rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-12 shadow-sm hover:border-[#09090b] transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <article className="card-hover-lift rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-12 shadow-sm transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               <div className="lg:col-span-6 space-y-6">
                 <div>
                   <span className="rounded-full bg-[#09090b] text-white px-3 py-1 font-mono font-bold text-[11px] uppercase tracking-wider">

@@ -61,6 +61,10 @@ export default function Header({ onOpenDemo }: HeaderProps) {
       <aside aria-label="Announcement" className="bg-[#09090b] text-white border-b border-[#27272a] py-2 px-3 sm:px-4 text-xs">
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-2 text-center sm:text-left">
           <div className="flex items-center gap-2">
+            <span className="relative flex h-2 w-2 shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+            </span>
             <span className="inline-flex items-center rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white font-mono">
               Integrated Talent
             </span>
@@ -588,14 +592,14 @@ export default function Header({ onOpenDemo }: HeaderProps) {
               <button
                 type="button"
                 onClick={onOpenDemo}
-                className="inline-flex h-9 items-center justify-center rounded-xl bg-[#09090b] px-4.5 text-[13px] font-semibold text-white hover:bg-[#27272a] transition-all border border-[#09090b] shadow-sm cursor-pointer"
+                className="btn-gleam inline-flex h-9 items-center justify-center rounded-xl bg-[#09090b] px-4.5 text-[13px] font-semibold text-white hover:bg-[#27272a] transition-all border border-[#09090b] shadow-sm cursor-pointer"
               >
                 Book a Demo
               </button>
             ) : (
               <Link
                 href="/contact"
-                className="inline-flex h-9 items-center justify-center rounded-xl bg-[#09090b] px-4.5 text-[13px] font-semibold text-white hover:bg-[#27272a] transition-all border border-[#09090b] shadow-sm"
+                className="btn-gleam inline-flex h-9 items-center justify-center rounded-xl bg-[#09090b] px-4.5 text-[13px] font-semibold text-white hover:bg-[#27272a] transition-all border border-[#09090b] shadow-sm"
               >
                 Book a Demo
               </Link>

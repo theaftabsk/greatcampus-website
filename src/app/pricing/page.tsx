@@ -83,6 +83,9 @@ export default function PricingPage() {
 
       {/* -------------------- HERO -------------------- */}
       <section className="relative overflow-hidden bg-white pt-16 pb-16 sm:pt-24 sm:pb-24 border-b border-[#e4e4e7] bg-grid-pattern">
+        {/* Ambient Floating Glow Sphere */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[580px] h-[340px] bg-gradient-to-tr from-black/[0.03] via-zinc-400/[0.07] to-transparent rounded-full blur-3xl pointer-events-none animate-ambient-glow" />
+
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[11px] font-bold tracking-wide text-white font-mono shadow-sm">
             TAILORED INSTITUTIONAL PRICING
@@ -140,7 +143,7 @@ export default function PricingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Model 1: Pilot & Rapid Evaluation */}
-            <div className="rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-8 flex flex-col justify-between shadow-sm hover:border-[#09090b] transition-all">
+            <div className="card-hover-lift rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-8 flex flex-col justify-between shadow-sm transition-all">
               <div className="space-y-4">
                 <span className="text-xs font-mono font-bold text-[#71717a] uppercase block">
                   TIER 01 · PILOT DEPLOYMENT
@@ -180,14 +183,14 @@ export default function PricingPage() {
               <button
                 type="button"
                 onClick={() => handleSelectEngagement("Pilot Evaluation Tier")}
-                className="mt-8 w-full text-center py-3 rounded-xl border border-[#27272a] font-bold text-xs text-[#09090b] hover:bg-[#fafafa] transition-colors cursor-pointer"
+                className="btn-gleam mt-8 w-full text-center py-3 rounded-xl border border-[#27272a] font-bold text-xs text-[#09090b] hover:bg-[#fafafa] transition-colors cursor-pointer"
               >
                 Request Pilot Quote →
               </button>
             </div>
 
             {/* Model 2: Growth Scale (Most Popular) */}
-            <div className="rounded-3xl border-2 border-[#09090b] bg-[#09090b] text-white p-7 sm:p-8 flex flex-col justify-between shadow-2xl relative">
+            <div className="card-dark-lift rounded-3xl border-2 border-[#09090b] bg-[#09090b] text-white p-7 sm:p-8 flex flex-col justify-between shadow-2xl relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-[#09090b] px-3.5 py-0.5 rounded-full text-[10px] font-mono font-extrabold uppercase tracking-wider">
                 RECOMMENDED
               </div>
@@ -234,14 +237,14 @@ export default function PricingPage() {
               <button
                 type="button"
                 onClick={() => handleSelectEngagement("Growth & High-Volume Scaling Tier")}
-                className="mt-8 w-full text-center py-3.5 rounded-xl bg-white font-bold text-xs text-[#09090b] hover:bg-[#e4e4e7] transition-colors cursor-pointer"
+                className="btn-gleam mt-8 w-full text-center py-3.5 rounded-xl bg-white font-bold text-xs text-[#09090b] hover:bg-[#e4e4e7] transition-colors cursor-pointer"
               >
                 Request Volume Quote →
               </button>
             </div>
 
             {/* Model 3: Enterprise & Institutional Campus */}
-            <div className="rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-8 flex flex-col justify-between shadow-sm hover:border-[#09090b] transition-all">
+            <div className="card-hover-lift rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-8 flex flex-col justify-between shadow-sm transition-all">
               <div className="space-y-4">
                 <span className="text-xs font-mono font-bold text-[#71717a] uppercase block">
                   TIER 03 · ENTERPRISE & CAMPUS
@@ -281,7 +284,7 @@ export default function PricingPage() {
               <button
                 type="button"
                 onClick={() => handleSelectEngagement("Enterprise & Institutional Campus Tier")}
-                className="mt-8 w-full text-center py-3 rounded-xl border border-[#27272a] font-bold text-xs text-[#09090b] hover:bg-[#fafafa] transition-colors cursor-pointer"
+                className="btn-gleam mt-8 w-full text-center py-3 rounded-xl border border-[#27272a] font-bold text-xs text-[#09090b] hover:bg-[#fafafa] transition-colors cursor-pointer"
               >
                 Discuss Enterprise SLA →
               </button>
@@ -555,7 +558,7 @@ export default function PricingPage() {
                   <button
                     disabled={isSubmitting}
                     type="submit"
-                    className="w-full h-12 rounded-xl bg-[#09090b] hover:bg-[#27272a] text-white font-bold text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md disabled:opacity-60"
+                    className="btn-gleam w-full h-12 rounded-xl bg-[#09090b] hover:bg-[#27272a] text-white font-bold text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md disabled:opacity-60"
                   >
                     {isSubmitting ? (
                       <>

@@ -51,6 +51,9 @@ export default function ContactPage() {
 
       {/* -------------------- HERO -------------------- */}
       <section className="relative overflow-hidden bg-white pt-16 pb-16 sm:pt-24 sm:pb-20 border-b border-[#e4e4e7] bg-grid-pattern">
+        {/* Ambient Floating Glow Backdrop */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[320px] bg-gradient-to-tr from-black/[0.03] via-zinc-400/[0.07] to-transparent rounded-full blur-3xl pointer-events-none animate-ambient-glow" />
+
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[11px] font-bold tracking-wide text-white font-mono shadow-sm">
             DIRECT LEADERSHIP ACCESS
@@ -72,7 +75,7 @@ export default function ContactPage() {
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
             {/* Leadership Card */}
-            <div className="md:col-span-6 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-6 sm:p-10 lg:p-12 flex flex-col justify-between shadow-2xl">
+            <div className="card-dark-lift md:col-span-6 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-6 sm:p-10 lg:p-12 flex flex-col justify-between shadow-2xl">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-[11px] font-mono text-[#a1a1aa] mb-5">
                   STRATEGIC PARTNERSHIPS
@@ -181,7 +184,7 @@ export default function ContactPage() {
             </div>
 
             {/* Interactive Demo Request Form */}
-            <div className="md:col-span-6 rounded-3xl border border-[#e4e4e7] bg-white p-8 sm:p-12 flex flex-col justify-between shadow-sm">
+            <div className="card-hover-lift md:col-span-6 rounded-3xl border border-[#e4e4e7] bg-white p-8 sm:p-12 flex flex-col justify-between shadow-sm">
               <div>
                 <h3 className="text-[24px] font-bold text-[#09090b]">
                   Schedule an Executive Walkthrough
@@ -296,7 +299,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-12 rounded-xl bg-[#09090b] text-white font-bold text-sm hover:bg-[#27272a] transition-all cursor-pointer mt-1 disabled:opacity-60 flex items-center justify-center gap-2"
+                      className="btn-gleam w-full h-12 rounded-xl bg-[#09090b] text-white font-bold text-sm hover:bg-[#27272a] transition-all cursor-pointer mt-1 disabled:opacity-60 flex items-center justify-center gap-2 shadow-md"
                     >
                       {isSubmitting ? (
                         <>
