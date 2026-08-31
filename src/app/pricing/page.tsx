@@ -117,7 +117,7 @@ export default function PricingPage() {
                 Estimated Monthly Savings
               </span>
 
-              <div className="grid grid-cols-2 gap-6 border-b border-[#27272a] pb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 border-b border-[#27272a] pb-6">
                 <div>
                   <span className="text-xs text-[#a1a1aa] block">Recruiter Hours Saved</span>
                   <p className="text-3xl sm:text-4xl font-extrabold text-white mt-1">
@@ -150,7 +150,7 @@ export default function PricingPage() {
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex h-11 items-center justify-center rounded-xl bg-white px-6 text-xs font-bold text-[#09090b] hover:bg-[#e4e4e7] transition-colors"
+                  className="inline-flex h-11 items-center justify-center rounded-xl bg-white px-6 text-xs font-bold text-[#09090b] hover:bg-[#e4e4e7] transition-colors w-full sm:w-auto"
                 >
                   Start Saving Today →
                 </Link>

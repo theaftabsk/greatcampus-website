@@ -746,13 +746,13 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="pt-2 border-t border-[#e4e4e7] flex items-center justify-between">
+                <div className="pt-2 border-t border-[#e4e4e7] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
                   <p className="text-xs font-semibold text-[#09090b]">
                     The outcome: Measure capability. Improve confidence. Make better shortlists.
                   </p>
                   <Link
                     href="/assess"
-                    className="inline-flex items-center gap-1 font-bold text-xs text-[#09090b] hover:underline cursor-pointer"
+                    className="inline-flex items-center gap-1 font-bold text-xs text-[#09090b] hover:underline cursor-pointer shrink-0"
                   >
                     Explore AI Assessments <ArrowRight className="w-3 h-3" />
                   </Link>
@@ -862,13 +862,13 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-[#e4e4e7] flex items-center justify-between">
+                <div className="pt-2 border-t border-[#e4e4e7] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
                   <p className="text-xs font-semibold text-[#09090b]">
                     The outcome: Reduce screening effort. Standardize evaluation. Scale without workload.
                   </p>
                   <Link
                     href="/interview"
-                    className="inline-flex items-center gap-1 font-bold text-xs text-[#09090b] hover:underline cursor-pointer"
+                    className="inline-flex items-center gap-1 font-bold text-xs text-[#09090b] hover:underline cursor-pointer shrink-0"
                   >
                     Explore AI Interviews <ArrowRight className="w-3 h-3" />
                   </Link>
@@ -1028,13 +1028,13 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-[#e4e4e7] flex items-center justify-between">
+                <div className="pt-2 border-t border-[#e4e4e7] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
                   <p className="text-xs font-semibold text-[#09090b]">
                     The outcome: Identify gaps → Develop capability → Reinforce learning → Reassess progress
                   </p>
                   <Link
                     href="/develop"
-                    className="inline-flex items-center gap-1 font-bold text-xs text-[#09090b] hover:underline cursor-pointer"
+                    className="inline-flex items-center gap-1 font-bold text-xs text-[#09090b] hover:underline cursor-pointer shrink-0"
                   >
                     Explore Microlearning <ArrowRight className="w-3 h-3" />
                   </Link>
@@ -1099,24 +1099,25 @@ export default function Home() {
           </div>
 
           {/* Lifecycle Switcher Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
+          <div className="flex flex-nowrap sm:flex-wrap justify-start sm:justify-center gap-2 mb-8 sm:mb-10 overflow-x-auto pb-2 scrollbar-none max-w-full">
             {[
-              { id: "recruitment", label: "For Recruitment & Talent Acquisition" },
-              { id: "staffing", label: "For Recruitment & Staffing Agencies" },
-              { id: "universities", label: "For Universities & Higher Education" },
-              { id: "ld", label: "For Learning & Development" },
+              { id: "recruitment", label: "Talent Acquisition", fullLabel: "For Recruitment & Talent Acquisition" },
+              { id: "staffing", label: "Staffing Agencies", fullLabel: "For Recruitment & Staffing Agencies" },
+              { id: "universities", label: "Universities & Campuses", fullLabel: "For Universities & Higher Education" },
+              { id: "ld", label: "Learning & Development", fullLabel: "For Learning & Development" },
             ].map((tab) => (
               <button
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveLifecycleTab(tab.id as any)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-[13px] font-bold border transition-all cursor-pointer ${
+                className={`shrink-0 whitespace-nowrap px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-[13px] font-bold border transition-all cursor-pointer ${
                   activeLifecycleTab === tab.id
                     ? "bg-[#09090b] text-white border-[#09090b] shadow-sm"
                     : "bg-white text-[#52525b] border-[#e4e4e7] hover:border-[#09090b]"
                 }`}
               >
-                {tab.label}
+                <span className="inline sm:hidden">{tab.label}</span>
+                <span className="hidden sm:inline">{tab.fullLabel}</span>
               </button>
             ))}
           </div>
@@ -1460,7 +1461,7 @@ export default function Home() {
               Simple for HR. Powerful for Organizations.
             </h3>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
               {[
                 { title: "Reduce manual effort", detail: "Let technology handle repetitive assessment and first-round evaluation." },
                 { title: "Improve consistency", detail: "Use structured assessments and interviews across all candidates." },
@@ -1549,7 +1550,7 @@ export default function Home() {
             <button
               type="button"
               onClick={() => setDemoModalOpen(true)}
-              className="inline-flex h-12 shrink-0 items-center justify-center rounded-xl bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#e4e4e7] transition-colors cursor-pointer"
+              className="inline-flex h-12 shrink-0 items-center justify-center rounded-xl bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#e4e4e7] transition-colors cursor-pointer w-full sm:w-auto"
             >
               Book a Demo
             </button>

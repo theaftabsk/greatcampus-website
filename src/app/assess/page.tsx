@@ -67,7 +67,7 @@ export default function AssessPage() {
               <p className="text-2xl font-extrabold text-[#09090b]">500+</p>
               <p className="text-xs text-[#71717a] font-mono mt-0.5">Role Competency Profiles</p>
             </div>
-            <div className="border-l border-[#e4e4e7] pl-4">
+            <div className="border-l-0 md:border-l border-[#e4e4e7] md:pl-4">
               <p className="text-2xl font-extrabold text-[#09090b]">15+ Languages</p>
               <p className="text-xs text-[#71717a] font-mono mt-0.5">Cloud Code Sandbox</p>
             </div>
