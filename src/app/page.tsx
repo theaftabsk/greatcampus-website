@@ -1570,6 +1570,21 @@ export default function Home() {
                   </a>
 
                   <a
+                    href="mailto:contact@greatcampus.in"
+                    className="flex items-center gap-3.5 p-3 rounded-xl border border-[#27272a] bg-[#121215] hover:border-white transition-colors group"
+                  >
+                    <div className="h-10 w-10 rounded-lg bg-white text-[#09090b] flex items-center justify-center">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Corporate Email</span>
+                      <span className="font-bold text-white text-[15px] group-hover:underline">
+                        contact@greatcampus.in
+                      </span>
+                    </div>
+                  </a>
+
+                  <a
                     href="mailto:mvasir@gmail.com"
                     className="flex items-center gap-3.5 p-3 rounded-xl border border-[#27272a] bg-[#121215] hover:border-white transition-colors group"
                   >
@@ -1793,7 +1808,7 @@ export default function Home() {
                 Schedule an Executive Walkthrough
               </h3>
               <p className="text-xs text-[#a1a1aa] mt-1">
-                Direct consultation with <strong>Maninder Singh</strong> (+91-9811352666 · mvasir@gmail.com).
+                Direct consultation with <strong>Maninder Singh</strong> (+91-9811352666 · contact@greatcampus.in).
               </p>
             </div>
 

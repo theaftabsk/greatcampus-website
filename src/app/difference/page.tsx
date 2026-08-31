@@ -227,7 +227,7 @@ export default function DifferencePage() {
             Experience the GreatCampus Architecture
           </h2>
           <p className="text-xs sm:text-sm text-[#52525b] max-w-xl mx-auto">
-            Speak directly with Head of Strategic Partnerships <strong>Maninder Singh</strong> (+91-9811352666 / mvasir@gmail.com).
+            Speak directly with Head of Strategic Partnerships <strong>Maninder Singh</strong> (+91-9811352666 / contact@greatcampus.in).
           </p>
           <div className="pt-2">
             <Link

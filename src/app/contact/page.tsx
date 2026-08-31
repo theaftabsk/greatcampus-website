@@ -64,7 +64,23 @@ export default function ContactPage() {
                     </div>
                   </a>
 
-                  {/* Email */}
+                  {/* Official Corporate Email */}
+                  <a
+                    href="mailto:contact@greatcampus.in"
+                    className="flex items-center gap-4 p-4 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
+                  >
+                    <div className="h-11 w-11 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Corporate Official Desk</span>
+                      <span className="font-bold text-white text-[16px] group-hover:underline">
+                        contact@greatcampus.in
+                      </span>
+                    </div>
+                  </a>
+
+                  {/* Direct Leadership Email */}
                   <a
                     href="mailto:mvasir@gmail.com"
                     className="flex items-center gap-4 p-4 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
@@ -73,7 +89,7 @@ export default function ContactPage() {
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Direct Email</span>
+                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Direct Leadership Email</span>
                       <span className="font-bold text-white text-[16px] group-hover:underline">
                         mvasir@gmail.com
                       </span>

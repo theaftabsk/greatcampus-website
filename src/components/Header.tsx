@@ -77,10 +77,10 @@ export default function Header({ onOpenDemo }: HeaderProps) {
             </a>
             <span className="hidden sm:inline text-[#3f3f46]">|</span>
             <a
-              href="mailto:mvasir@gmail.com"
+              href="mailto:contact@greatcampus.in"
               className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors font-mono text-xs"
             >
-              <Mail className="w-3 h-3 text-white" /> mvasir@gmail.com
+              <Mail className="w-3 h-3 text-white" /> contact@greatcampus.in
             </a>
           </div>
         </div>

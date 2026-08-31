@@ -61,7 +61,13 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <span className="text-[#71717a]">E-mail:</span>{" "}
+                <span className="text-[#71717a]">Corporate:</span>{" "}
+                <a href="mailto:contact@greatcampus.in" className="text-white hover:underline">
+                  contact@greatcampus.in
+                </a>
+              </p>
+              <p>
+                <span className="text-[#71717a]">Direct:</span>{" "}
                 <a href="mailto:mvasir@gmail.com" className="text-white hover:underline">
                   mvasir@gmail.com
                 </a>
