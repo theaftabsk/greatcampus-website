@@ -35,7 +35,9 @@ import {
   TrendingUp,
   Building2,
   BrainCircuit,
-  MessageSquare
+  MessageSquare,
+  Loader2,
+  AlertCircle
 } from "lucide-react";
 
 function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -65,6 +67,35 @@ export default function Home() {
   // Demo Modal State
   const [demoModalOpen, setDemoModalOpen] = useState(false);
   const [demoFormSubmitted, setDemoFormSubmitted] = useState(false);
+  const [demoSubmitting, setDemoSubmitting] = useState(false);
+  const [demoError, setDemoError] = useState("");
+  const [demoData, setDemoData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    objective: "Complete Integrated Journey (Assess → Interview → Develop)",
+  });
+
+  const handleDemoSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setDemoSubmitting(true);
+    setDemoError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(demoData),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to submit request.");
+      setDemoFormSubmitted(true);
+    } catch (err: any) {
+      setDemoError(err?.message || "An unexpected error occurred. Please try again.");
+    } finally {
+      setDemoSubmitting(false);
+    }
+  };
 
   // Interactive Talent Journey Visualizer step
   const [activeJourneyStep, setActiveJourneyStep] = useState<
@@ -1643,95 +1674,55 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Quick Consultation Request Form */}
-            <div className="md:col-span-6 rounded-3xl border border-[#e4e4e7] bg-white p-8 sm:p-10 flex flex-col justify-between shadow-sm">
+            {/* Executive Walkthrough Hub */}
+            <div className="md:col-span-6 rounded-3xl border border-[#e4e4e7] bg-white p-8 sm:p-12 flex flex-col justify-between shadow-sm">
               <div>
-                <h3 className="text-[22px] font-bold text-[#09090b]">
-                  Request an Executive Walkthrough
+                <span className="inline-flex items-center gap-2 rounded-full bg-[#fafafa] border border-[#e4e4e7] px-3.5 py-1 text-[11px] font-mono text-[#09090b] font-bold mb-4">
+                  FAST-TRACK CONSULTATION
+                </span>
+                <h3 className="text-[28px] font-extrabold text-[#09090b] leading-tight">
+                  Schedule Your Executive Walkthrough
                 </h3>
-                <p className="text-xs text-[#52525b] mt-1 mb-6">
-                  Fill in your requirements and our team will prepare a customized assessment and interview demo for your role types.
+                <p className="text-sm text-[#52525b] mt-2 mb-6 leading-relaxed">
+                  Tailored demonstration showing how GreatCampus integrates digital testing, AI voice interviews, and microlearning for your exact hiring roles.
                 </p>
 
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setDemoFormSubmitted(true);
-                  }}
-                  className="space-y-4 text-xs"
-                >
-                  {demoFormSubmitted ? (
-                    <div className="p-6 rounded-2xl bg-[#09090b] text-white text-center space-y-2">
-                      <CheckCircle2 className="w-8 h-8 mx-auto text-white" />
-                      <h4 className="font-bold text-base">Request Received</h4>
-                      <p className="text-xs text-[#a1a1aa]">
-                        Thank you! Maninder Singh and the GreatCampus team will reach out to you within 4 business hours.
-                      </p>
-                    </div>
-                  ) : (
-                    <>
-                      <div>
-                        <label className="font-bold text-[#09090b] block mb-1">Your Name</label>
-                        <input
-                          required
-                          type="text"
-                          placeholder="e.g. Rahul Sharma"
-                          className="w-full h-11 px-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-[#09090b] focus:outline-none focus:border-[#09090b]"
-                        />
-                      </div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div>
-                          <label className="font-bold text-[#09090b] block mb-1">Work Email</label>
-                          <input
-                            required
-                            type="email"
-                            placeholder="rahul@company.com"
-                            className="w-full h-11 px-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-[#09090b] focus:outline-none focus:border-[#09090b]"
-                          />
-                        </div>
-                        <div>
-                          <label className="font-bold text-[#09090b] block mb-1">Phone Number</label>
-                          <input
-                            required
-                            type="tel"
-                            placeholder="+91 98765 43210"
-                            className="w-full h-11 px-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-[#09090b] focus:outline-none focus:border-[#09090b]"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <label className="font-bold text-[#09090b] block mb-1">Primary Objective</label>
-                        <select className="w-full h-11 px-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-[#09090b] focus:outline-none focus:border-[#09090b]">
-                          <option>Full Integrated Journey (Assess → Interview → Develop)</option>
-                          <option>Aptitude & Technical Assessments at Scale</option>
-                          <option>AI Voice & Video First-Round Interviews</option>
-                          <option>Post-hire Workforce Microlearning & Reassessment</option>
-                          <option>Campus Placement & Student Readiness</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label className="font-bold text-[#09090b] block mb-1">Organization / Institution Name</label>
-                        <input
-                          required
-                          type="text"
-                          placeholder="e.g. Nexus Corp / State University"
-                          className="w-full h-11 px-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-[#09090b] focus:outline-none focus:border-[#09090b]"
-                        />
-                      </div>
-                      <button
-                        type="submit"
-                        className="w-full h-12 rounded-xl bg-[#09090b] text-white font-bold text-sm hover:bg-[#27272a] transition-colors cursor-pointer mt-2"
-                      >
-                        Submit Request
-                      </button>
-                    </>
-                  )}
-                </form>
+                <div className="space-y-3 pt-1">
+                  <div className="flex items-center gap-2.5 text-xs text-[#09090b]">
+                    <Check className="w-4 h-4 text-[#09090b] shrink-0" />
+                    <span>Setup and pilot deployment within 24 hours</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs text-[#09090b]">
+                    <Check className="w-4 h-4 text-[#09090b] shrink-0" />
+                    <span>Live testing with your job descriptions and competency criteria</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs text-[#09090b]">
+                    <Check className="w-4 h-4 text-[#09090b] shrink-0" />
+                    <span>Zero seat-tax pricing model (unlimited recruiters included)</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs text-[#09090b]">
+                    <Check className="w-4 h-4 text-[#09090b] shrink-0" />
+                    <span>Instant welcome email and leadership turnaround in under 4 hours</span>
+                  </div>
+                </div>
               </div>
 
-              <p className="mt-6 text-[11px] text-[#71717a] text-center">
-                Strict data privacy. No spam. Direct response from senior leadership.
-              </p>
+              <div className="mt-8 pt-6 border-t border-[#e4e4e7] flex flex-col sm:flex-row items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setDemoModalOpen(true)}
+                  className="w-full sm:w-auto flex-1 h-12 rounded-xl bg-[#09090b] text-white font-bold text-sm hover:bg-[#27272a] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                >
+                  <span>Book a Demo Now</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <Link
+                  href="/contact"
+                  className="w-full sm:w-auto h-12 px-6 rounded-xl border border-[#27272a] bg-white text-[#09090b] font-bold text-sm hover:bg-[#fafafa] transition-colors flex items-center justify-center"
+                >
+                  Full Contact Page →
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -1832,47 +1823,59 @@ export default function Home() {
               </p>
             </div>
 
+            {demoError && (
+              <div className="p-3 rounded-xl border border-red-500/30 bg-red-500/10 text-red-300 text-xs flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 shrink-0 text-red-400" />
+                <span>{demoError}</span>
+              </div>
+            )}
+
             {demoFormSubmitted ? (
               <div className="p-6 rounded-2xl bg-[#18181b] border border-[#27272a] text-center space-y-3">
                 <CheckCircle2 className="w-10 h-10 text-white mx-auto" />
-                <h4 className="font-bold text-lg text-white">Demo Booked Successfully</h4>
-                <p className="text-xs text-[#a1a1aa]">
-                  We have received your details. Maninder Singh will confirm the calendar invite and direct briefing slot.
+                <h4 className="font-bold text-lg text-white">Walkthrough Request Received!</h4>
+                <p className="text-xs text-[#a1a1aa] leading-relaxed">
+                  Thank you, <strong>{demoData.name}</strong>! We have dispatched a confirmation email to <strong>{demoData.email}</strong> and notified our leadership team (Maninder Singh & Aftab).
                 </p>
                 <button
                   type="button"
                   onClick={() => {
                     setDemoFormSubmitted(false);
                     setDemoModalOpen(false);
+                    setDemoData({
+                      name: "",
+                      email: "",
+                      phone: "",
+                      company: "",
+                      objective: "Complete Integrated Journey (Assess → Interview → Develop)",
+                    });
                   }}
-                  className="mt-2 px-5 py-2 rounded-xl bg-white text-[#09090b] font-bold text-xs hover:bg-[#e4e4e7]"
+                  className="mt-2 px-6 py-2.5 rounded-xl bg-white text-[#09090b] font-bold text-xs hover:bg-[#e4e4e7] cursor-pointer"
                 >
                   Close Window
                 </button>
               </div>
             ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setDemoFormSubmitted(true);
-                }}
-                className="space-y-3.5 text-xs"
-              >
+              <form onSubmit={handleDemoSubmit} className="space-y-3.5 text-xs">
                 <div>
-                  <label className="font-bold text-white block mb-1">Full Name</label>
+                  <label className="font-bold text-white block mb-1">Full Name *</label>
                   <input
                     required
                     type="text"
+                    value={demoData.name}
+                    onChange={(e) => setDemoData({ ...demoData, name: e.target.value })}
                     placeholder="e.g. Priya Sharma"
                     className="w-full h-10 px-3 rounded-xl border border-[#27272a] bg-[#121215] text-white focus:outline-none focus:border-white"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="font-bold text-white block mb-1">Corporate Email</label>
+                    <label className="font-bold text-white block mb-1">Corporate Email *</label>
                     <input
                       required
                       type="email"
+                      value={demoData.email}
+                      onChange={(e) => setDemoData({ ...demoData, email: e.target.value })}
                       placeholder="priya@company.com"
                       className="w-full h-10 px-3 rounded-xl border border-[#27272a] bg-[#121215] text-white focus:outline-none focus:border-white"
                     />
@@ -1880,16 +1883,21 @@ export default function Home() {
                   <div>
                     <label className="font-bold text-white block mb-1">Phone / WhatsApp</label>
                     <input
-                      required
                       type="tel"
-                      placeholder="+91 98113 XXXXX"
+                      value={demoData.phone}
+                      onChange={(e) => setDemoData({ ...demoData, phone: e.target.value })}
+                      placeholder="+91 90733 51545"
                       className="w-full h-10 px-3 rounded-xl border border-[#27272a] bg-[#121215] text-white focus:outline-none focus:border-white"
                     />
                   </div>
                 </div>
                 <div>
                   <label className="font-bold text-white block mb-1">Area of Interest</label>
-                  <select className="w-full h-10 px-3 rounded-xl border border-[#27272a] bg-[#121215] text-white focus:outline-none focus:border-white">
+                  <select
+                    value={demoData.objective}
+                    onChange={(e) => setDemoData({ ...demoData, objective: e.target.value })}
+                    className="w-full h-10 px-3 rounded-xl border border-[#27272a] bg-[#121215] text-white focus:outline-none focus:border-white"
+                  >
                     <option>Complete Journey: Assess → Interview → Develop</option>
                     <option>Pillar 01: Aptitude & Skill Digital Assessments</option>
                     <option>Pillar 02: AI Structured Voice/Video Interviews</option>
@@ -1901,17 +1909,26 @@ export default function Home() {
                 <div>
                   <label className="font-bold text-white block mb-1">Company / College Name</label>
                   <input
-                    required
                     type="text"
-                    placeholder="Organization Name"
+                    value={demoData.company}
+                    onChange={(e) => setDemoData({ ...demoData, company: e.target.value })}
+                    placeholder="e.g. Nexus Enterprise / University"
                     className="w-full h-10 px-3 rounded-xl border border-[#27272a] bg-[#121215] text-white focus:outline-none focus:border-white"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full h-11 rounded-xl bg-white text-[#09090b] font-bold text-sm hover:bg-[#e4e4e7] transition-colors cursor-pointer mt-2"
+                  disabled={demoSubmitting}
+                  className="w-full h-11 rounded-xl bg-white text-[#09090b] font-bold text-sm hover:bg-[#e4e4e7] transition-all cursor-pointer mt-2 disabled:opacity-60 flex items-center justify-center gap-2"
                 >
-                  Confirm Walkthrough Request
+                  {demoSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin text-[#09090b]" />
+                      <span>Sending Request via SMTP...</span>
+                    </>
+                  ) : (
+                    <span>Confirm Walkthrough Request</span>
+                  )}
                 </button>
               </form>
             )}
