@@ -78,10 +78,10 @@ export default function ContactPage() {
                   STRATEGIC PARTNERSHIPS
                 </div>
                 <h2 className="text-[26px] sm:text-[32px] font-extrabold text-white">
-                  Maninder Singh
+                  GreatCampus Leadership
                 </h2>
                 <p className="text-xs sm:text-sm text-[#a1a1aa] mt-1.5">
-                  Head of Strategic Partnerships & Institutional Growth · GreatCampus
+                  Strategic Partnerships & Institutional Growth · GreatCampus
                 </p>
 
                 <div className="mt-10 space-y-3.5">
@@ -202,7 +202,7 @@ export default function ContactPage() {
                     <CheckCircle2 className="w-10 h-10 text-white mx-auto" />
                     <h4 className="font-bold text-lg">Briefing Request Received!</h4>
                     <p className="text-xs text-[#a1a1aa] leading-relaxed">
-                      Thank you, <strong>{formData.name}</strong>! We have dispatched a confirmation email to <strong>{formData.email}</strong> and notified our leadership team (Maninder Singh & Aftab).
+                      Thank you, <strong>{formData.name}</strong>! We have dispatched a confirmation email to <strong>{formData.email}</strong> and notified the <strong>GreatCampus Leadership Team</strong>.
                     </p>
                     <button
                       type="button"

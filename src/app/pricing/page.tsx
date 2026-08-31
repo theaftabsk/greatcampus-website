@@ -100,7 +100,7 @@ export default function PricingPage() {
           {/* Quick Connect Badges */}
           <div className="mt-9 flex flex-wrap justify-center items-center gap-3 text-xs font-mono">
             <a
-              href="https://wa.me/919811352666?text=Hi%20Maninder,%20we%20would%20like%20to%20get%20a%20pricing%20quote%20for%20GreatCampus."
+              href="https://wa.me/919811352666?text=Hi%20GreatCampus%20Team,%20we%20would%20like%20to%20get%20a%20pricing%20quote."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#09090b] text-white hover:bg-[#27272a] transition-all font-bold"
@@ -309,9 +309,9 @@ export default function PricingPage() {
               </div>
 
               <div className="space-y-3 pt-2">
-                {/* Maninder Singh WhatsApp / Phone */}
+                {/* Direct Leadership WhatsApp / Phone */}
                 <a
-                  href="https://wa.me/919811352666?text=Hi%20Maninder,%20we%20would%20like%20to%20discuss%20pricing%20for%20GreatCampus."
+                  href="https://wa.me/919811352666?text=Hi%20GreatCampus%20Leadership,%20we%20would%20like%20to%20discuss%20pricing."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3.5 p-3.5 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
@@ -321,7 +321,7 @@ export default function PricingPage() {
                   </div>
                   <div>
                     <span className="text-[10px] text-[#a1a1aa] block uppercase font-mono">
-                      Maninder Singh · WhatsApp / SMS
+                      Strategic Partnerships · WhatsApp / SMS
                     </span>
                     <span className="font-bold text-white text-[14px] group-hover:underline">
                       +91-9811352666
@@ -571,7 +571,7 @@ export default function PricingPage() {
                   </button>
 
                   <p className="text-[11px] text-[#71717a] text-center pt-1">
-                    Direct notification sent to <strong>Maninder Singh</strong> & <strong>Aftab</strong> · Confirmation email sent to your inbox.
+                    Direct notification sent to <strong>GreatCampus Leadership</strong> · Confirmation email sent to your inbox.
                   </p>
                 </form>
               )}

@@ -31,7 +31,7 @@ export async function POST(req: Request) {
       },
     });
 
-    // 1. Email notification to GreatCampus Leadership (Aftab & Maninder)
+    // 1. Email notification to GreatCampus Leadership
     const adminMailHtml = `
       <!DOCTYPE html>
       <html>
@@ -131,7 +131,7 @@ export async function POST(req: Request) {
 
             <div class="card">
               <div class="step-title">Direct Leadership Touchpoints</div>
-              <div class="contact-item">👤 Maninder Singh — Head of Strategic Partnerships</div>
+              <div class="contact-item">🏢 GreatCampus Leadership — Strategic Partnerships & Growth</div>
               <div class="contact-item">📞 Direct / WhatsApp: +91-9811352666</div>
               <div class="contact-item">📞 Partnerships / Support: +91-9073351545</div>
               <div class="contact-item">✉️ Corporate: contact@greatcampus.in</div>
@@ -152,7 +152,7 @@ export async function POST(req: Request) {
 
     // Dispatch both emails in parallel
     await Promise.all([
-      // Send to GreatCampus admin emails (Aftab & Maninder)
+      // Send to GreatCampus admin emails
       transporter.sendMail({
         from: `"GreatCampus Platform" <${smtpUser}>`,
         to: adminEmails,

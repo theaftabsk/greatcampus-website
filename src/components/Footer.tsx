@@ -50,9 +50,9 @@ export default function Footer() {
               Direct Contact & Leadership
             </p>
             <div className="text-xs text-[#a1a1aa] space-y-2 font-mono">
-              <p className="text-white font-bold font-sans text-sm">Maninder Singh</p>
+              <p className="text-white font-bold font-sans text-sm">GreatCampus Leadership</p>
               <p className="text-[#71717a] font-sans text-[11.5px]">
-                Head of Strategic Partnerships & Institutional Growth
+                Strategic Partnerships & Institutional Growth
               </p>
               <p className="pt-1">
                 <span className="text-[#71717a]">Phone 1:</span>{" "}

@@ -1650,7 +1650,7 @@ export default function Home() {
                 Schedule an Executive Walkthrough
               </h3>
               <p className="text-xs text-[#a1a1aa] mt-1">
-                Direct consultation with <strong>Maninder Singh</strong> (+91-9811352666 / +91-9073351545 · contact@greatcampus.in).
+                Direct consultation with <strong>GreatCampus Leadership</strong> (+91-9811352666 / +91-9073351545 · contact@greatcampus.in).
               </p>
             </div>
 
@@ -1666,7 +1666,7 @@ export default function Home() {
                 <CheckCircle2 className="w-10 h-10 text-white mx-auto" />
                 <h4 className="font-bold text-lg text-white">Walkthrough Request Received!</h4>
                 <p className="text-xs text-[#a1a1aa] leading-relaxed">
-                  Thank you, <strong>{demoData.name}</strong>! We have dispatched a confirmation email to <strong>{demoData.email}</strong> and notified our leadership team (Maninder Singh & Aftab).
+                  Thank you, <strong>{demoData.name}</strong>! We have dispatched a confirmation email to <strong>{demoData.email}</strong> and notified the <strong>GreatCampus Leadership Team</strong>.
                 </p>
                 <button
                   type="button"
