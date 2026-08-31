@@ -22,7 +22,13 @@ import {
   GraduationCap,
   Briefcase,
   Layers,
-  BarChart3
+  BarChart3,
+  Target,
+  FileCheck,
+  TrendingUp,
+  Building2,
+  Clock,
+  Check
 } from "lucide-react";
 
 interface HeaderProps {
@@ -58,23 +64,23 @@ export default function Header({ onOpenDemo }: HeaderProps) {
             <span className="inline-flex items-center rounded-full bg-white/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white font-mono">
               Integrated Talent Journey
             </span>
-            <span className="text-[#a1a1aa]">
+            <span className="text-[#a1a1aa] text-xs">
               Assess → Interview → Develop → Reassess in one unified AI platform.
             </span>
           </div>
           <div className="flex items-center gap-4 text-[#a1a1aa]">
             <a
               href="tel:+919811352666"
-              className="flex items-center gap-1.5 hover:text-white transition-colors font-mono"
+              className="flex items-center gap-1.5 hover:text-white transition-colors font-mono text-xs"
             >
-              <Phone className="w-3 h-3" /> +91-9811352666
+              <Phone className="w-3 h-3 text-white" /> +91-9811352666
             </a>
             <span className="hidden sm:inline text-[#3f3f46]">|</span>
             <a
               href="mailto:mvasir@gmail.com"
-              className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors font-mono"
+              className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors font-mono text-xs"
             >
-              <Mail className="w-3 h-3" /> mvasir@gmail.com
+              <Mail className="w-3 h-3 text-white" /> mvasir@gmail.com
             </a>
           </div>
         </div>
@@ -84,7 +90,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#e4e4e7]">
         <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 sm:px-8">
           {/* Brand Logo & Main Nav */}
-          <div className="flex items-center gap-6" ref={navRef}>
+          <div className="flex items-center gap-7" ref={navRef}>
             <Link href="/" className="flex items-center gap-3 group shrink-0">
               <img
                 src="/greatcampus-logo-cropped.png"
@@ -94,16 +100,16 @@ export default function Header({ onOpenDemo }: HeaderProps) {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden items-center gap-1 xl:gap-2 lg:flex pl-3">
+            <nav className="hidden items-center gap-1 lg:flex pl-2">
               {/* Home */}
               <Link
                 href="/"
-                className="inline-flex h-9 items-center rounded-md px-3 text-[13.5px] font-medium text-[#52525b] hover:text-[#09090b] hover:bg-[#fafafa] transition-colors"
+                className="inline-flex h-9 items-center rounded-lg px-3 text-[13.5px] font-medium text-[#52525b] hover:text-[#09090b] hover:bg-black/[0.04] transition-all"
               >
                 Home
               </Link>
 
-              {/* -------------------- MEGA MENU: ALL PRODUCTS -------------------- */}
+              {/* -------------------- LUXURY PRODUCTS MEGA-MENU -------------------- */}
               <div
                 className="relative"
                 onMouseEnter={() => {
@@ -115,76 +121,117 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                 <button
                   type="button"
                   onClick={() => setProductsOpen(!productsOpen)}
-                  className={`inline-flex h-9 items-center gap-1.5 rounded-lg px-3.5 text-[13.5px] font-bold transition-all cursor-pointer ${
+                  className={`inline-flex h-9 items-center gap-1.5 rounded-lg px-3 text-[13.5px] font-semibold transition-all cursor-pointer ${
                     productsOpen
-                      ? "bg-[#09090b] text-white shadow-sm"
-                      : "bg-[#f4f4f5] text-[#09090b] hover:bg-[#e4e4e7]"
+                      ? "text-[#09090b] bg-black/[0.06]"
+                      : "text-[#09090b] hover:bg-black/[0.04]"
                   }`}
                 >
                   <span>Products</span>
                   <ChevronDown
                     className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                      productsOpen ? "rotate-180 text-white" : "text-[#71717a]"
+                      productsOpen ? "rotate-180 text-[#09090b]" : "text-[#71717a]"
                     }`}
                   />
                 </button>
 
-                {/* All Products Mega-Menu Dropdown */}
+                {/* Products Mega Menu Container */}
                 {productsOpen && (
-                  <div className="absolute top-full left-[-80px] w-[860px] bg-white rounded-3xl border border-[#27272a] shadow-2xl p-6 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                    {/* Header */}
-                    <div className="flex items-center justify-between border-b border-[#e4e4e7] pb-3 mb-5">
-                      <div className="flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-[#09090b] animate-pulse"></span>
+                  <div className="absolute top-[calc(100%+4px)] left-[-140px] w-[900px] bg-white rounded-3xl border border-[#e4e4e7] shadow-[0_30px_70px_rgba(0,0,0,0.14)] p-6 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                    {/* Header Strip */}
+                    <div className="flex items-center justify-between border-b border-[#f4f4f5] pb-3.5 mb-5">
+                      <div className="flex items-center gap-2.5">
+                        <span className="flex h-2 w-2 rounded-full bg-[#09090b] animate-pulse"></span>
                         <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#09090b]">
-                          GreatCampus Complete Product Suite
+                          The Integrated Talent Suite
                         </span>
                       </div>
-                      <span className="text-[11px] font-mono text-[#71717a]">
-                        Assess → Interview → Select → Develop → Reassess
-                      </span>
+                      <div className="flex items-center gap-2 text-[11px] font-mono text-[#71717a]">
+                        <span className="font-semibold text-[#09090b]">Assess</span>
+                        <span>→</span>
+                        <span className="font-semibold text-[#09090b]">Interview</span>
+                        <span>→</span>
+                        <span className="font-semibold text-[#09090b]">Select</span>
+                        <span>→</span>
+                        <span className="font-semibold text-[#09090b]">Develop</span>
+                        <span>→</span>
+                        <span className="font-semibold text-[#09090b]">Reassess</span>
+                      </div>
                     </div>
 
-                    {/* 3 Core Pillars Columns */}
-                    <div className="grid grid-cols-3 gap-6">
-                      {/* Product 01: ASSESS */}
-                      <div className="rounded-2xl border border-[#e4e4e7] bg-[#fafafa] p-4 flex flex-col justify-between hover:border-[#09090b] transition-all group">
+                    {/* 3 Core Product Columns */}
+                    <div className="grid grid-cols-3 gap-5">
+                      {/* Column 1: ASSESS */}
+                      <div className="rounded-2xl border border-[#e4e4e7] bg-[#fafafa]/80 p-4.5 flex flex-col justify-between hover:border-[#09090b] hover:bg-white hover:shadow-md transition-all group">
                         <div>
                           <div className="flex items-center justify-between mb-2">
-                            <span className="px-2 py-0.5 rounded bg-[#09090b] text-white font-mono font-bold text-[10px]">
-                              PRODUCT 01
+                            <span className="px-2 py-0.5 rounded-md bg-[#09090b] text-white font-mono font-bold text-[10px]">
+                              01 · PRE-HIRE
                             </span>
-                            <span className="text-[10px] font-mono text-[#71717a]">Pre-Hire</span>
+                            <span className="text-[10px] font-mono text-[#71717a]">Capability</span>
                           </div>
 
                           <Link
                             href="/assess"
                             onClick={() => setProductsOpen(false)}
-                            className="font-extrabold text-[15px] text-[#09090b] group-hover:underline block leading-tight mb-1"
+                            className="font-extrabold text-[15px] text-[#09090b] group-hover:underline flex items-center justify-between"
                           >
-                            Digital Assessments & AI Proctoring
+                            <span>Digital Assessments</span>
+                            <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </Link>
-                          <p className="text-[11.5px] text-[#52525b] mb-3 leading-relaxed">
-                            Objective digital testing measuring true capabilities beyond the resume.
+                          <p className="text-[12px] text-[#52525b] mt-1 mb-3.5 leading-relaxed">
+                            Screen candidates with objective aptitude, domain tests, and AI proctoring.
                           </p>
 
-                          <ul className="space-y-1.5 text-[11.5px] text-[#09090b] border-t border-[#e4e4e7] pt-2.5">
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> Aptitude (Numerical, Logical, Verbal)
-                            </li>
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> 15+ Language Cloud Code Sandbox
-                            </li>
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> Role Tests (Sales, Finance, Ops)
-                            </li>
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> Behavioural Competency Matrix
-                            </li>
-                            <li className="flex items-center gap-1.5 font-bold text-[#09090b]">
-                              <ShieldCheck className="w-3.5 h-3.5 text-[#09090b]" /> AI Anti-Cheat Proctoring
-                            </li>
-                          </ul>
+                          <div className="space-y-2 border-t border-[#e4e4e7]/80 pt-3">
+                            <Link
+                              href="/assess"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <Target className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">Aptitude Testing</span>
+                                <span className="text-[10.5px] text-[#71717a]">Numerical, logical & verbal</span>
+                              </div>
+                            </Link>
+
+                            <Link
+                              href="/assess"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <Code2 className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">Coding Sandbox</span>
+                                <span className="text-[10.5px] text-[#71717a]">15+ languages auto-graded</span>
+                              </div>
+                            </Link>
+
+                            <Link
+                              href="/assess"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <ShieldCheck className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">AI Anti-Cheat Proctoring</span>
+                                <span className="text-[10.5px] text-[#71717a]">Webcam & browser integrity</span>
+                              </div>
+                            </Link>
+
+                            <Link
+                              href="/assess"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <BarChart3 className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">Role-Based Benchmarks</span>
+                                <span className="text-[10.5px] text-[#71717a]">Sales, finance & engineering</span>
+                              </div>
+                            </Link>
+                          </div>
                         </div>
 
                         <Link
@@ -197,44 +244,77 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                         </Link>
                       </div>
 
-                      {/* Product 02: INTERVIEW */}
-                      <div className="rounded-2xl border border-[#e4e4e7] bg-[#fafafa] p-4 flex flex-col justify-between hover:border-[#09090b] transition-all group">
+                      {/* Column 2: INTERVIEW */}
+                      <div className="rounded-2xl border border-[#e4e4e7] bg-[#fafafa]/80 p-4.5 flex flex-col justify-between hover:border-[#09090b] hover:bg-white hover:shadow-md transition-all group">
                         <div>
                           <div className="flex items-center justify-between mb-2">
-                            <span className="px-2 py-0.5 rounded bg-[#09090b] text-white font-mono font-bold text-[10px]">
-                              PRODUCT 02
+                            <span className="px-2 py-0.5 rounded-md bg-[#09090b] text-white font-mono font-bold text-[10px]">
+                              02 · AT SCALE
                             </span>
-                            <span className="text-[10px] font-mono text-[#71717a]">At Scale</span>
+                            <span className="text-[10px] font-mono text-[#71717a]">Conversational</span>
                           </div>
 
                           <Link
                             href="/interview"
                             onClick={() => setProductsOpen(false)}
-                            className="font-extrabold text-[15px] text-[#09090b] group-hover:underline block leading-tight mb-1"
+                            className="font-extrabold text-[15px] text-[#09090b] group-hover:underline flex items-center justify-between"
                           >
-                            AI Voice & Video First-Round Interviews
+                            <span>AI Voice & Video Interviews</span>
+                            <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </Link>
-                          <p className="text-[11.5px] text-[#52525b] mb-3 leading-relaxed">
-                            Screen 100% of applicants with dynamic AI questioning and instant scorecards.
+                          <p className="text-[12px] text-[#52525b] mt-1 mb-3.5 leading-relaxed">
+                            First-round automated screening over Phone, WhatsApp, and Web.
                           </p>
 
-                          <ul className="space-y-1.5 text-[11.5px] text-[#09090b] border-t border-[#e4e4e7] pt-2.5">
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> Direct Automated Phone Call
-                            </li>
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> WhatsApp Voice Note Interviews
-                            </li>
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> Web Video Room Evaluator
-                            </li>
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> 14 Indian & Global Languages
-                            </li>
-                            <li className="flex items-center gap-1.5 font-bold text-[#09090b]">
-                              <span className="text-[#71717a]">▪</span> Instant ATS Scorecard & Audio Snippets
-                            </li>
-                          </ul>
+                          <div className="space-y-2 border-t border-[#e4e4e7]/80 pt-3">
+                            <Link
+                              href="/interview"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <PhoneCall className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">Automated Phone Calls</span>
+                                <span className="text-[10.5px] text-[#71717a]">Instant voice interviews</span>
+                              </div>
+                            </Link>
+
+                            <Link
+                              href="/interview"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <MessageSquare className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">WhatsApp Voice Interviews</span>
+                                <span className="text-[10.5px] text-[#71717a]">Zero-app friction screening</span>
+                              </div>
+                            </Link>
+
+                            <Link
+                              href="/interview"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <Globe className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">14 Regional & Global Languages</span>
+                                <span className="text-[10.5px] text-[#71717a]">English, Hindi, Bengali & more</span>
+                              </div>
+                            </Link>
+
+                            <Link
+                              href="/interview"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <FileCheck className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">Instant Scorecards</span>
+                                <span className="text-[10.5px] text-[#71717a]">Automated ranked shortlists</span>
+                              </div>
+                            </Link>
+                          </div>
                         </div>
 
                         <Link
@@ -247,44 +327,77 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                         </Link>
                       </div>
 
-                      {/* Product 03: DEVELOP */}
-                      <div className="rounded-2xl border border-[#e4e4e7] bg-[#fafafa] p-4 flex flex-col justify-between hover:border-[#09090b] transition-all group">
+                      {/* Column 3: DEVELOP */}
+                      <div className="rounded-2xl border border-[#e4e4e7] bg-[#fafafa]/80 p-4.5 flex flex-col justify-between hover:border-[#09090b] hover:bg-white hover:shadow-md transition-all group">
                         <div>
                           <div className="flex items-center justify-between mb-2">
-                            <span className="px-2 py-0.5 rounded bg-[#09090b] text-white font-mono font-bold text-[10px]">
-                              PRODUCT 03
+                            <span className="px-2 py-0.5 rounded-md bg-[#09090b] text-white font-mono font-bold text-[10px]">
+                              03 · POST-HIRE
                             </span>
-                            <span className="text-[10px] font-mono text-[#71717a]">Post-Hire</span>
+                            <span className="text-[10px] font-mono text-[#71717a]">Growth</span>
                           </div>
 
                           <Link
                             href="/develop"
                             onClick={() => setProductsOpen(false)}
-                            className="font-extrabold text-[15px] text-[#09090b] group-hover:underline block leading-tight mb-1"
+                            className="font-extrabold text-[15px] text-[#09090b] group-hover:underline flex items-center justify-between"
                           >
-                            Workforce Microlearning & Reassessment
+                            <span>Workforce Microlearning</span>
+                            <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </Link>
-                          <p className="text-[11.5px] text-[#52525b] mb-3 leading-relaxed">
-                            Transform candidate skill gaps into continuous practical 5-minute modules.
+                          <p className="text-[12px] text-[#52525b] mt-1 mb-3.5 leading-relaxed">
+                            Continuous capability building through 5-minute practical daily modules.
                           </p>
 
-                          <ul className="space-y-1.5 text-[11.5px] text-[#09090b] border-t border-[#e4e4e7] pt-2.5">
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> Automated Skill Gap Mapping
-                            </li>
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> Sales & Negotiation Enablement
-                            </li>
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> Customer Service & Empathy Drills
-                            </li>
-                            <li className="flex items-center gap-1.5 font-medium">
-                              <span className="text-[#71717a]">▪</span> Leadership & Conflict Resolution
-                            </li>
-                            <li className="flex items-center gap-1.5 font-bold text-[#09090b]">
-                              <Repeat className="w-3.5 h-3.5 text-[#09090b]" /> 30-60-90 Day Skill Gain Tracking
-                            </li>
-                          </ul>
+                          <div className="space-y-2 border-t border-[#e4e4e7]/80 pt-3">
+                            <Link
+                              href="/develop"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <TrendingUp className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">Automated Gap Mapping</span>
+                                <span className="text-[10.5px] text-[#71717a]">Pre-hire weaknesses into learning</span>
+                              </div>
+                            </Link>
+
+                            <Link
+                              href="/develop"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <BookOpen className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">Role Microlearning</span>
+                                <span className="text-[10.5px] text-[#71717a]">Sales, service & leadership</span>
+                              </div>
+                            </Link>
+
+                            <Link
+                              href="/develop"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <Repeat className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">Continuous Reassessment</span>
+                                <span className="text-[10.5px] text-[#71717a]">30, 60 & 90-day progress checks</span>
+                              </div>
+                            </Link>
+
+                            <Link
+                              href="/develop"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex items-start gap-2 text-xs text-[#27272a] hover:text-[#09090b] transition-colors"
+                            >
+                              <Award className="w-3.5 h-3.5 text-[#09090b] shrink-0 mt-0.5" />
+                              <div>
+                                <span className="font-semibold block text-[12px]">Workforce Mobility</span>
+                                <span className="text-[10.5px] text-[#71717a]">Verified promotion readiness</span>
+                              </div>
+                            </Link>
+                          </div>
                         </div>
 
                         <Link
@@ -298,29 +411,25 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                       </div>
                     </div>
 
-                    {/* Bottom Quick-Action Bar */}
-                    <div className="mt-5 pt-4 border-t border-[#e4e4e7] flex items-center justify-between bg-[#09090b] text-white p-3.5 rounded-2xl">
-                      <div className="flex items-center gap-3">
-                        <span className="font-mono text-xs font-bold text-white bg-white/10 px-2.5 py-1 rounded">
-                          ALL-IN-ONE
-                        </span>
-                        <span className="text-xs text-[#a1a1aa]">
-                          Need all 3 products combined in a unified talent loop?
-                        </span>
+                    {/* Bottom Strip */}
+                    <div className="mt-5 pt-3.5 border-t border-[#e4e4e7] flex items-center justify-between px-2 text-xs">
+                      <div className="flex items-center gap-2 text-[#71717a]">
+                        <span className="font-semibold text-[#09090b]">Unified Platform:</span>
+                        <span>Replace 3 fragmented vendors with one continuous talent architecture.</span>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-4">
                         <Link
-                          href="/"
+                          href="/difference"
                           onClick={() => setProductsOpen(false)}
-                          className="text-xs font-bold text-white hover:underline flex items-center gap-1"
+                          className="font-bold text-[#09090b] hover:underline flex items-center gap-1 text-[12.5px]"
                         >
-                          View Full Journey <ArrowRight className="w-3 h-3" />
+                          See The Difference <ArrowRight className="w-3 h-3" />
                         </Link>
-                        <span className="text-[#3f3f46]">|</span>
+                        <span className="text-[#d4d4d8]">|</span>
                         <Link
                           href="/pricing"
                           onClick={() => setProductsOpen(false)}
-                          className="text-xs font-bold text-[#a1a1aa] hover:text-white"
+                          className="font-semibold text-[#52525b] hover:text-[#09090b] text-[12.5px]"
                         >
                           ROI Calculator
                         </Link>
@@ -330,7 +439,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                 )}
               </div>
 
-              {/* SOLUTIONS DROPDOWN */}
+              {/* -------------------- SOLUTIONS DROPDOWN -------------------- */}
               <div
                 className="relative"
                 onMouseEnter={() => {
@@ -342,73 +451,93 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                 <button
                   type="button"
                   onClick={() => setSolutionsOpen(!solutionsOpen)}
-                  className={`inline-flex h-9 items-center gap-1.5 rounded-md px-3 text-[13.5px] font-medium transition-colors cursor-pointer ${
+                  className={`inline-flex h-9 items-center gap-1.5 rounded-lg px-3 text-[13.5px] font-medium transition-all cursor-pointer ${
                     solutionsOpen
-                      ? "bg-[#09090b] text-white"
-                      : "text-[#52525b] hover:text-[#09090b] hover:bg-[#fafafa]"
+                      ? "text-[#09090b] bg-black/[0.06]"
+                      : "text-[#52525b] hover:text-[#09090b] hover:bg-black/[0.04]"
                   }`}
                 >
                   <span>Solutions</span>
                   <ChevronDown
                     className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                      solutionsOpen ? "rotate-180 text-white" : "text-[#71717a]"
+                      solutionsOpen ? "rotate-180 text-[#09090b]" : "text-[#71717a]"
                     }`}
                   />
                 </button>
 
                 {/* Solutions Dropdown Menu */}
                 {solutionsOpen && (
-                  <div className="absolute top-full left-0 w-[450px] bg-white rounded-2xl border border-[#27272a] shadow-2xl p-4 z-50 animate-in fade-in slide-in-from-top-2 duration-150 space-y-1">
+                  <div className="absolute top-[calc(100%+4px)] left-[-50px] w-[460px] bg-white rounded-3xl border border-[#e4e4e7] shadow-[0_30px_70px_rgba(0,0,0,0.14)] p-4 z-50 animate-in fade-in slide-in-from-top-2 duration-150 space-y-1">
                     <Link
                       href="/solutions#recruitment"
                       onClick={() => setSolutionsOpen(false)}
-                      className="block p-3 rounded-xl hover:bg-[#fafafa] border border-transparent hover:border-[#e4e4e7] transition-all"
+                      className="group flex items-start gap-3 p-3 rounded-2xl hover:bg-[#fafafa] transition-all"
                     >
-                      <span className="font-bold text-xs text-[#09090b] block">
-                        Corporate Talent Acquisition
-                      </span>
-                      <span className="text-[11px] text-[#71717a]">
-                        High-volume screening and candidate shortlisting without recruiter burnout.
-                      </span>
+                      <div className="h-8 w-8 rounded-lg bg-[#09090b] text-white flex items-center justify-center shrink-0 mt-0.5">
+                        <Briefcase className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className="font-bold text-xs text-[#09090b] group-hover:underline block">
+                          Corporate Talent Acquisition
+                        </span>
+                        <span className="text-[11px] text-[#71717a] leading-tight block mt-0.5">
+                          High-volume candidate screening and shortlisting without recruiter burnout.
+                        </span>
+                      </div>
                     </Link>
 
                     <Link
                       href="/solutions#staffing"
                       onClick={() => setSolutionsOpen(false)}
-                      className="block p-3 rounded-xl hover:bg-[#fafafa] border border-transparent hover:border-[#e4e4e7] transition-all"
+                      className="group flex items-start gap-3 p-3 rounded-2xl hover:bg-[#fafafa] transition-all"
                     >
-                      <span className="font-bold text-xs text-[#09090b] block">
-                        Recruitment & Staffing Agencies
-                      </span>
-                      <span className="text-[11px] text-[#71717a]">
-                        Deliver evidence-based candidate portfolios instead of raw resumes.
-                      </span>
+                      <div className="h-8 w-8 rounded-lg bg-[#09090b] text-white flex items-center justify-center shrink-0 mt-0.5">
+                        <Building2 className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className="font-bold text-xs text-[#09090b] group-hover:underline block">
+                          Recruitment & Staffing Agencies
+                        </span>
+                        <span className="text-[11px] text-[#71717a] leading-tight block mt-0.5">
+                          Deliver evidence-based candidate dossiers instead of raw resumes.
+                        </span>
+                      </div>
                     </Link>
 
                     <Link
                       href="/solutions#universities"
                       onClick={() => setSolutionsOpen(false)}
-                      className="block p-3 rounded-xl hover:bg-[#fafafa] border border-transparent hover:border-[#e4e4e7] transition-all"
+                      className="group flex items-start gap-3 p-3 rounded-2xl hover:bg-[#fafafa] transition-all"
                     >
-                      <span className="font-bold text-xs text-[#09090b] block">
-                        Universities & Higher Education
-                      </span>
-                      <span className="text-[11px] text-[#71717a]">
-                        Empower student employability with AI mock interviews & campus placement readiness.
-                      </span>
+                      <div className="h-8 w-8 rounded-lg bg-[#09090b] text-white flex items-center justify-center shrink-0 mt-0.5">
+                        <GraduationCap className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className="font-bold text-xs text-[#09090b] group-hover:underline block">
+                          Universities & Higher Education
+                        </span>
+                        <span className="text-[11px] text-[#71717a] leading-tight block mt-0.5">
+                          Empower student employability with AI mock interviews & campus readiness.
+                        </span>
+                      </div>
                     </Link>
 
                     <Link
                       href="/solutions#ld"
                       onClick={() => setSolutionsOpen(false)}
-                      className="block p-3 rounded-xl hover:bg-[#fafafa] border border-transparent hover:border-[#e4e4e7] transition-all"
+                      className="group flex items-start gap-3 p-3 rounded-2xl hover:bg-[#fafafa] transition-all"
                     >
-                      <span className="font-bold text-xs text-[#09090b] block">
-                        Learning & Development (L&D)
-                      </span>
-                      <span className="text-[11px] text-[#71717a]">
-                        Turn training into continuous capability growth with measurable reassessment.
-                      </span>
+                      <div className="h-8 w-8 rounded-lg bg-[#09090b] text-white flex items-center justify-center shrink-0 mt-0.5">
+                        <TrendingUp className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className="font-bold text-xs text-[#09090b] group-hover:underline block">
+                          Learning & Development (L&D)
+                        </span>
+                        <span className="text-[11px] text-[#71717a] leading-tight block mt-0.5">
+                          Turn training into continuous capability growth with measurable reassessment.
+                        </span>
+                      </div>
                     </Link>
                   </div>
                 )}
@@ -417,7 +546,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
               {/* The Difference */}
               <Link
                 href="/difference"
-                className="inline-flex h-9 items-center rounded-md px-3 text-[13.5px] font-medium text-[#52525b] hover:text-[#09090b] hover:bg-[#fafafa] transition-colors"
+                className="inline-flex h-9 items-center rounded-lg px-3 text-[13.5px] font-medium text-[#52525b] hover:text-[#09090b] hover:bg-black/[0.04] transition-all"
               >
                 The Difference
               </Link>
@@ -425,7 +554,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
               {/* Pricing & ROI */}
               <Link
                 href="/pricing"
-                className="inline-flex h-9 items-center rounded-md px-3 text-[13.5px] font-medium text-[#52525b] hover:text-[#09090b] hover:bg-[#fafafa] transition-colors"
+                className="inline-flex h-9 items-center rounded-lg px-3 text-[13.5px] font-medium text-[#52525b] hover:text-[#09090b] hover:bg-black/[0.04] transition-all"
               >
                 Pricing & ROI
               </Link>
@@ -433,7 +562,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
               {/* Contact */}
               <Link
                 href="/contact"
-                className="inline-flex h-9 items-center rounded-md px-3 text-[13.5px] font-medium text-[#52525b] hover:text-[#09090b] hover:bg-[#fafafa] transition-colors"
+                className="inline-flex h-9 items-center rounded-lg px-3 text-[13.5px] font-medium text-[#52525b] hover:text-[#09090b] hover:bg-black/[0.04] transition-all"
               >
                 Contact
               </Link>
@@ -452,14 +581,14 @@ export default function Header({ onOpenDemo }: HeaderProps) {
               <button
                 type="button"
                 onClick={onOpenDemo}
-                className="inline-flex h-9 items-center justify-center rounded-lg bg-[#09090b] px-4 text-[13px] font-semibold text-white hover:bg-[#27272a] transition-all border border-[#09090b] shadow-sm cursor-pointer"
+                className="inline-flex h-9 items-center justify-center rounded-xl bg-[#09090b] px-4.5 text-[13px] font-semibold text-white hover:bg-[#27272a] transition-all border border-[#09090b] shadow-sm cursor-pointer"
               >
                 Book a Demo
               </button>
             ) : (
               <Link
                 href="/contact"
-                className="inline-flex h-9 items-center justify-center rounded-lg bg-[#09090b] px-4 text-[13px] font-semibold text-white hover:bg-[#27272a] transition-all border border-[#09090b] shadow-sm"
+                className="inline-flex h-9 items-center justify-center rounded-xl bg-[#09090b] px-4.5 text-[13px] font-semibold text-white hover:bg-[#27272a] transition-all border border-[#09090b] shadow-sm"
               >
                 Book a Demo
               </Link>
@@ -470,7 +599,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-[#09090b] hover:bg-[#f4f4f5] lg:hidden border border-[#e4e4e7]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#09090b] hover:bg-[#f4f4f5] lg:hidden border border-[#e4e4e7]"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -504,7 +633,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                   <Link
                     href="/assess"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block p-2 rounded-lg bg-[#fafafa] border border-[#e4e4e7]"
+                    className="block p-2.5 rounded-xl bg-[#fafafa] border border-[#e4e4e7]"
                   >
                     <span className="font-bold text-xs text-[#09090b] block">01 - ASSESS (Digital Tests & AI Proctoring)</span>
                     <span className="text-[11px] text-[#71717a]">Aptitude, 15+ coding languages sandbox & anti-cheat.</span>
@@ -513,7 +642,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                   <Link
                     href="/interview"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block p-2 rounded-lg bg-[#fafafa] border border-[#e4e4e7]"
+                    className="block p-2.5 rounded-xl bg-[#fafafa] border border-[#e4e4e7]"
                   >
                     <span className="font-bold text-xs text-[#09090b] block">02 - INTERVIEW (AI Voice & Video First-Round)</span>
                     <span className="text-[11px] text-[#71717a]">Phone, WhatsApp & Web interviews in 14 languages.</span>
@@ -522,7 +651,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                   <Link
                     href="/develop"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block p-2 rounded-lg bg-[#fafafa] border border-[#e4e4e7]"
+                    className="block p-2.5 rounded-xl bg-[#fafafa] border border-[#e4e4e7]"
                   >
                     <span className="font-bold text-xs text-[#09090b] block">03 - DEVELOP (Microlearning & Reassessment)</span>
                     <span className="text-[11px] text-[#71717a]">5-min daily modules & verified 30/60/90-day progress.</span>
@@ -601,7 +730,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-2.5 rounded-lg bg-[#09090b] text-white font-semibold text-[14px]"
+                className="w-full text-center py-2.5 rounded-xl bg-[#09090b] text-white font-semibold text-[14px]"
               >
                 Book a Demo
               </Link>
