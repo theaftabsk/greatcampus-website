@@ -58,36 +58,36 @@ export default function Header({ onOpenDemo }: HeaderProps) {
   return (
     <>
       {/* -------------------- TOP ANNOUNCEMENT BANNER -------------------- */}
-      <aside aria-label="Announcement" className="bg-[#09090b] text-white border-b border-[#27272a] py-2 px-4 text-xs">
-        <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <aside aria-label="Announcement" className="bg-[#09090b] text-white border-b border-[#27272a] py-2 px-3 sm:px-4 text-xs">
+        <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-2 text-center sm:text-left">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center rounded-full bg-white/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white font-mono">
-              Integrated Talent Journey
+            <span className="inline-flex items-center rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white font-mono">
+              Integrated Talent
             </span>
-            <span className="text-[#a1a1aa] text-xs">
-              Assess → Interview → Develop → Reassess in one unified AI platform.
+            <span className="text-[#a1a1aa] text-[11px] sm:text-xs">
+              Assess → Interview → Develop → Reassess
             </span>
           </div>
-          <div className="flex items-center gap-3 sm:gap-4 text-[#a1a1aa] flex-wrap justify-center">
+          <div className="flex items-center gap-2.5 sm:gap-4 text-[#a1a1aa] flex-wrap justify-center text-[11px] sm:text-xs">
             <a
               href="tel:+919811352666"
-              className="flex items-center gap-1.5 hover:text-white transition-colors font-mono text-xs"
+              className="flex items-center gap-1 hover:text-white transition-colors font-mono"
             >
-              <Phone className="w-3 h-3 text-white" /> +91-9811352666
+              <Phone className="w-3 h-3 text-white shrink-0" /> +91-9811352666
             </a>
-            <span className="hidden sm:inline text-[#3f3f46]">|</span>
+            <span className="text-[#3f3f46]">|</span>
             <a
               href="tel:+919073351545"
-              className="flex items-center gap-1.5 hover:text-white transition-colors font-mono text-xs"
+              className="flex items-center gap-1 hover:text-white transition-colors font-mono"
             >
-              <Phone className="w-3 h-3 text-white" /> +91-9073351545
+              <Phone className="w-3 h-3 text-white shrink-0" /> +91-9073351545
             </a>
-            <span className="hidden sm:inline text-[#3f3f46]">|</span>
+            <span className="hidden md:inline text-[#3f3f46]">|</span>
             <a
               href="mailto:contact@greatcampus.in"
-              className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors font-mono text-xs"
+              className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors font-mono text-xs"
             >
-              <Mail className="w-3 h-3 text-white" /> contact@greatcampus.in
+              <Mail className="w-3 h-3 text-white shrink-0" /> contact@greatcampus.in
             </a>
           </div>
         </div>
@@ -733,14 +733,54 @@ export default function Header({ onOpenDemo }: HeaderProps) {
             >
               Contact & Leadership
             </Link>
-            <div className="pt-3 border-t border-[#e4e4e7] flex flex-col gap-2">
-              <Link
-                href="/contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-2.5 rounded-xl bg-[#09090b] text-white font-semibold text-[14px]"
-              >
-                Book a Demo
-              </Link>
+            <div className="pt-3 border-t border-[#e4e4e7] flex flex-col gap-2.5">
+              {onOpenDemo ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onOpenDemo();
+                  }}
+                  className="w-full text-center py-3 rounded-xl bg-[#09090b] text-white font-bold text-[14px] cursor-pointer shadow-md"
+                >
+                  Book a Demo
+                </button>
+              ) : (
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full text-center py-3 rounded-xl bg-[#09090b] text-white font-bold text-[14px] shadow-md"
+                >
+                  Book a Demo
+                </Link>
+              )}
+
+              {/* Direct Leadership Access for Mobile */}
+              <div className="pt-2 border-t border-slate-100 space-y-2">
+                <span className="text-[10px] font-mono font-bold text-[#71717a] uppercase tracking-wider block">
+                  Direct Call / Contact
+                </span>
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="tel:+919811352666"
+                    className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-[#fafafa] border border-[#e4e4e7] text-xs font-mono font-semibold text-[#09090b]"
+                  >
+                    <Phone className="w-3.5 h-3.5" /> +91-9811352666
+                  </a>
+                  <a
+                    href="tel:+919073351545"
+                    className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-[#fafafa] border border-[#e4e4e7] text-xs font-mono font-semibold text-[#09090b]"
+                  >
+                    <Phone className="w-3.5 h-3.5" /> +91-9073351545
+                  </a>
+                </div>
+                <a
+                  href="mailto:contact@greatcampus.in"
+                  className="flex items-center justify-center gap-2 p-2 rounded-xl bg-[#fafafa] border border-[#e4e4e7] text-xs font-mono text-[#09090b]"
+                >
+                  <Mail className="w-3.5 h-3.5" /> contact@greatcampus.in
+                </a>
+              </div>
             </div>
           </div>
         )}

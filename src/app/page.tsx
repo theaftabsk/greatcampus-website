@@ -142,7 +142,7 @@ export default function Home() {
           </div>
 
           {/* Main Title */}
-          <h1 className="mt-8 max-w-5xl text-[40px] font-extrabold text-[#09090b] leading-[1.08] tracking-tight sm:text-[64px] lg:text-[76px]">
+          <h1 className="mt-8 max-w-5xl text-[34px] sm:text-[58px] lg:text-[74px] font-extrabold text-[#09090b] leading-[1.1] tracking-tight">
             <span>Identify the right people.</span>
             <br />
             <span>Make better hiring decisions.</span>
@@ -151,23 +151,23 @@ export default function Home() {
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-7 max-w-3xl text-[17px] text-[#52525b] leading-relaxed sm:text-[20px]">
+          <p className="mt-6 sm:mt-7 max-w-3xl text-[16px] sm:text-[20px] text-[#52525b] leading-relaxed">
             From assessment to interview to development, GreatCampus helps organizations build a smarter, faster and more measurable talent journey.
           </p>
 
           {/* Primary Call to Actions */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
             <button
               type="button"
               onClick={() => setDemoModalOpen(true)}
-              className="group inline-flex h-13 items-center gap-2 rounded-xl bg-[#09090b] px-8 text-[15px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all hover:scale-[1.02] border border-[#09090b] cursor-pointer"
+              className="group inline-flex h-12 sm:h-13 items-center justify-center gap-2 rounded-xl bg-[#09090b] px-8 text-[15px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all hover:scale-[1.02] border border-[#09090b] cursor-pointer w-full sm:w-auto"
             >
               Book a Demo
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
             <Link
               href="/assess"
-              className="inline-flex h-13 items-center justify-center rounded-xl border border-[#27272a] bg-white px-8 text-[15px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors shadow-sm"
+              className="inline-flex h-12 sm:h-13 items-center justify-center rounded-xl border border-[#27272a] bg-white px-8 text-[15px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors shadow-sm w-full sm:w-auto"
             >
               Explore GreatCampus
             </Link>
@@ -202,7 +202,7 @@ export default function Home() {
           </div>
 
           {/* -------------------- INTERACTIVE TALENT JOURNEY PREVIEW -------------------- */}
-          <div id="journey" className="mt-16 w-full max-w-5xl rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-6 sm:p-8 shadow-2xl text-left">
+          <div id="journey" className="mt-16 w-full max-w-5xl rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-5 sm:p-8 shadow-2xl text-left">
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#27272a] pb-6">
               <div>
@@ -229,12 +229,14 @@ export default function Home() {
                 { id: "select", step: "03", name: "SELECT", question: "Who should we hire?" },
                 { id: "develop", step: "04", name: "DEVELOP", question: "What to improve?" },
                 { id: "reassess", step: "05", name: "REASSESS", question: "Has capability improved?" },
-              ].map((s) => (
+              ].map((s, idx) => (
                 <button
                   key={s.id}
                   type="button"
                   onClick={() => setActiveJourneyStep(s.id as any)}
                   className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
+                    idx === 4 ? "col-span-2 sm:col-span-1" : ""
+                  } ${
                     activeJourneyStep === s.id
                       ? "bg-white text-[#09090b] border-white shadow-lg"
                       : "bg-[#121215] text-[#a1a1aa] border-[#27272a] hover:border-[#3f3f46] hover:text-white"
@@ -1622,28 +1624,28 @@ export default function Home() {
 
       {/* -------------------- BOOK A DEMO MODAL -------------------- */}
       {demoModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="relative w-full max-w-lg rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-7 shadow-2xl space-y-5">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm">
+          <div className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-5 sm:p-7 shadow-2xl space-y-4 sm:space-y-5">
             <button
               type="button"
               onClick={() => setDemoModalOpen(false)}
-              className="absolute top-5 right-5 text-[#a1a1aa] hover:text-white"
+              className="absolute top-4 right-4 sm:top-5 sm:right-5 text-[#a1a1aa] hover:text-white"
             >
               <X className="w-5 h-5" />
             </button>
 
             <div>
-              <div className="mb-3">
+              <div className="mb-2.5 sm:mb-3">
                 <img
                   src="/greatcampus-logo-white.png"
                   alt="GreatCampus"
-                  className="h-8 w-auto object-contain"
+                  className="h-7 sm:h-8 w-auto object-contain"
                 />
               </div>
-              <span className="text-[11px] font-mono font-bold text-[#a1a1aa] uppercase">
+              <span className="text-[10.5px] font-mono font-bold text-[#a1a1aa] uppercase">
                 EXECUTIVE DEMO & BRIEFING
               </span>
-              <h3 className="text-[22px] font-extrabold text-white mt-1">
+              <h3 className="text-[20px] sm:text-[22px] font-extrabold text-white mt-0.5">
                 Schedule an Executive Walkthrough
               </h3>
               <p className="text-xs text-[#a1a1aa] mt-1">
@@ -1684,7 +1686,7 @@ export default function Home() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleDemoSubmit} className="space-y-3.5 text-xs">
+              <form onSubmit={handleDemoSubmit} className="space-y-3 sm:space-y-3.5 text-xs">
                 <div>
                   <label className="font-bold text-white block mb-1">Full Name *</label>
                   <input
@@ -1696,7 +1698,7 @@ export default function Home() {
                     className="w-full h-10 px-3 rounded-xl border border-[#27272a] bg-[#121215] text-white focus:outline-none focus:border-white"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label className="font-bold text-white block mb-1">Corporate Email *</label>
                     <input

@@ -93,32 +93,33 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigation Column: Pillars & Solutions */}
-          <div className="md:col-span-2 space-y-3">
-            <p className="font-bold text-[12px] text-white uppercase tracking-wider font-mono">
-              The Three Pillars
-            </p>
-            <ul className="space-y-2 text-xs text-[#a1a1aa]">
-              <li><Link href="/assess" className="hover:text-white">01 - ASSESS</Link></li>
-              <li><Link href="/interview" className="hover:text-white">02 - INTERVIEW</Link></li>
-              <li><Link href="/develop" className="hover:text-white">03 - DEVELOP</Link></li>
-              <li><Link href="/difference" className="hover:text-white">The Difference</Link></li>
-              <li><Link href="/pricing" className="hover:text-white">Pricing & ROI</Link></li>
-            </ul>
-          </div>
+          {/* Navigation Columns: Pillars & Solutions (2-cols on mobile) */}
+          <div className="grid grid-cols-2 gap-8 md:col-span-4 md:grid-cols-2">
+            <div className="space-y-3">
+              <p className="font-bold text-[12px] text-white uppercase tracking-wider font-mono">
+                The Pillars
+              </p>
+              <ul className="space-y-2 text-xs text-[#a1a1aa]">
+                <li><Link href="/assess" className="hover:text-white">01 - ASSESS</Link></li>
+                <li><Link href="/interview" className="hover:text-white">02 - INTERVIEW</Link></li>
+                <li><Link href="/develop" className="hover:text-white">03 - DEVELOP</Link></li>
+                <li><Link href="/difference" className="hover:text-white">The Difference</Link></li>
+                <li><Link href="/pricing" className="hover:text-white">Pricing & ROI</Link></li>
+              </ul>
+            </div>
 
-          {/* Navigation Column: Solutions & Lifecycle */}
-          <div className="md:col-span-2 space-y-3">
-            <p className="font-bold text-[12px] text-white uppercase tracking-wider font-mono">
-              Lifecycle
-            </p>
-            <ul className="space-y-2 text-xs text-[#a1a1aa]">
-              <li><Link href="/solutions#recruitment" className="hover:text-white">Talent Acquisition</Link></li>
-              <li><Link href="/solutions#staffing" className="hover:text-white">Staffing Agencies</Link></li>
-              <li><Link href="/solutions#universities" className="hover:text-white">Higher Education</Link></li>
-              <li><Link href="/solutions#ld" className="hover:text-white">Learning & Dev</Link></li>
-              <li><Link href="/contact" className="hover:text-white font-bold text-white">Book a Demo →</Link></li>
-            </ul>
+            <div className="space-y-3">
+              <p className="font-bold text-[12px] text-white uppercase tracking-wider font-mono">
+                Lifecycle
+              </p>
+              <ul className="space-y-2 text-xs text-[#a1a1aa]">
+                <li><Link href="/solutions#recruitment" className="hover:text-white">Talent Acquisition</Link></li>
+                <li><Link href="/solutions#staffing" className="hover:text-white">Staffing Agencies</Link></li>
+                <li><Link href="/solutions#universities" className="hover:text-white">Higher Education</Link></li>
+                <li><Link href="/solutions#ld" className="hover:text-white">Learning & Dev</Link></li>
+                <li><Link href="/contact" className="hover:text-white font-bold text-white">Book a Demo →</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
 
