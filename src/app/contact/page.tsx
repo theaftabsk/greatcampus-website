@@ -48,7 +48,7 @@ export default function ContactPage() {
                 </p>
 
                 <div className="mt-10 space-y-4">
-                  {/* Phone */}
+                  {/* Phone 1 */}
                   <a
                     href="tel:+919811352666"
                     className="flex items-center gap-4 p-4 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
@@ -57,9 +57,25 @@ export default function ContactPage() {
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Mobile / WhatsApp</span>
+                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Direct / WhatsApp</span>
                       <span className="font-bold text-white text-[16px] group-hover:underline">
                         +91-9811352666
+                      </span>
+                    </div>
+                  </a>
+
+                  {/* Phone 2 */}
+                  <a
+                    href="tel:+919073351545"
+                    className="flex items-center gap-4 p-4 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
+                  >
+                    <div className="h-11 w-11 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Partnerships / Support</span>
+                      <span className="font-bold text-white text-[16px] group-hover:underline">
+                        +91-9073351545
                       </span>
                     </div>
                   </a>
@@ -96,22 +112,27 @@ export default function ContactPage() {
                     </div>
                   </a>
 
-                  {/* LinkedIn */}
+                  {/* LinkedIn Button (No raw URL shown) */}
                   <a
                     href="https://www.linkedin.com/in/manindersinghvasir/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
+                    className="flex items-center justify-between p-4 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
                   >
-                    <div className="h-11 w-11 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
-                      <LinkedinIcon className="w-5 h-5" />
+                    <div className="flex items-center gap-4">
+                      <div className="h-11 w-11 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
+                        <LinkedinIcon className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Professional Network</span>
+                        <span className="font-bold text-white text-[16px]">
+                          Connect on LinkedIn
+                        </span>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">LinkedIn Profile</span>
-                      <span className="font-bold text-white text-[15px] group-hover:underline flex items-center gap-1.5">
-                        linkedin.com/in/manindersinghvasir <ArrowRight className="w-3.5 h-3.5" />
-                      </span>
-                    </div>
+                    <span className="inline-flex h-9 items-center justify-center rounded-xl bg-white/10 px-4 text-xs font-bold text-white group-hover:bg-white group-hover:text-[#09090b] transition-all">
+                      View Profile <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                    </span>
                   </a>
                 </div>
               </div>
@@ -179,7 +200,7 @@ export default function ContactPage() {
                         <input
                           required
                           type="tel"
-                          placeholder="+91 98113 52666"
+                          placeholder="+91 90733 51545"
                           className="w-full h-11 px-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-[#09090b] focus:outline-none focus:border-[#09090b]"
                         />
                       </div>

@@ -68,12 +68,19 @@ export default function Header({ onOpenDemo }: HeaderProps) {
               Assess → Interview → Develop → Reassess in one unified AI platform.
             </span>
           </div>
-          <div className="flex items-center gap-4 text-[#a1a1aa]">
+          <div className="flex items-center gap-3 sm:gap-4 text-[#a1a1aa] flex-wrap justify-center">
             <a
               href="tel:+919811352666"
               className="flex items-center gap-1.5 hover:text-white transition-colors font-mono text-xs"
             >
               <Phone className="w-3 h-3 text-white" /> +91-9811352666
+            </a>
+            <span className="hidden sm:inline text-[#3f3f46]">|</span>
+            <a
+              href="tel:+919073351545"
+              className="flex items-center gap-1.5 hover:text-white transition-colors font-mono text-xs"
+            >
+              <Phone className="w-3 h-3 text-white" /> +91-9073351545
             </a>
             <span className="hidden sm:inline text-[#3f3f46]">|</span>
             <a

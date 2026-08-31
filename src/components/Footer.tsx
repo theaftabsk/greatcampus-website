@@ -55,9 +55,15 @@ export default function Footer() {
                 Head of Strategic Partnerships & Institutional Growth
               </p>
               <p className="pt-1">
-                <span className="text-[#71717a]">M:</span>{" "}
+                <span className="text-[#71717a]">Phone 1:</span>{" "}
                 <a href="tel:+919811352666" className="text-white hover:underline">
                   +91-9811352666
+                </a>
+              </p>
+              <p>
+                <span className="text-[#71717a]">Phone 2:</span>{" "}
+                <a href="tel:+919073351545" className="text-white hover:underline">
+                  +91-9073351545
                 </a>
               </p>
               <p>
@@ -72,18 +78,18 @@ export default function Footer() {
                   mvasir@gmail.com
                 </a>
               </p>
-              <p className="pt-1">
+              <div className="pt-2">
                 <a
                   href="https://www.linkedin.com/in/manindersinghvasir/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-white hover:underline"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white text-white hover:text-[#09090b] px-3.5 py-2 text-xs font-semibold transition-all border border-white/20 hover:border-white group"
                 >
-                  <LinkedinIcon className="w-4 h-4 text-white" />
-                  <span>linkedin.com/in/manindersinghvasir</span>
-                  <ArrowRight className="w-3 h-3" />
+                  <LinkedinIcon className="w-4 h-4" />
+                  <span>Connect on LinkedIn</span>
+                  <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                 </a>
-              </p>
+              </div>
             </div>
           </div>
 

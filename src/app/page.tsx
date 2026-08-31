@@ -1562,9 +1562,24 @@ export default function Home() {
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Mobile / WhatsApp</span>
+                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Direct / WhatsApp</span>
                       <span className="font-bold text-white text-[15px] group-hover:underline">
                         +91-9811352666
+                      </span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="tel:+919073351545"
+                    className="flex items-center gap-3.5 p-3 rounded-xl border border-[#27272a] bg-[#121215] hover:border-white transition-colors group"
+                  >
+                    <div className="h-10 w-10 rounded-lg bg-white text-[#09090b] flex items-center justify-center">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Partnerships / Support</span>
+                      <span className="font-bold text-white text-[15px] group-hover:underline">
+                        +91-9073351545
                       </span>
                     </div>
                   </a>
@@ -1603,17 +1618,22 @@ export default function Home() {
                     href="https://www.linkedin.com/in/manindersinghvasir/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3.5 p-3 rounded-xl border border-[#27272a] bg-[#121215] hover:border-white transition-colors group"
+                    className="flex items-center justify-between p-3.5 rounded-xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
                   >
-                    <div className="h-10 w-10 rounded-lg bg-white text-[#09090b] flex items-center justify-center">
-                      <LinkedinIcon className="w-5 h-5" />
+                    <div className="flex items-center gap-3.5">
+                      <div className="h-10 w-10 rounded-lg bg-white text-[#09090b] flex items-center justify-center">
+                        <LinkedinIcon className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">Professional Network</span>
+                        <span className="font-bold text-white text-[15px]">
+                          Connect on LinkedIn
+                        </span>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-[11px] text-[#a1a1aa] block uppercase font-mono">LinkedIn Profile</span>
-                      <span className="font-bold text-white text-[15px] group-hover:underline flex items-center gap-1.5">
-                        linkedin.com/in/manindersinghvasir <ArrowRight className="w-3.5 h-3.5" />
-                      </span>
-                    </div>
+                    <span className="inline-flex h-8 items-center justify-center rounded-lg bg-white/10 px-3 text-xs font-semibold text-white group-hover:bg-white group-hover:text-[#09090b] transition-all">
+                      View Profile <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                    </span>
                   </a>
                 </div>
               </div>
@@ -1808,7 +1828,7 @@ export default function Home() {
                 Schedule an Executive Walkthrough
               </h3>
               <p className="text-xs text-[#a1a1aa] mt-1">
-                Direct consultation with <strong>Maninder Singh</strong> (+91-9811352666 · contact@greatcampus.in).
+                Direct consultation with <strong>Maninder Singh</strong> (+91-9811352666 / +91-9073351545 · contact@greatcampus.in).
               </p>
             </div>
 

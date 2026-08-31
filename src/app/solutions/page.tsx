@@ -251,7 +251,7 @@ export default function SolutionsPage() {
             Ready to deploy GreatCampus for your organization?
           </h2>
           <p className="text-xs sm:text-sm text-[#52525b] max-w-xl mx-auto">
-            Directly consult with Head of Strategic Partnerships <strong>Maninder Singh</strong> (+91-9811352666 / contact@greatcampus.in).
+            Directly consult with Head of Strategic Partnerships <strong>Maninder Singh</strong> (+91-9811352666 / +91-9073351545 · contact@greatcampus.in).
           </p>
           <div className="pt-2">
             <Link

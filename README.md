@@ -61,8 +61,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to view th
 - **Head of Strategic Partnerships**: Maninder Singh
 - **Corporate Email**: [contact@greatcampus.in](mailto:contact@greatcampus.in)
 - **Direct Email**: [mvasir@gmail.com](mailto:mvasir@gmail.com)
-- **Mobile / WhatsApp**: [+91-9811352666](tel:+919811352666)
-- **LinkedIn**: [linkedin.com/in/manindersinghvasir](https://www.linkedin.com/in/manindersinghvasir/)
+- **Direct Mobile / WhatsApp**: [+91-9811352666](tel:+919811352666)
+- **Partnerships / Support**: [+91-9073351545](tel:+919073351545)
+- **LinkedIn Profile**: [Connect on LinkedIn →](https://www.linkedin.com/in/manindersinghvasir/)
 
 ---
 
