@@ -40,26 +40,6 @@ import {
   AlertCircle
 } from "lucide-react";
 
-function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      width="20"
-      height="20"
-      stroke="currentColor"
-      strokeWidth="2"
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect x="2" y="9" width="4" height="12" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  );
-}
-
 export default function Home() {
   // Mobile navigation state
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -1653,7 +1633,7 @@ export default function Home() {
                 Schedule an Executive Walkthrough
               </h3>
               <p className="text-xs text-[#a1a1aa] mt-1">
-                Direct consultation with <strong>GreatCampus Leadership</strong> (+91-9811352666 / +91-9073351545 · contact@greatcampus.in).
+                Direct consultation with <strong>GreatCampus</strong> (+91-8810418647 · contact@greatcampus.tech).
               </p>
             </div>
 
@@ -1669,7 +1649,7 @@ export default function Home() {
                 <CheckCircle2 className="w-10 h-10 text-white mx-auto" />
                 <h4 className="font-bold text-lg text-white">Walkthrough Request Received!</h4>
                 <p className="text-xs text-[#a1a1aa] leading-relaxed">
-                  Thank you, <strong>{demoData.name}</strong>! We have dispatched a confirmation email to <strong>{demoData.email}</strong> and notified the <strong>GreatCampus Leadership Team</strong>.
+                  Thank you, <strong>{demoData.name}</strong>! We have dispatched a confirmation email to <strong>{demoData.email}</strong> and notified the <strong>GreatCampus Team</strong>.
                 </p>
                 <button
                   type="button"
@@ -1720,7 +1700,7 @@ export default function Home() {
                       type="tel"
                       value={demoData.phone}
                       onChange={(e) => setDemoData({ ...demoData, phone: e.target.value })}
-                      placeholder="+91 90733 51545"
+                      placeholder="+91 88104 18647"
                       className="w-full h-10 px-3 rounded-xl border border-[#27272a] bg-[#121215] text-white focus:outline-none focus:border-white"
                     />
                   </div>

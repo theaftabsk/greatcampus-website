@@ -97,24 +97,24 @@ export default function PricingPage() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-[16px] sm:text-[19px] text-[#52525b] leading-relaxed">
-            We do not believe in rigid, inflated per-seat pricing that penalizes your recruiting teams. Contact GreatCampus leadership directly for a bespoke volume blueprint tailored to your hiring pipeline.
+            We do not believe in rigid, inflated per-seat pricing that penalizes your recruiting teams. Contact GreatCampus directly for a bespoke volume blueprint tailored to your hiring pipeline.
           </p>
 
           {/* Quick Connect Badges */}
           <div className="mt-9 flex flex-wrap justify-center items-center gap-3 text-xs font-mono">
             <a
-              href="https://wa.me/919811352666?text=Hi%20GreatCampus%20Team,%20we%20would%20like%20to%20get%20a%20pricing%20quote."
+              href="https://wa.me/918810418647?text=Hi%20GreatCampus%20Team,%20we%20would%20like%20to%20get%20a%20pricing%20quote."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#09090b] text-white hover:bg-[#27272a] transition-all font-bold"
             >
-              <MessageSquare className="w-3.5 h-3.5" /> SMS / WhatsApp: +91-9811352666
+              <MessageSquare className="w-3.5 h-3.5" /> SMS / WhatsApp: +91-8810418647
             </a>
             <a
-              href="tel:+919073351545"
+              href="tel:+918810418647"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-[#09090b] hover:border-[#09090b] transition-all font-bold"
             >
-              <Phone className="w-3.5 h-3.5" /> Call Support: +91-9073351545
+              <Phone className="w-3.5 h-3.5" /> Call: +91-8810418647
             </a>
             <a
               href="mailto:contact@greatcampus.in?subject=Pricing%20Quote%20Inquiry%20-%20GreatCampus"
@@ -301,10 +301,10 @@ export default function PricingPage() {
             <div className="md:col-span-5 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-6 sm:p-10 space-y-6 shadow-2xl">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-[11px] font-mono text-[#a1a1aa] mb-4">
-                  DIRECT LEADERSHIP ACCESS
+                  DIRECT ACCESS
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                  Speak Directly With Leadership
+                  Speak Directly With Us
                 </h3>
                 <p className="text-xs sm:text-sm text-[#a1a1aa] mt-2 leading-relaxed">
                   Need an urgent quotation, pilot setup, or volume contract? Reach out directly to discuss your recruitment volume.
@@ -312,29 +312,9 @@ export default function PricingPage() {
               </div>
 
               <div className="space-y-3 pt-2">
-                {/* Direct Leadership WhatsApp / Phone */}
+                {/* Direct Marketing / WhatsApp / Phone */}
                 <a
-                  href="https://wa.me/919811352666?text=Hi%20GreatCampus%20Leadership,%20we%20would%20like%20to%20discuss%20pricing."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3.5 p-3.5 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
-                >
-                  <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
-                    <MessageSquare className="w-4.5 h-4.5" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-[#a1a1aa] block uppercase font-mono">
-                      Strategic Partnerships · WhatsApp / SMS
-                    </span>
-                    <span className="font-bold text-white text-[14px] group-hover:underline">
-                      +91-9811352666
-                    </span>
-                  </div>
-                </a>
-
-                {/* Support / Partnerships Phone */}
-                <a
-                  href="tel:+919073351545"
+                  href="tel:+918810418647"
                   className="flex items-center gap-3.5 p-3.5 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
                 >
                   <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
@@ -342,10 +322,10 @@ export default function PricingPage() {
                   </div>
                   <div>
                     <span className="text-[10px] text-[#a1a1aa] block uppercase font-mono">
-                      Institutional Support Desk
+                      Marketing & Direct Contact
                     </span>
                     <span className="font-bold text-white text-[14px] group-hover:underline">
-                      +91-9073351545
+                      +91-8810418647
                     </span>
                   </div>
                 </a>
@@ -368,23 +348,6 @@ export default function PricingPage() {
                   </div>
                 </a>
 
-                {/* Direct Leadership Email */}
-                <a
-                  href="mailto:mvasir@gmail.com?subject=GreatCampus%20Pricing%20Discussion"
-                  className="flex items-center gap-3.5 p-3.5 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
-                >
-                  <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
-                    <Mail className="w-4.5 h-4.5" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-[#a1a1aa] block uppercase font-mono">
-                      Direct Leadership Email
-                    </span>
-                    <span className="font-bold text-white text-[14px] group-hover:underline">
-                      mvasir@gmail.com
-                    </span>
-                  </div>
-                </a>
               </div>
 
               {/* Response Time SLA Guarantee */}
@@ -420,7 +383,7 @@ export default function PricingPage() {
                   <CheckCircle2 className="w-12 h-12 text-white mx-auto" />
                   <h4 className="font-bold text-xl">Pricing Request Received!</h4>
                   <p className="text-xs sm:text-sm text-[#a1a1aa] max-w-md mx-auto leading-relaxed">
-                    Thank you, <strong>{formData.name}</strong>! We have dispatched a confirmation email to <strong>{formData.email}</strong>. Our leadership team has been notified and will deliver your custom volume quotation within 4 hours.
+                    Thank you, <strong>{formData.name}</strong>! We have dispatched a confirmation email to <strong>{formData.email}</strong>. Our team has been notified and will deliver your custom volume quotation within 4 hours.
                   </p>
                   <button
                     type="button"
@@ -563,7 +526,7 @@ export default function PricingPage() {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin" />
-                        <span>Sending Request to Leadership...</span>
+                        <span>Sending Request...</span>
                       </>
                     ) : (
                       <>
@@ -574,7 +537,7 @@ export default function PricingPage() {
                   </button>
 
                   <p className="text-[11px] text-[#71717a] text-center pt-1">
-                    Direct notification sent to <strong>GreatCampus Leadership</strong> · Confirmation email sent to your inbox.
+                    Direct notification sent to <strong>GreatCampus</strong> · Confirmation email sent to your inbox.
                   </p>
                 </form>
               )}

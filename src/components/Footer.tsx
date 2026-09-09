@@ -1,26 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Phone, Mail, ArrowRight } from "lucide-react";
-
-export function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      width="18"
-      height="18"
-      stroke="currentColor"
-      strokeWidth="2"
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect x="2" y="9" width="4" height="12" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  );
-}
+import { Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -47,23 +27,17 @@ export default function Footer() {
           {/* Direct Leadership Contact Column */}
           <div className="md:col-span-4 space-y-3">
             <p className="font-bold text-[12px] text-white uppercase tracking-wider font-mono">
-              Direct Contact & Leadership
+              Direct Contact
             </p>
             <div className="text-xs text-[#a1a1aa] space-y-2 font-mono">
-              <p className="text-white font-bold font-sans text-sm">GreatCampus Leadership</p>
+              <p className="text-white font-bold font-sans text-sm">GreatCampus</p>
               <p className="text-[#71717a] font-sans text-[11.5px]">
                 Strategic Partnerships & Institutional Growth
               </p>
               <p className="pt-1">
-                <span className="text-[#71717a]">Phone 1:</span>{" "}
-                <a href="tel:+919811352666" className="text-white hover:underline">
-                  +91-9811352666
-                </a>
-              </p>
-              <p>
-                <span className="text-[#71717a]">Phone 2:</span>{" "}
-                <a href="tel:+919073351545" className="text-white hover:underline">
-                  +91-9073351545
+                <span className="text-[#71717a]">Phone:</span>{" "}
+                <a href="tel:+918810418647" className="text-white hover:underline">
+                  +91-8810418647
                 </a>
               </p>
               <p>
@@ -72,24 +46,6 @@ export default function Footer() {
                   contact@greatcampus.in
                 </a>
               </p>
-              <p>
-                <span className="text-[#71717a]">Direct:</span>{" "}
-                <a href="mailto:mvasir@gmail.com" className="text-white hover:underline">
-                  mvasir@gmail.com
-                </a>
-              </p>
-              <div className="pt-2">
-                <a
-                  href="https://www.linkedin.com/in/manindersinghvasir/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white text-white hover:text-[#09090b] px-3.5 py-2 text-xs font-semibold transition-all border border-white/20 hover:border-white group"
-                >
-                  <LinkedinIcon className="w-4 h-4" />
-                  <span>Connect on LinkedIn</span>
-                  <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
-                </a>
-              </div>
             </div>
           </div>
 

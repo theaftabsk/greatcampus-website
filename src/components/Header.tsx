@@ -74,17 +74,10 @@ export default function Header({ onOpenDemo }: HeaderProps) {
           </div>
           <div className="flex items-center gap-2.5 sm:gap-4 text-[#a1a1aa] flex-wrap justify-center text-[11px] sm:text-xs">
             <a
-              href="tel:+919811352666"
+              href="tel:+918810418647"
               className="flex items-center gap-1 hover:text-white transition-colors font-mono"
             >
-              <Phone className="w-3 h-3 text-white shrink-0" /> +91-9811352666
-            </a>
-            <span className="text-[#3f3f46]">|</span>
-            <a
-              href="tel:+919073351545"
-              className="flex items-center gap-1 hover:text-white transition-colors font-mono"
-            >
-              <Phone className="w-3 h-3 text-white shrink-0" /> +91-9073351545
+              <Phone className="w-3 h-3 text-white shrink-0" /> +91-8810418647
             </a>
             <span className="hidden md:inline text-[#3f3f46]">|</span>
             <a
@@ -735,7 +728,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
               onClick={() => setMobileMenuOpen(false)}
               className="block font-medium text-[14.5px] text-[#09090b] py-1"
             >
-              Contact & Leadership
+              Contact Us
             </Link>
             <div className="pt-3 border-t border-[#e4e4e7] flex flex-col gap-2.5">
               {onOpenDemo ? (
@@ -764,18 +757,12 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                 <span className="text-[10px] font-mono font-bold text-[#71717a] uppercase tracking-wider block">
                   Direct Call / Contact
                 </span>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 gap-2">
                   <a
-                    href="tel:+919811352666"
+                    href="tel:+918810418647"
                     className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-[#fafafa] border border-[#e4e4e7] text-xs font-mono font-semibold text-[#09090b]"
                   >
-                    <Phone className="w-3.5 h-3.5" /> +91-9811352666
-                  </a>
-                  <a
-                    href="tel:+919073351545"
-                    className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-[#fafafa] border border-[#e4e4e7] text-xs font-mono font-semibold text-[#09090b]"
-                  >
-                    <Phone className="w-3.5 h-3.5" /> +91-9073351545
+                    <Phone className="w-3.5 h-3.5" /> +91-8810418647
                   </a>
                 </div>
                 <a

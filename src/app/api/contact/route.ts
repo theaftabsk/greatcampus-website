@@ -1,10 +1,20 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const { name, email, phone, company, objective, message } = body;
+    let body: any;
+    try {
+      body = await req.json();
+    } catch {
+      return NextResponse.json(
+        { error: "Invalid JSON format in request body." },
+        { status: 400 }
+      );
+    }
+    const { name, email, phone, company, objective, message } = body || {};
 
     if (!name || !email) {
       return NextResponse.json(
@@ -13,25 +23,11 @@ export async function POST(req: Request) {
       );
     }
 
-    const smtpUser = process.env.SMTP_USER || "contact@greatcampus.in";
-    const smtpPass = process.env.SMTP_PASS || "yrqa-d3zn-bcfp-t43j";
-    const adminEmails = [
-      "aftabsk0005@gmail.com",
-      "mvasir@gmail.com"
-    ];
+    const fromEmail = process.env.RESEND_FROM_EMAIL || "GreatCampus <contact@greatcampus.tech>";
+    const rawAdminEmails = process.env.ADMIN_EMAILS || "aftabsk0005@gmail.com";
+    const adminEmails = rawAdminEmails.split(",").map((e) => e.trim()).filter(Boolean);
 
-    // Configure Nodemailer transporter with Gmail / Google Workspace SMTP
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: smtpUser,
-        pass: smtpPass.replace(/\s+/g, ""),
-      },
-    });
-
-    // 1. Email notification to GreatCampus Leadership
+    // 1. Email notification to GreatCampus
     const adminMailHtml = `
       <!DOCTYPE html>
       <html>
@@ -77,12 +73,16 @@ export async function POST(req: Request) {
               <div class="label">Primary Objective / Interest</div>
               <div class="value">${objective || "Integrated Talent Journey"}</div>
             </div>
-            ${message ? `
+            ${
+              message
+                ? `
             <div class="row" style="border-bottom: none;">
               <div class="label">Additional Message / Requirements</div>
               <div class="value" style="font-weight: 400; line-height: 1.5;">${message}</div>
             </div>
-            ` : ""}
+            `
+                : ""
+            }
           </div>
           <div class="footer">
             GreatCampus Technologies · Assess → Interview → Develop → Reassess
@@ -126,15 +126,14 @@ export async function POST(req: Request) {
               Thank you for reaching out to <strong>GreatCampus</strong>. We have received your consultation request for <strong>${objective || "our integrated talent platform"}</strong>.
             </p>
             <p class="paragraph">
-              Our leadership team is reviewing your requirements. We will connect with you within <strong>4 business hours</strong> to share the walkthrough calendar and customize a demonstration for your organization's specific roles.
+              Our team is reviewing your requirements. We will connect with you within <strong>4 business hours</strong> to share the walkthrough calendar and customize a demonstration for your organization's specific roles.
             </p>
 
             <div class="card">
-              <div class="step-title">Direct Leadership Touchpoints</div>
-              <div class="contact-item">🏢 GreatCampus Leadership — Strategic Partnerships & Growth</div>
-              <div class="contact-item">📞 Direct / WhatsApp: +91-9811352666</div>
-              <div class="contact-item">📞 Partnerships / Support: +91-9073351545</div>
-              <div class="contact-item">✉️ Corporate: contact@greatcampus.in</div>
+              <div class="step-title">Direct Touchpoints</div>
+              <div class="contact-item">🏢 GreatCampus — Strategic Partnerships & Growth</div>
+              <div class="contact-item">📞 Direct / WhatsApp: +91-8810418647</div>
+              <div class="contact-item">✉️ Corporate: contact@greatcampus.tech</div>
             </div>
 
             <p class="paragraph" style="font-size: 13px; color: #71717a;">
@@ -150,30 +149,46 @@ export async function POST(req: Request) {
       </html>
     `;
 
-    // Dispatch both emails in parallel
-    await Promise.all([
-      // Send to GreatCampus admin emails
-      transporter.sendMail({
-        from: `"GreatCampus Platform" <${smtpUser}>`,
-        to: adminEmails,
-        subject: `[New Lead] ${name} from ${company || "Organization"} (${objective || "General Inquiry"})`,
-        html: adminMailHtml,
-      }),
+    // Send admin notification
+    const adminResponse = await resend.emails.send({
+      from: fromEmail,
+      to: adminEmails,
+      replyTo: email,
+      subject: `[New Lead] ${name} from ${company || "Organization"} (${objective || "General Inquiry"})`,
+      html: adminMailHtml,
+    });
 
-      // Send Welcome Confirmation to user
-      transporter.sendMail({
-        from: `"GreatCampus" <${smtpUser}>`,
-        to: email,
-        subject: "Thank you for contacting GreatCampus | Executive Briefing Request",
-        html: welcomeMailHtml,
-      }),
-    ]);
+    if (adminResponse.error) {
+      console.error("Resend Admin Email Error:", adminResponse.error);
+      return NextResponse.json(
+        { error: adminResponse.error.message || "Failed to dispatch admin notification via Resend." },
+        { status: 500 }
+      );
+    }
 
-    return NextResponse.json({ success: true, message: "Emails sent successfully." });
+    // Send welcome / confirmation email to the lead
+    const welcomeResponse = await resend.emails.send({
+      from: fromEmail,
+      to: email,
+      replyTo: "contact@greatcampus.in",
+      subject: "Thank you for contacting GreatCampus | Executive Briefing Request",
+      html: welcomeMailHtml,
+    });
+
+    if (welcomeResponse.error) {
+      console.warn("Resend User Confirmation Email Warning:", welcomeResponse.error);
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: "Notification dispatched successfully via Resend.",
+      adminEmailId: adminResponse.data?.id,
+      welcomeEmailId: welcomeResponse.data?.id,
+    });
   } catch (error: any) {
-    console.error("SMTP Error in /api/contact:", error);
+    console.error("Resend API Route Error in /api/contact:", error);
     return NextResponse.json(
-      { error: error?.message || "Failed to dispatch email via SMTP." },
+      { error: error?.message || "Failed to dispatch email via Resend." },
       { status: 500 }
     );
   }

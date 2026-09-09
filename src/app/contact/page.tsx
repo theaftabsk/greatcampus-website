@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Header from "@/components/Header";
-import Footer, { LinkedinIcon } from "@/components/Footer";
+import Footer from "@/components/Footer";
 import { Phone, Mail, ArrowRight, CheckCircle2, ShieldCheck, Clock, Building2, Loader2, AlertCircle } from "lucide-react";
 
 export default function ContactPage() {
@@ -56,12 +56,12 @@ export default function ContactPage() {
 
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[11px] font-bold tracking-wide text-white font-mono shadow-sm">
-            DIRECT LEADERSHIP ACCESS
+            DIRECT ACCESS
           </div>
 
           <h1 className="mt-8 max-w-4xl text-[30px] sm:text-[48px] lg:text-[58px] font-extrabold text-[#09090b] leading-[1.1] tracking-tight">
-            <span>Connect with GreatCampus</span>{" "}
-            <span className="accent-shimmer">Leadership.</span>
+            <span>Connect with</span>{" "}
+            <span className="accent-shimmer">GreatCampus.</span>
           </h1>
 
           <p className="mt-5 sm:mt-6 max-w-3xl text-[16px] sm:text-[19px] text-[#52525b] leading-relaxed">
@@ -81,41 +81,25 @@ export default function ContactPage() {
                   STRATEGIC PARTNERSHIPS
                 </div>
                 <h2 className="text-[26px] sm:text-[32px] font-extrabold text-white">
-                  GreatCampus Leadership
+                  GreatCampus
                 </h2>
                 <p className="text-xs sm:text-sm text-[#a1a1aa] mt-1.5">
                   Strategic Partnerships & Institutional Growth · GreatCampus
                 </p>
 
                 <div className="mt-10 space-y-3.5">
-                  {/* Phone 1 */}
+                  {/* Phone */}
                   <a
-                    href="tel:+919811352666"
+                    href="tel:+918810418647"
                     className="flex items-center gap-4 p-3.5 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
                   >
                     <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
                       <Phone className="w-4.5 h-4.5" />
                     </div>
                     <div>
-                      <span className="text-[10px] text-[#a1a1aa] block uppercase font-mono">Direct / WhatsApp</span>
+                      <span className="text-[10px] text-[#a1a1aa] block uppercase font-mono">Marketing / Direct / WhatsApp</span>
                       <span className="font-bold text-white text-[15px] group-hover:underline">
-                        +91-9811352666
-                      </span>
-                    </div>
-                  </a>
-
-                  {/* Phone 2 */}
-                  <a
-                    href="tel:+919073351545"
-                    className="flex items-center gap-4 p-3.5 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
-                  >
-                    <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
-                      <Phone className="w-4.5 h-4.5" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-[#a1a1aa] block uppercase font-mono">Partnerships / Support</span>
-                      <span className="font-bold text-white text-[15px] group-hover:underline">
-                        +91-9073351545
+                        +91-8810418647
                       </span>
                     </div>
                   </a>
@@ -136,44 +120,7 @@ export default function ContactPage() {
                     </div>
                   </a>
 
-                  {/* Direct Leadership Email */}
-                  <a
-                    href="mailto:mvasir@gmail.com"
-                    className="flex items-center gap-4 p-3.5 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
-                  >
-                    <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
-                      <Mail className="w-4.5 h-4.5" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-[#a1a1aa] block uppercase font-mono">Direct Leadership Email</span>
-                      <span className="font-bold text-white text-[15px] group-hover:underline">
-                        mvasir@gmail.com
-                      </span>
-                    </div>
-                  </a>
 
-                  {/* LinkedIn Button (No raw URL shown) */}
-                  <a
-                    href="https://www.linkedin.com/in/manindersinghvasir/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3.5 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
-                  >
-                    <div className="flex items-center gap-3.5">
-                      <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
-                        <LinkedinIcon className="w-4.5 h-4.5" />
-                      </div>
-                      <div>
-                        <span className="text-[10px] text-[#a1a1aa] block uppercase font-mono">Professional Network</span>
-                        <span className="font-bold text-white text-[15px]">
-                          Connect on LinkedIn
-                        </span>
-                      </div>
-                    </div>
-                    <span className="inline-flex h-8 items-center justify-center rounded-lg bg-white/10 px-3 text-xs font-semibold text-white group-hover:bg-white group-hover:text-[#09090b] transition-all">
-                      View Profile <ArrowRight className="w-3 h-3 ml-1" />
-                    </span>
-                  </a>
                 </div>
               </div>
 
@@ -205,7 +152,7 @@ export default function ContactPage() {
                     <CheckCircle2 className="w-10 h-10 text-white mx-auto" />
                     <h4 className="font-bold text-lg">Briefing Request Received!</h4>
                     <p className="text-xs text-[#a1a1aa] leading-relaxed">
-                      Thank you, <strong>{formData.name}</strong>! We have dispatched a confirmation email to <strong>{formData.email}</strong> and notified the <strong>GreatCampus Leadership Team</strong>.
+                      Thank you, <strong>{formData.name}</strong>! We have dispatched a confirmation email to <strong>{formData.email}</strong> and notified the <strong>GreatCampus Team</strong>.
                     </p>
                     <button
                       type="button"
