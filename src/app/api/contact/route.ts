@@ -1,10 +1,20 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("Missing RESEND_API_KEY environment variable.");
+      return NextResponse.json(
+        { error: "Email service is not configured (missing RESEND_API_KEY in environment variables)." },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
     let body: any;
     try {
       body = await req.json();
