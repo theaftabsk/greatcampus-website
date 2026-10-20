@@ -25,42 +25,45 @@ export default function SolutionsPage() {
 
       {/* -------------------- HERO -------------------- */}
       <section className="relative overflow-hidden bg-white pt-16 pb-20 sm:pt-24 sm:pb-28 border-b border-[#e4e4e7] bg-grid-pattern">
-        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
+        {/* Ambient Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[320px] bg-gradient-to-tr from-black/[0.03] via-zinc-400/[0.06] to-transparent rounded-full blur-3xl pointer-events-none animate-ambient-glow" />
+
+        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-6 md:px-8 text-center scroll-reveal">
           <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-4 py-2 text-[11px] font-bold tracking-wide text-white font-mono shadow-md">
             BUILT FOR THE COMPLETE TALENT LIFECYCLE
           </div>
 
-          <h1 className="mt-8 max-w-4xl text-[38px] font-extrabold text-[#09090b] leading-[1.1] tracking-tight sm:text-[58px] lg:text-[68px]">
+          <h1 className="mt-8 max-w-4xl text-[32px] sm:text-[52px] lg:text-[68px] font-extrabold text-[#09090b] leading-[1.1] tracking-tight font-heading">
             <span>One platform. Tailored for your exact</span>{" "}
             <span className="accent-shimmer">talent mission.</span>
           </h1>
 
-          <p className="mt-6 max-w-3xl text-[17px] text-[#52525b] leading-relaxed sm:text-[19px]">
+          <p className="mt-6 max-w-3xl text-[16px] sm:text-[19px] text-[#52525b] leading-relaxed">
             Whether you are hiring 10 people or 10,000, preparing students for the workplace, or developing an existing corporate workforce, GreatCampus brings structure, intelligence and continuity to the talent journey.
           </p>
 
-          <div className="mt-9 flex flex-wrap justify-center gap-3">
+          <div className="mt-9 flex flex-wrap justify-center gap-2.5 sm:gap-3 scroll-reveal-scale">
             <a
               href="#recruitment"
-              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
+              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel glass-specular tap-bounce text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
             >
               Talent Acquisition ↓
             </a>
             <a
               href="#staffing"
-              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
+              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel glass-specular tap-bounce text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
             >
               Staffing Agencies ↓
             </a>
             <a
               href="#universities"
-              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
+              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel glass-specular tap-bounce text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
             >
               Universities & Campuses ↓
             </a>
             <a
               href="#ld"
-              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
+              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel glass-specular tap-bounce text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
             >
               Learning & Development ↓
             </a>
@@ -70,32 +73,32 @@ export default function SolutionsPage() {
 
       {/* -------------------- TRACK 1: RECRUITMENT -------------------- */}
       <section id="recruitment" className="bg-[#fafafa] py-20 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center scroll-reveal">
             <div className="lg:col-span-7 space-y-5">
               <span className="text-xs font-mono font-bold text-[#71717a] uppercase tracking-wider">
                 01 · CORPORATE RECRUITMENT & TALENT ACQUISITION
               </span>
-              <h2 className="text-[30px] sm:text-[40px] font-extrabold text-[#09090b] leading-tight">
+              <h2 className="text-[28px] sm:text-[40px] font-extrabold text-[#09090b] leading-tight font-heading">
                 Assess more candidates. Interview smarter.
               </h2>
               <p className="text-[15px] text-[#52525b] leading-relaxed">
                 Handle high-volume recruitment without proportionately increasing manual screening and interview workload. Screen 100% of applicants with objective tests and AI-powered voice/video interviews.
               </p>
 
-              <div className="grid grid-cols-2 gap-3 pt-2 text-xs text-[#09090b]">
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> Graduate Recruitment</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> High-Volume Hiring</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> Role-Based Assessments</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> AI First-Round Interviews</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> Candidate Shortlisting</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> Communication & Behavioural Assessment</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-[#09090b]">
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> Graduate Recruitment</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> High-Volume Hiring</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> Role-Based Assessments</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> AI First-Round Interviews</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> Candidate Shortlisting</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> Communication & Behavioural Assessment</span>
               </div>
             </div>
 
-            <div className="lg:col-span-5 rounded-3xl glass-panel-dark text-white p-8 space-y-4 shadow-2xl border border-white/10">
+            <div className="lg:col-span-5 rounded-3xl glass-panel-dark glass-specular text-white p-6 sm:p-8 space-y-4 shadow-2xl border border-white/10 scroll-reveal-scale">
               <p className="text-xs font-mono text-[#a1a1aa] uppercase">Enterprise Recruitment Impact</p>
-              <h3 className="text-2xl font-extrabold text-white">
+              <h3 className="text-2xl font-extrabold text-white font-heading">
                 80% Faster Time-to-Shortlist
               </h3>
               <p className="text-xs text-[#a1a1aa] leading-relaxed">
@@ -103,7 +106,7 @@ export default function SolutionsPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex w-full items-center justify-center py-2.5 rounded-lg bg-white text-[#09090b] font-bold text-xs hover:bg-[#e4e4e7] transition-colors"
+                className="btn-gleam tap-bounce inline-flex w-full items-center justify-center py-2.5 rounded-xl bg-white text-[#09090b] font-bold text-xs hover:bg-[#e4e4e7] transition-colors shadow-md"
               >
                 Schedule TA Walkthrough
               </Link>
@@ -114,13 +117,13 @@ export default function SolutionsPage() {
 
       {/* -------------------- TRACK 2: STAFFING AGENCIES -------------------- */}
       <section id="staffing" className="bg-white py-20 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center scroll-reveal">
             <div className="lg:col-span-7 space-y-5">
               <span className="text-xs font-mono font-bold text-[#71717a] uppercase tracking-wider">
                 02 · RECRUITMENT & STAFFING AGENCIES
               </span>
-              <h2 className="text-[30px] sm:text-[40px] font-extrabold text-[#09090b] leading-tight">
+              <h2 className="text-[28px] sm:text-[40px] font-extrabold text-[#09090b] leading-tight font-heading">
                 Don't just send CVs. Send assessed and interviewed candidates.
               </h2>
               <p className="text-[15px] text-[#52525b] leading-relaxed">
@@ -137,9 +140,9 @@ export default function SolutionsPage() {
               </p>
             </div>
 
-            <div className="lg:col-span-5 rounded-3xl glass-panel-dark text-white p-8 space-y-4 shadow-2xl border border-white/10">
+            <div className="lg:col-span-5 rounded-3xl glass-panel-dark glass-specular text-white p-6 sm:p-8 space-y-4 shadow-2xl border border-white/10 scroll-reveal-scale">
               <p className="text-xs font-mono text-[#a1a1aa] uppercase">Agency Differentiation</p>
-              <h3 className="text-2xl font-extrabold text-white">
+              <h3 className="text-2xl font-extrabold text-white font-heading">
                 Higher Client Placement Velocity
               </h3>
               <p className="text-xs text-[#a1a1aa] leading-relaxed">
@@ -147,7 +150,7 @@ export default function SolutionsPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex w-full items-center justify-center py-2.5 rounded-lg bg-white text-[#09090b] font-bold text-xs hover:bg-[#e4e4e7] transition-colors"
+                className="btn-gleam tap-bounce inline-flex w-full items-center justify-center py-2.5 rounded-xl bg-white text-[#09090b] font-bold text-xs hover:bg-[#e4e4e7] transition-colors shadow-md"
               >
                 Become an Agency Partner
               </Link>
@@ -158,32 +161,32 @@ export default function SolutionsPage() {
 
       {/* -------------------- TRACK 3: UNIVERSITIES -------------------- */}
       <section id="universities" className="bg-[#fafafa] py-20 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center scroll-reveal">
             <div className="lg:col-span-7 space-y-5">
               <span className="text-xs font-mono font-bold text-[#71717a] uppercase tracking-wider">
                 03 · UNIVERSITIES & HIGHER EDUCATION
               </span>
-              <h2 className="text-[30px] sm:text-[40px] font-extrabold text-[#09090b] leading-tight">
+              <h2 className="text-[28px] sm:text-[40px] font-extrabold text-[#09090b] leading-tight font-heading">
                 Assess. Prepare. Develop.
               </h2>
               <p className="text-[15px] text-[#52525b] leading-relaxed">
                 Help students become more employable while strengthening institutional assessment and campus placement readiness.
               </p>
 
-              <div className="grid grid-cols-2 gap-3 pt-2 text-xs text-[#09090b]">
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> Online Academic & Placement Assessments</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> Secure Proctored Examinations</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> AI Mock Interviews with Instant Feedback</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> Employability Diagnostics</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> Practical Skill Development</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b]" /> Student Workplace Readiness Reports</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-[#09090b]">
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> Online Academic & Placement Assessments</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> Secure Proctored Examinations</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> AI Mock Interviews with Instant Feedback</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> Employability Diagnostics</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> Practical Skill Development</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[#09090b] shrink-0" /> Student Workplace Readiness Reports</span>
               </div>
             </div>
 
-            <div className="lg:col-span-5 rounded-3xl glass-panel-dark text-white p-8 space-y-4 shadow-2xl border border-white/10">
+            <div className="lg:col-span-5 rounded-3xl glass-panel-dark glass-specular text-white p-6 sm:p-8 space-y-4 shadow-2xl border border-white/10 scroll-reveal-scale">
               <p className="text-xs font-mono text-[#a1a1aa] uppercase">Institutional Placement Success</p>
-              <h3 className="text-2xl font-extrabold text-white">
+              <h3 className="text-2xl font-extrabold text-white font-heading">
                 3x Higher Placement Clearance
               </h3>
               <p className="text-xs text-[#a1a1aa] leading-relaxed">
@@ -191,7 +194,7 @@ export default function SolutionsPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex w-full items-center justify-center py-2.5 rounded-lg bg-white text-[#09090b] font-bold text-xs hover:bg-[#e4e4e7] transition-colors"
+                className="btn-gleam tap-bounce inline-flex w-full items-center justify-center py-2.5 rounded-xl bg-white text-[#09090b] font-bold text-xs hover:bg-[#e4e4e7] transition-colors shadow-md"
               >
                 Campus Partnership Briefing
               </Link>
@@ -202,13 +205,13 @@ export default function SolutionsPage() {
 
       {/* -------------------- TRACK 4: LEARNING & DEVELOPMENT -------------------- */}
       <section id="ld" className="bg-white py-20 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center scroll-reveal">
             <div className="lg:col-span-7 space-y-5">
               <span className="text-xs font-mono font-bold text-[#71717a] uppercase tracking-wider">
                 04 · LEARNING & DEVELOPMENT (L&D)
               </span>
-              <h2 className="text-[30px] sm:text-[40px] font-extrabold text-[#09090b] leading-tight">
+              <h2 className="text-[28px] sm:text-[40px] font-extrabold text-[#09090b] leading-tight font-heading">
                 Turn training into continuous capability development.
               </h2>
               <p className="text-[15px] text-[#52525b] leading-relaxed">
@@ -225,9 +228,9 @@ export default function SolutionsPage() {
               </p>
             </div>
 
-            <div className="lg:col-span-5 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-8 space-y-4 shadow-xl">
+            <div className="lg:col-span-5 rounded-3xl glass-panel-dark glass-specular text-white p-6 sm:p-8 space-y-4 shadow-2xl border border-white/10 scroll-reveal-scale">
               <p className="text-xs font-mono text-[#a1a1aa] uppercase">Enterprise Capability Growth</p>
-              <h3 className="text-2xl font-extrabold text-white">
+              <h3 className="text-2xl font-extrabold text-white font-heading">
                 Measurable Workforce Readiness
               </h3>
               <p className="text-xs text-[#a1a1aa] leading-relaxed">
@@ -235,7 +238,7 @@ export default function SolutionsPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex w-full items-center justify-center py-2.5 rounded-lg bg-white text-[#09090b] font-bold text-xs hover:bg-[#e4e4e7] transition-colors"
+                className="btn-gleam tap-bounce inline-flex w-full items-center justify-center py-2.5 rounded-xl bg-white text-[#09090b] font-bold text-xs hover:bg-[#e4e4e7] transition-colors shadow-md"
               >
                 Discuss L&D Architecture
               </Link>
@@ -246,8 +249,8 @@ export default function SolutionsPage() {
 
       {/* -------------------- CTA BANNER -------------------- */}
       <section className="bg-[#fafafa] py-16 text-center border-b border-[#e4e4e7]">
-        <div className="mx-auto max-w-4xl px-5 sm:px-8 space-y-5">
-          <h2 className="text-3xl font-extrabold text-[#09090b]">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 md:px-8 space-y-5 scroll-reveal">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#09090b] font-heading">
             Ready to deploy GreatCampus for your organization?
           </h2>
           <p className="text-xs sm:text-sm text-[#52525b] max-w-xl mx-auto">
@@ -256,7 +259,7 @@ export default function SolutionsPage() {
           <div className="pt-2">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-colors shadow-md"
+              className="btn-gleam tap-bounce w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-colors shadow-md"
             >
               Book an Executive Walkthrough
             </Link>

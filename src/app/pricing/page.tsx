@@ -128,12 +128,12 @@ export default function PricingPage() {
 
       {/* -------------------- 3 ENGAGEMENT FRAMEWORKS (NO FIXED NUMBERS) -------------------- */}
       <section className="bg-[#fafafa] py-16 sm:py-24 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14 scroll-reveal">
             <span className="text-xs font-mono font-bold text-[#71717a] uppercase tracking-wider">
               Engagement Models
             </span>
-            <h2 className="text-[28px] sm:text-[40px] font-extrabold text-[#09090b] tracking-tight mt-2">
+            <h2 className="text-[28px] sm:text-[40px] font-extrabold text-[#09090b] tracking-tight mt-2 font-heading">
               Flexible Deployment Tiers for Every Stage
             </h2>
             <p className="mt-3 text-[15px] sm:text-[16px] text-[#52525b]">
@@ -141,14 +141,14 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 scroll-reveal">
             {/* Model 1: Pilot & Rapid Evaluation */}
-            <div className="glass-panel glass-panel-hover rounded-3xl p-7 sm:p-8 border border-zinc-200/80 flex flex-col justify-between shadow-xs transition-all">
+            <div className="glass-panel glass-panel-hover glass-specular card-hover-lift rounded-3xl p-6 sm:p-8 border border-zinc-200/80 flex flex-col justify-between shadow-xs transition-all">
               <div className="space-y-4">
                 <span className="text-xs font-mono font-bold text-[#71717a] uppercase block">
                   TIER 01 · PILOT DEPLOYMENT
                 </span>
-                <h3 className="font-bold text-[22px] text-[#09090b]">
+                <h3 className="font-bold text-[22px] text-[#09090b] font-heading">
                   Pilot Evaluation
                 </h3>
                 <p className="text-xs text-[#52525b] leading-relaxed">
@@ -157,7 +157,7 @@ export default function PricingPage() {
 
                 <div className="py-3 border-y border-[#f4f4f5]">
                   <span className="text-xs text-[#71717a] uppercase font-mono block">Pricing Structure</span>
-                  <span className="text-2xl font-extrabold text-[#09090b]">Tailored Pilot Scope</span>
+                  <span className="text-2xl font-extrabold text-[#09090b] font-heading">Tailored Pilot Scope</span>
                   <span className="text-xs text-[#71717a] block mt-0.5">Zero long-term commitment required</span>
                 </div>
 
@@ -183,14 +183,14 @@ export default function PricingPage() {
               <button
                 type="button"
                 onClick={() => handleSelectEngagement("Pilot Evaluation Tier")}
-                className="btn-gleam mt-8 w-full text-center py-3 rounded-xl border border-[#27272a] font-bold text-xs text-[#09090b] hover:bg-[#fafafa] transition-colors cursor-pointer"
+                className="btn-gleam tap-bounce mt-8 w-full text-center py-3 rounded-xl border border-[#27272a] font-bold text-xs text-[#09090b] hover:bg-[#fafafa] transition-colors cursor-pointer"
               >
                 Request Pilot Quote →
               </button>
             </div>
 
             {/* Model 2: Growth Scale (Most Popular) */}
-            <div className="glass-panel-dark glass-panel-dark-hover rounded-3xl border border-white/20 text-white p-7 sm:p-8 flex flex-col justify-between shadow-2xl relative">
+            <div className="glass-panel-dark glass-panel-dark-hover glass-specular card-dark-lift rounded-3xl border border-white/20 text-white p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-[#09090b] px-3.5 py-0.5 rounded-full text-[10px] font-mono font-extrabold uppercase tracking-wider shadow-sm">
                 RECOMMENDED
               </div>
@@ -199,7 +199,7 @@ export default function PricingPage() {
                 <span className="text-xs font-mono font-bold text-[#a1a1aa] uppercase block">
                   TIER 02 · HIGH-VOLUME SCALING
                 </span>
-                <h3 className="font-bold text-[22px] text-white">
+                <h3 className="font-bold text-[22px] text-white font-heading">
                   Growth & High-Volume
                 </h3>
                 <p className="text-xs text-[#a1a1aa] leading-relaxed">
@@ -208,7 +208,7 @@ export default function PricingPage() {
 
                 <div className="py-3 border-y border-[#27272a]">
                   <span className="text-xs text-[#a1a1aa] uppercase font-mono block">Pricing Structure</span>
-                  <span className="text-2xl font-extrabold text-white">Tiered Volume Rates</span>
+                  <span className="text-2xl font-extrabold text-white font-heading">Tiered Volume Rates</span>
                   <span className="text-xs text-[#a1a1aa] block mt-0.5">Scale discounts as applicant volume grows</span>
                 </div>
 
@@ -237,19 +237,19 @@ export default function PricingPage() {
               <button
                 type="button"
                 onClick={() => handleSelectEngagement("Growth & High-Volume Scaling Tier")}
-                className="btn-gleam mt-8 w-full text-center py-3.5 rounded-xl bg-white font-bold text-xs text-[#09090b] hover:bg-[#e4e4e7] transition-colors cursor-pointer"
+                className="btn-gleam tap-bounce mt-8 w-full text-center py-3.5 rounded-xl bg-white font-bold text-xs text-[#09090b] hover:bg-[#e4e4e7] transition-colors cursor-pointer shadow-md"
               >
                 Request Volume Quote →
               </button>
             </div>
 
             {/* Model 3: Enterprise & Institutional Campus */}
-            <div className="glass-panel glass-panel-hover rounded-3xl p-7 sm:p-8 border border-zinc-200/80 flex flex-col justify-between shadow-xs transition-all">
+            <div className="glass-panel glass-panel-hover glass-specular card-hover-lift rounded-3xl p-6 sm:p-8 border border-zinc-200/80 flex flex-col justify-between shadow-xs transition-all">
               <div className="space-y-4">
                 <span className="text-xs font-mono font-bold text-[#71717a] uppercase block">
                   TIER 03 · ENTERPRISE & CAMPUS
                 </span>
-                <h3 className="font-bold text-[22px] text-[#09090b]">
+                <h3 className="font-bold text-[22px] text-[#09090b] font-heading">
                   Enterprise & University
                 </h3>
                 <p className="text-xs text-[#52525b] leading-relaxed">
@@ -258,7 +258,7 @@ export default function PricingPage() {
 
                 <div className="py-3 border-y border-[#f4f4f5]">
                   <span className="text-xs text-[#71717a] uppercase font-mono block">Pricing Structure</span>
-                  <span className="text-2xl font-extrabold text-[#09090b]">Custom Institutional SLA</span>
+                  <span className="text-2xl font-extrabold text-[#09090b] font-heading">Custom Institutional SLA</span>
                   <span className="text-xs text-[#71717a] block mt-0.5">Annual / multi-year institutional partnership</span>
                 </div>
 
@@ -284,7 +284,7 @@ export default function PricingPage() {
               <button
                 type="button"
                 onClick={() => handleSelectEngagement("Enterprise & Institutional Campus Tier")}
-                className="btn-gleam mt-8 w-full text-center py-3 rounded-xl border border-[#27272a] font-bold text-xs text-[#09090b] hover:bg-[#fafafa] transition-colors cursor-pointer"
+                className="btn-gleam tap-bounce mt-8 w-full text-center py-3 rounded-xl border border-[#27272a] font-bold text-xs text-[#09090b] hover:bg-[#fafafa] transition-colors cursor-pointer"
               >
                 Discuss Enterprise SLA →
               </button>
@@ -295,10 +295,10 @@ export default function PricingPage() {
 
       {/* -------------------- DEDICATED PRICING INQUIRY FORM & LEADERSHIP DIRECT CONTACT -------------------- */}
       <section id="quote-form-section" className="bg-white py-16 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start scroll-reveal">
             {/* Leadership Direct Contact Column */}
-            <div className="md:col-span-5 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-6 sm:p-10 space-y-6 shadow-2xl">
+            <div className="md:col-span-5 rounded-3xl glass-panel-dark glass-specular border border-[#27272a] text-white p-6 sm:p-10 space-y-6 shadow-2xl">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-[11px] font-mono text-[#a1a1aa] mb-4">
                   DIRECT ACCESS

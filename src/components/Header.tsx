@@ -612,7 +612,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
 
         {/* Mobile Dropdown Menu with Luxury Frosted Glass Layer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mx-3 sm:mx-6 my-2 glass-drawer rounded-3xl border border-zinc-200/80 p-5 sm:p-6 space-y-4 max-h-[82vh] overflow-y-auto shadow-2xl animate-in fade-in slide-in-from-top-3 duration-200">
+          <div className="lg:hidden mx-3 sm:mx-6 my-2 glass-drawer glass-specular rounded-3xl border border-white/60 p-5 sm:p-6 space-y-4 max-h-[82vh] overflow-y-auto shadow-[0_25px_60px_-15px_rgba(0,0,0,0.2)] animate-drawer">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
@@ -801,6 +801,38 @@ export default function Header({ onOpenDemo }: HeaderProps) {
           </div>
         )}
       </header>
+
+      {/* -------------------- MOBILE FLOATING GLASS DOCK -------------------- */}
+      <aside aria-label="Mobile Quick Actions" className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 lg:hidden w-[calc(100%-2rem)] max-w-sm pointer-events-auto">
+        <div className="glass-panel glass-specular rounded-full p-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.18)] border border-white/80 flex items-center justify-between gap-2 backdrop-blur-2xl bg-white/90">
+          <a
+            href="tel:+918810418647"
+            className="tap-bounce flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-mono font-bold text-[#09090b] hover:bg-black/[0.04] transition-all"
+          >
+            <Phone className="w-3.5 h-3.5 text-[#09090b]" />
+            <span>Call Direct</span>
+          </a>
+          <div className="h-4 w-px bg-zinc-300" />
+          {onOpenDemo ? (
+            <button
+              type="button"
+              onClick={onOpenDemo}
+              className="btn-gleam tap-bounce flex items-center gap-1.5 px-4.5 py-2 rounded-full bg-[#09090b] text-white text-xs font-bold shadow-md hover:bg-[#27272a] transition-all cursor-pointer"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-white" />
+              <span>Book Demo</span>
+            </button>
+          ) : (
+            <Link
+              href="/contact"
+              className="btn-gleam tap-bounce flex items-center gap-1.5 px-4.5 py-2 rounded-full bg-[#09090b] text-white text-xs font-bold shadow-md hover:bg-[#27272a] transition-all"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-white" />
+              <span>Book Demo</span>
+            </Link>
+          )}
+        </div>
+      </aside>
     </>
   );
 }

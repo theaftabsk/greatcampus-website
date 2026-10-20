@@ -117,7 +117,7 @@ export default function Home() {
         {/* Ambient Floating Glow Backdrop */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[360px] bg-gradient-to-tr from-black/[0.03] via-zinc-400/[0.07] to-transparent rounded-full blur-3xl pointer-events-none animate-ambient-glow" />
 
-        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
+        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-6 md:px-8 text-center scroll-reveal">
           {/* Positioning Pill */}
           <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-4 py-2 text-[12px] font-semibold tracking-wide text-white shadow-lg">
             <span className="h-2 w-2 rounded-full bg-white animate-pulse"></span>
@@ -157,7 +157,7 @@ export default function Home() {
           </div>
 
           {/* Frosted Glass Metric Bar */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full max-w-5xl text-left glass-panel rounded-3xl p-6 sm:p-8 border border-zinc-200/80 shadow-md">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full max-w-5xl text-left glass-panel glass-specular animate-glass-pulse rounded-3xl p-6 sm:p-8 border border-white/60 shadow-lg">
             <div className="p-2 sm:p-3">
               <p className="text-[28px] sm:text-[36px] font-extrabold text-[#09090b] font-heading">30,000+</p>
               <p className="text-[12px] font-medium text-[#71717a] uppercase tracking-wider mt-1">
@@ -185,7 +185,7 @@ export default function Home() {
           </div>
 
           {/* -------------------- INTERACTIVE TALENT JOURNEY PREVIEW -------------------- */}
-          <div id="journey" className="mt-16 w-full max-w-5xl rounded-3xl glass-panel-dark text-white p-5 sm:p-8 shadow-2xl text-left">
+          <div id="journey" className="mt-16 w-full max-w-5xl rounded-3xl glass-panel-dark glass-specular text-white p-5 sm:p-8 shadow-2xl text-left border border-white/10">
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
               <div>
@@ -204,7 +204,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Stepper Buttons */}
+            {/* Stepper Buttons with Tactile Tap Bounce */}
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-5 gap-2.5">
               {[
                 { id: "assess", step: "01", name: "ASSESS", question: "Who can do the job?" },
@@ -217,7 +217,7 @@ export default function Home() {
                   key={s.id}
                   type="button"
                   onClick={() => setActiveJourneyStep(s.id as any)}
-                  className={`p-3 rounded-2xl border text-left transition-all cursor-pointer ${
+                  className={`p-3 rounded-2xl border text-left transition-all tap-bounce cursor-pointer ${
                     idx === 4 ? "col-span-2 sm:col-span-1" : ""
                   } ${
                     activeJourneyStep === s.id
@@ -491,7 +491,7 @@ export default function Home() {
 
       {/* -------------------- THE CHALLENGE -------------------- */}
       <section id="challenge" className="bg-[#fafafa] py-20 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 scroll-reveal">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#27272a] bg-[#09090b] px-3.5 py-1 text-[11px] font-bold text-white uppercase tracking-wider mb-4">
               The Challenge
@@ -506,7 +506,7 @@ export default function Home() {
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Challenge 1 */}
-            <div className="glass-panel glass-panel-hover rounded-3xl p-7 sm:p-8 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover glass-specular tap-bounce rounded-3xl p-7 sm:p-8 border border-white/60 shadow-xs flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="h-12 w-12 rounded-2xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base shadow-sm">
                   01
@@ -524,7 +524,7 @@ export default function Home() {
             </div>
 
             {/* Challenge 2 */}
-            <div className="glass-panel glass-panel-hover rounded-3xl p-7 sm:p-8 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover glass-specular tap-bounce rounded-3xl p-7 sm:p-8 border border-white/60 shadow-xs flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="h-12 w-12 rounded-2xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base shadow-sm">
                   02
@@ -542,7 +542,7 @@ export default function Home() {
             </div>
 
             {/* Challenge 3 */}
-            <div className="glass-panel glass-panel-hover rounded-3xl p-7 sm:p-8 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover glass-specular tap-bounce rounded-3xl p-7 sm:p-8 border border-white/60 shadow-xs flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="h-12 w-12 rounded-2xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base shadow-sm">
                   03
@@ -561,7 +561,7 @@ export default function Home() {
           </div>
 
           {/* Unified Solution Banner */}
-          <div className="mt-10 rounded-3xl glass-panel-dark text-white p-8 sm:p-12 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-6 border border-white/10">
+          <div className="mt-10 rounded-3xl glass-panel-dark glass-specular text-white p-8 sm:p-12 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-6 border border-white/10">
             <div className="space-y-2 max-w-2xl">
               <span className="text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa] font-mono">
                 The GreatCampus Solution
@@ -586,7 +586,7 @@ export default function Home() {
 
       {/* -------------------- OUR THREE PILLARS -------------------- */}
       <section id="pillars" className="bg-white py-20 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 scroll-reveal">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#27272a] bg-[#09090b] px-3.5 py-1 text-[11px] font-bold text-white uppercase tracking-wider mb-3">
               The Architecture
@@ -1068,7 +1068,7 @@ export default function Home() {
 
       {/* -------------------- BUILT FOR THE COMPLETE TALENT LIFECYCLE -------------------- */}
       <section id="lifecycle" className="bg-[#fafafa] py-20 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 scroll-reveal">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#27272a] bg-[#09090b] px-3.5 py-1 text-[11px] font-bold text-white uppercase tracking-wider mb-3">
               Audience Solutions
@@ -1271,7 +1271,7 @@ export default function Home() {
 
       {/* -------------------- THE GREATCAMPUS DIFFERENCE -------------------- */}
       <section id="difference" className="bg-white py-20 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 scroll-reveal">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#27272a] bg-[#09090b] px-3.5 py-1 text-[11px] font-bold text-white uppercase tracking-wider mb-3">
               Market Comparison
@@ -1378,7 +1378,7 @@ export default function Home() {
 
       {/* -------------------- WHY GREATCAMPUS? -------------------- */}
       <section className="bg-[#fafafa] py-20 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 scroll-reveal">
           <div className="max-w-3xl mb-14">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#27272a] bg-[#09090b] px-3.5 py-1 text-[11px] font-bold text-white uppercase tracking-wider mb-3">
               Value Proposition
@@ -1470,7 +1470,7 @@ export default function Home() {
 
       {/* -------------------- INTERACTIVE CHALLENGE SELECTOR -------------------- */}
       <section className="bg-white py-20 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-5xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 md:px-8 scroll-reveal">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#27272a] bg-[#09090b] px-3.5 py-1 text-[11px] font-bold text-white uppercase tracking-wider mb-3">
               Interactive Consultation
@@ -1544,7 +1544,7 @@ export default function Home() {
 
       {/* -------------------- FAQ ACCORDION -------------------- */}
       <section className="bg-white py-20 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-4xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 md:px-8 scroll-reveal">
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#27272a] bg-[#09090b] px-3.5 py-1 text-[11px] font-bold text-white uppercase tracking-wider mb-3">
               Frequently Asked Questions
@@ -1609,7 +1609,7 @@ export default function Home() {
       {/* -------------------- BOOK A DEMO MODAL -------------------- */}
       {demoModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-xl animate-in fade-in duration-200">
-          <div className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto rounded-3xl glass-panel-dark text-white p-6 sm:p-8 shadow-2xl space-y-4 sm:space-y-5 border border-white/15">
+          <div className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto rounded-3xl glass-panel-dark glass-specular text-white p-6 sm:p-8 shadow-2xl space-y-4 sm:space-y-5 border border-white/15 animate-drawer">
             <button
               type="button"
               onClick={() => setDemoModalOpen(false)}

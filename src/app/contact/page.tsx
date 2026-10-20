@@ -54,12 +54,12 @@ export default function ContactPage() {
         {/* Ambient Floating Glow Backdrop */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[320px] bg-gradient-to-tr from-black/[0.03] via-zinc-400/[0.07] to-transparent rounded-full blur-3xl pointer-events-none animate-ambient-glow" />
 
-        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
+        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-6 md:px-8 text-center scroll-reveal">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[11px] font-bold tracking-wide text-white font-mono shadow-sm">
             DIRECT ACCESS
           </div>
 
-          <h1 className="mt-8 max-w-4xl text-[30px] sm:text-[48px] lg:text-[58px] font-extrabold text-[#09090b] leading-[1.1] tracking-tight">
+          <h1 className="mt-8 max-w-4xl text-[30px] sm:text-[48px] lg:text-[58px] font-extrabold text-[#09090b] leading-[1.1] tracking-tight font-heading">
             <span>Connect with</span>{" "}
             <span className="accent-shimmer">GreatCampus.</span>
           </h1>
@@ -72,10 +72,10 @@ export default function ContactPage() {
 
       {/* -------------------- CONTACT & FORM GRID -------------------- */}
       <section className="bg-[#fafafa] py-16 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch scroll-reveal">
             {/* Leadership Card */}
-            <div className="glass-panel-dark md:col-span-6 rounded-3xl border border-white/15 text-white p-6 sm:p-10 lg:p-12 flex flex-col justify-between shadow-2xl">
+            <div className="glass-panel-dark glass-specular card-dark-lift md:col-span-6 rounded-3xl border border-white/15 text-white p-6 sm:p-10 lg:p-12 flex flex-col justify-between shadow-2xl">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-3.5 py-1 text-[11px] font-mono text-[#a1a1aa] mb-5 border border-white/15">
                   STRATEGIC PARTNERSHIPS
@@ -91,7 +91,7 @@ export default function ContactPage() {
                   {/* Phone */}
                   <a
                     href="tel:+918810418647"
-                    className="flex items-center gap-4 p-3.5 rounded-2xl border border-white/10 bg-white/[0.04] hover:border-white/30 transition-all group backdrop-blur-md"
+                    className="tap-bounce flex items-center gap-4 p-3.5 rounded-2xl border border-white/10 bg-white/[0.04] hover:border-white/30 transition-all group backdrop-blur-md"
                   >
                     <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0 shadow-sm">
                       <Phone className="w-4.5 h-4.5" />
@@ -107,7 +107,7 @@ export default function ContactPage() {
                   {/* Official Corporate Email */}
                   <a
                     href="mailto:info@greatcampus.tech"
-                    className="flex items-center gap-4 p-3.5 rounded-2xl border border-white/10 bg-white/[0.04] hover:border-white/30 transition-all group backdrop-blur-md"
+                    className="tap-bounce flex items-center gap-4 p-3.5 rounded-2xl border border-white/10 bg-white/[0.04] hover:border-white/30 transition-all group backdrop-blur-md"
                   >
                     <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0 shadow-sm">
                       <Mail className="w-4.5 h-4.5" />
@@ -122,16 +122,16 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-5 border-t border-white/10 text-xs text-[#a1a1aa] flex items-center gap-2">
-                <Clock className="w-4 h-4 text-white" />
+              <div className="mt-8 pt-5 border-t border-white/10 text-xs text-[#a1a1aa] flex items-center gap-2 font-mono">
+                <Clock className="w-4 h-4 text-white shrink-0" />
                 <span>Executive response turnaround: under 4 business hours.</span>
               </div>
             </div>
 
             {/* Interactive Demo Request Form */}
-            <div className="glass-panel md:col-span-6 rounded-3xl border border-zinc-200/80 p-6 sm:p-10 lg:p-12 flex flex-col justify-between shadow-xs">
+            <div className="glass-panel glass-specular md:col-span-6 rounded-3xl border border-zinc-200/80 p-6 sm:p-10 lg:p-12 flex flex-col justify-between shadow-xs">
               <div>
-                <h3 className="text-[24px] font-bold text-[#09090b]">
+                <h3 className="text-[24px] font-bold text-[#09090b] font-heading">
                   Schedule an Executive Walkthrough
                 </h3>
                 <p className="text-xs text-[#52525b] mt-1.5 mb-6">

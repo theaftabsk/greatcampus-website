@@ -402,3 +402,149 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   scrollbar-width: none;
 }
 
+/* ==========================================================
+   MOBILE & UNIVERSAL GLASS ANIMATIONS
+   ========================================================== */
+
+/* Drawer Entrance Animation with Spring Physics */
+@keyframes glassDrawerOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-drawer {
+  animation: glassDrawerOpen 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Mobile Tactile Tap Bounce */
+.tap-bounce {
+  transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.16s ease;
+}
+.tap-bounce:active {
+  transform: scale(0.97);
+}
+
+/* Specular Light Gradient Overlay for Glass Cards */
+.glass-specular {
+  position: relative;
+}
+.glass-specular::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+/* Floating Glass Ambient Light Pulse */
+@keyframes glassPulseGlow {
+  0%, 100% {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 12px 42px 0 rgba(0, 0, 0, 0.11), 0 0 0 1px rgba(255, 255, 255, 0.95);
+  }
+}
+
+.animate-glass-pulse {
+  animation: glassPulseGlow 4s ease-in-out infinite;
+}
+
+/* Subtle Shimmer for interactive mobile cards */
+@keyframes mobileShimmer {
+  0% {
+    background-position: -150% 0;
+  }
+  100% {
+    background-position: 150% 0;
+  }
+}
+
+.mobile-card-shimmer {
+  background-size: 200% 100%;
+  animation: mobileShimmer 8s ease infinite;
+}
+
+/* ==========================================================
+   SCROLL REVEAL & PROGRESSIVE SCROLL-DRIVEN ANIMATIONS
+   ========================================================== */
+
+@keyframes scrollFadeUp {
+  from {
+    opacity: 0.15;
+    transform: translateY(28px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes scrollScaleIn {
+  from {
+    opacity: 0.2;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Base scroll animation classes */
+.scroll-reveal {
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Modern progressive CSS scroll-driven animations */
+@supports (animation-timeline: view()) {
+  .scroll-reveal {
+    animation: scrollFadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 25%;
+  }
+
+  .scroll-reveal-scale {
+    animation: scrollScaleIn linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 22%;
+  }
+}
+
+/* Glass Mobile Touch Ergonomics */
+.glass-touch-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.glass-touch-card:active {
+  transform: scale(0.985);
+}
+
+/* Safe touch target for mobile links */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+

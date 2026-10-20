@@ -27,37 +27,40 @@ export default function DevelopPage() {
 
       {/* -------------------- HERO -------------------- */}
       <section className="relative overflow-hidden bg-white pt-16 pb-20 sm:pt-24 sm:pb-28 border-b border-[#e4e4e7] bg-grid-pattern">
-        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
+        {/* Ambient Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[320px] bg-gradient-to-tr from-black/[0.03] via-zinc-400/[0.06] to-transparent rounded-full blur-3xl pointer-events-none animate-ambient-glow" />
+
+        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-6 md:px-8 text-center scroll-reveal">
           <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-4 py-2 text-[11px] font-bold tracking-wide text-white font-mono shadow-md">
             PILLAR 03 · CONTINUOUS WORKFORCE DEVELOPMENT
           </div>
 
-          <h1 className="mt-8 max-w-4xl text-[38px] font-extrabold text-[#09090b] leading-[1.1] tracking-tight sm:text-[58px] lg:text-[68px]">
+          <h1 className="mt-8 max-w-4xl text-[32px] sm:text-[52px] lg:text-[68px] font-extrabold text-[#09090b] leading-[1.1] tracking-tight font-heading">
             <span>Don't stop at hiring.</span>{" "}
             <span className="accent-shimmer">Build capability continuously.</span>
           </h1>
 
-          <p className="mt-6 max-w-3xl text-[17px] text-[#52525b] leading-relaxed sm:text-[19px]">
+          <p className="mt-6 max-w-3xl text-[16px] sm:text-[19px] text-[#52525b] leading-relaxed">
             Identifying a skill gap is only useful if you can do something about it. GreatCampus transforms identified gaps into opportunities for continuous development through short, focused microlearning.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="btn-gleam w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
+              className="btn-gleam tap-bounce w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
             >
               Build a Microlearning Journey
             </Link>
             <Link
               href="/difference"
-              className="glass-panel w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl px-8 text-[14px] font-bold text-[#09090b] hover:bg-white transition-all shadow-sm"
+              className="glass-panel tap-bounce w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl px-8 text-[14px] font-bold text-[#09090b] hover:bg-white transition-all shadow-sm"
             >
               See the GreatCampus Difference →
             </Link>
           </div>
 
           {/* Loop Diagram Pill with Glassmorphism */}
-          <div className="mt-12 p-3.5 sm:p-4 rounded-2xl glass-panel-dark text-white font-mono text-xs max-w-2xl w-full text-center shadow-xl border border-white/10">
+          <div className="mt-12 p-3.5 sm:p-4 rounded-2xl glass-panel-dark glass-specular text-white font-mono text-xs max-w-2xl w-full text-center shadow-xl border border-white/10 scroll-reveal-scale">
             Identify gaps → Develop capability → Reinforce learning → Reassess progress
           </div>
         </div>
@@ -65,12 +68,12 @@ export default function DevelopPage() {
 
       {/* -------------------- 5 MICROLEARNING SUITES -------------------- */}
       <section className="bg-[#fafafa] py-20 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
           <div className="max-w-3xl mb-14">
             <span className="text-xs font-mono font-bold text-[#71717a] uppercase tracking-wider">
               Bite-sized Capability Building
             </span>
-            <h2 className="text-[30px] sm:text-[42px] font-extrabold text-[#09090b] tracking-tight mt-2">
+            <h2 className="text-[28px] sm:text-[42px] font-extrabold text-[#09090b] tracking-tight mt-2 font-heading">
               Short Learning. Continuous Reinforcement. Measurable Development.
             </h2>
             <p className="mt-3 text-[16px] text-[#52525b]">
@@ -78,18 +81,18 @@ export default function DevelopPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">
             {/* Suite 1: Sales */}
-            <div className="glass-panel glass-panel-hover rounded-3xl p-7 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover glass-specular card-hover-lift rounded-3xl p-6 sm:p-7 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
               <div>
                 <span className="text-xs font-mono font-bold text-[#71717a] block mb-2">MODULE SUITE 01</span>
-                <h3 className="text-[20px] font-bold text-[#09090b] mb-4">Sales Enablement</h3>
+                <h3 className="text-[20px] font-bold text-[#09090b] mb-4 font-heading">Sales Enablement</h3>
                 <ul className="space-y-2 text-xs text-[#09090b]">
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Opening high-impact conversations</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Objection Handling under pressure</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Enterprise Negotiation tactics</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Cross-selling & expansion plays</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Closing and contract velocity</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Opening high-impact conversations</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Objection Handling under pressure</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Enterprise Negotiation tactics</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Cross-selling & expansion plays</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Closing and contract velocity</li>
                 </ul>
               </div>
               <div className="mt-6 pt-3 border-t border-[#e4e4e7] text-[11px] font-mono text-[#71717a]">
@@ -98,15 +101,15 @@ export default function DevelopPage() {
             </div>
 
             {/* Suite 2: Customer Service */}
-            <div className="glass-panel glass-panel-hover rounded-3xl p-7 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover glass-specular card-hover-lift rounded-3xl p-6 sm:p-7 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
               <div>
                 <span className="text-xs font-mono font-bold text-[#71717a] block mb-2">MODULE SUITE 02</span>
-                <h3 className="text-[20px] font-bold text-[#09090b] mb-4">Customer Service</h3>
+                <h3 className="text-[20px] font-bold text-[#09090b] mb-4 font-heading">Customer Service</h3>
                 <ul className="space-y-2 text-xs text-[#09090b]">
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Active Listening frameworks</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Empathetic customer communication</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Fast First-Touch Complaint Resolution</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Handling & De-escalating Angry Customers</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Active Listening frameworks</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Empathetic customer communication</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Fast First-Touch Complaint Resolution</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Handling & De-escalating Angry Customers</li>
                 </ul>
               </div>
               <div className="mt-6 pt-3 border-t border-[#e4e4e7] text-[11px] font-mono text-[#71717a]">
@@ -115,15 +118,15 @@ export default function DevelopPage() {
             </div>
 
             {/* Suite 3: Leadership */}
-            <div className="rounded-3xl border border-[#e4e4e7] bg-white p-7 shadow-sm hover:border-[#09090b] transition-all flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover glass-specular card-hover-lift rounded-3xl border border-zinc-200/80 p-6 sm:p-7 shadow-xs flex flex-col justify-between">
               <div>
                 <span className="text-xs font-mono font-bold text-[#71717a] block mb-2">MODULE SUITE 03</span>
-                <h3 className="text-[20px] font-bold text-[#09090b] mb-4">Leadership & Management</h3>
+                <h3 className="text-[20px] font-bold text-[#09090b] mb-4 font-heading">Leadership & Management</h3>
                 <ul className="space-y-2 text-xs text-[#09090b]">
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Constructive & Direct Feedback</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Task Delegation without Micromanagement</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Team Motivation in High-Stress Quarters</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Conflict Management & Mediation</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Constructive & Direct Feedback</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Task Delegation without Micromanagement</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Team Motivation in High-Stress Quarters</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Conflict Management & Mediation</li>
                 </ul>
               </div>
               <div className="mt-6 pt-3 border-t border-[#e4e4e7] text-[11px] font-mono text-[#71717a]">
@@ -132,15 +135,15 @@ export default function DevelopPage() {
             </div>
 
             {/* Suite 4: Operations */}
-            <div className="rounded-3xl border border-[#e4e4e7] bg-white p-7 shadow-sm hover:border-[#09090b] transition-all flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover glass-specular card-hover-lift rounded-3xl border border-zinc-200/80 p-6 sm:p-7 shadow-xs flex flex-col justify-between">
               <div>
                 <span className="text-xs font-mono font-bold text-[#71717a] block mb-2">MODULE SUITE 04</span>
-                <h3 className="text-[20px] font-bold text-[#09090b] mb-4">Operations & Quality</h3>
+                <h3 className="text-[20px] font-bold text-[#09090b] mb-4 font-heading">Operations & Quality</h3>
                 <ul className="space-y-2 text-xs text-[#09090b]">
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Daily SOP Reinforcement</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Quality Standards & Audit Readiness</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Workplace Safety & Compliance Protocols</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Process Error Reduction Drills</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Daily SOP Reinforcement</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Quality Standards & Audit Readiness</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Workplace Safety & Compliance Protocols</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Process Error Reduction Drills</li>
                 </ul>
               </div>
               <div className="mt-6 pt-3 border-t border-[#e4e4e7] text-[11px] font-mono text-[#71717a]">
@@ -149,16 +152,16 @@ export default function DevelopPage() {
             </div>
 
             {/* Suite 5: Onboarding & Compliance */}
-            <div className="rounded-3xl border border-[#e4e4e7] bg-white p-7 shadow-sm hover:border-[#09090b] transition-all flex flex-col justify-between md:col-span-2 lg:col-span-2">
+            <div className="glass-panel glass-panel-hover glass-specular card-hover-lift rounded-3xl border border-zinc-200/80 p-6 sm:p-7 shadow-xs flex flex-col justify-between md:col-span-2 lg:col-span-2">
               <div>
                 <span className="text-xs font-mono font-bold text-[#71717a] block mb-2">MODULE SUITE 05</span>
-                <h3 className="text-[20px] font-bold text-[#09090b] mb-4">Onboarding & Corporate Compliance</h3>
+                <h3 className="text-[20px] font-bold text-[#09090b] mb-4 font-heading">Onboarding & Corporate Compliance</h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#09090b]">
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Company Culture, Values & Norms</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Product Architecture & Value Proposition</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Internal Cross-Team Tooling & Workflows</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> 30-60-90 Day Role Expectations</li>
-                  <li className="flex items-center gap-2 sm:col-span-2"><Check className="w-3.5 h-3.5 text-[#09090b]" /> Information Security, POSH, & Regulatory Policy Reinforcement</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Company Culture, Values & Norms</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Product Architecture & Value Proposition</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Internal Cross-Team Tooling & Workflows</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> 30-60-90 Day Role Expectations</li>
+                  <li className="flex items-center gap-2 sm:col-span-2"><Check className="w-3.5 h-3.5 text-[#09090b] shrink-0" /> Information Security, POSH, & Regulatory Policy Reinforcement</li>
                 </ul>
               </div>
               <div className="mt-6 pt-3 border-t border-[#e4e4e7] text-[11px] font-mono text-[#71717a]">
@@ -171,13 +174,13 @@ export default function DevelopPage() {
 
       {/* -------------------- CONTINUOUS REASSESSMENT LOOP -------------------- */}
       <section className="bg-white py-20 sm:py-28 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center scroll-reveal">
             <div className="lg:col-span-6 space-y-6">
               <span className="rounded-full bg-[#09090b] text-white px-3 py-1 font-mono font-bold text-[11px] uppercase tracking-wider">
                 Measurable Growth
               </span>
-              <h2 className="text-[30px] sm:text-[42px] font-extrabold text-[#09090b] leading-tight">
+              <h2 className="text-[28px] sm:text-[42px] font-extrabold text-[#09090b] leading-tight font-heading">
                 Continuous Reassessment: Verifying True Skill Gains
               </h2>
               <p className="text-[15px] text-[#52525b] leading-relaxed">
@@ -185,15 +188,15 @@ export default function DevelopPage() {
               </p>
 
               <div className="space-y-3 pt-2 text-xs">
-                <div className="flex items-start gap-3 p-3 rounded-xl border border-[#e4e4e7] bg-[#fafafa]">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa]">
                   <span className="font-bold font-mono text-[#09090b]">30 DAYS:</span>
                   <span className="text-[#52525b]">Micro-pulse checks knowledge retention from onboarding modules.</span>
                 </div>
-                <div className="flex items-start gap-3 p-3 rounded-xl border border-[#e4e4e7] bg-[#fafafa]">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa]">
                   <span className="font-bold font-mono text-[#09090b]">60 DAYS:</span>
                   <span className="text-[#52525b]">Evaluates applied execution across realistic role simulations.</span>
                 </div>
-                <div className="flex items-start gap-3 p-3 rounded-xl border border-[#e4e4e7] bg-[#fafafa]">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa]">
                   <span className="font-bold font-mono text-[#09090b]">90 DAYS:</span>
                   <span className="text-[#52525b]">Full competency reassessment before permanent confirmation or internal mobility.</span>
                 </div>
@@ -201,7 +204,7 @@ export default function DevelopPage() {
             </div>
 
             {/* Reassessment Metrics Card */}
-            <div className="lg:col-span-6 rounded-3xl glass-panel-dark text-white p-8 shadow-2xl space-y-5 border border-white/10">
+            <div className="lg:col-span-6 rounded-3xl glass-panel-dark glass-specular text-white p-6 sm:p-8 shadow-2xl space-y-5 border border-white/10 scroll-reveal-scale">
               <div className="flex items-center justify-between border-b border-[#27272a] pb-3 text-xs">
                 <span className="font-bold font-mono">VERIFIED TALENT DELTA REPORT</span>
                 <span className="text-white bg-white/10 px-2 py-0.5 rounded font-mono">+28% GROWTH</span>
@@ -242,11 +245,11 @@ export default function DevelopPage() {
 
       {/* -------------------- THE OUTCOME -------------------- */}
       <section className="bg-[#fafafa] py-16 sm:py-24 border-b border-[#e4e4e7]">
-        <div className="mx-auto w-full max-w-5xl px-5 sm:px-8 text-center space-y-6">
+        <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 md:px-8 text-center space-y-6 scroll-reveal">
           <span className="text-xs font-mono font-bold text-[#71717a] uppercase">
             The Complete Talent Loop
           </span>
-          <h2 className="text-[32px] sm:text-[44px] font-extrabold text-[#09090b] tracking-tight">
+          <h2 className="text-[28px] sm:text-[44px] font-extrabold text-[#09090b] tracking-tight font-heading">
             Assess. Interview. Select. Develop. Reassess.
           </h2>
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#52525b] leading-relaxed">
@@ -255,13 +258,13 @@ export default function DevelopPage() {
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-all"
+              className="btn-gleam tap-bounce w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-sm font-bold text-white hover:bg-[#27272a] transition-all shadow-md"
             >
               Build Your L&D Plan
             </Link>
             <Link
               href="/solutions"
-              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-sm font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
+              className="tap-bounce w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-sm font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
             >
               Explore Solutions by Industry →
             </Link>
