@@ -119,7 +119,7 @@ export default function Home() {
 
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
           {/* Positioning Pill */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[12px] font-semibold tracking-wide text-white shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-4 py-2 text-[12px] font-semibold tracking-wide text-white shadow-lg">
             <span className="h-2 w-2 rounded-full bg-white animate-pulse"></span>
             <span>ASSESS → INTERVIEW → DEVELOP → REASSESS</span>
           </div>
@@ -150,34 +150,34 @@ export default function Home() {
             </button>
             <Link
               href="/assess"
-              className="inline-flex h-12 sm:h-13 items-center justify-center rounded-xl border border-[#27272a] bg-white px-8 text-[15px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors shadow-sm w-full sm:w-auto"
+              className="glass-panel group inline-flex h-12 sm:h-13 items-center justify-center rounded-xl px-8 text-[15px] font-bold text-[#09090b] hover:bg-white hover:border-black/30 transition-all shadow-sm w-full sm:w-auto"
             >
               Explore GreatCampus
             </Link>
           </div>
 
-          {/* Metric Bar */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full max-w-4xl text-left border-y border-[#e4e4e7] py-6">
-            <div className="p-3">
-              <p className="text-[28px] sm:text-[34px] font-extrabold text-[#09090b]">30,000+</p>
+          {/* Frosted Glass Metric Bar */}
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full max-w-5xl text-left glass-panel rounded-3xl p-6 sm:p-8 border border-zinc-200/80 shadow-md">
+            <div className="p-2 sm:p-3">
+              <p className="text-[28px] sm:text-[36px] font-extrabold text-[#09090b] font-heading">30,000+</p>
               <p className="text-[12px] font-medium text-[#71717a] uppercase tracking-wider mt-1">
                 Validated Role Tests
               </p>
             </div>
-            <div className="p-3 border-l border-[#e4e4e7]">
-              <p className="text-[28px] sm:text-[34px] font-extrabold text-[#09090b]">80%</p>
+            <div className="p-2 sm:p-3 border-l border-zinc-200/80">
+              <p className="text-[28px] sm:text-[36px] font-extrabold text-[#09090b] font-heading">80%</p>
               <p className="text-[12px] font-medium text-[#71717a] uppercase tracking-wider mt-1">
                 Recruiter Hours Saved
               </p>
             </div>
-            <div className="p-3 border-l-0 md:border-l border-[#e4e4e7]">
-              <p className="text-[28px] sm:text-[34px] font-extrabold text-[#09090b]">100%</p>
+            <div className="p-2 sm:p-3 border-t md:border-t-0 md:border-l border-zinc-200/80">
+              <p className="text-[28px] sm:text-[36px] font-extrabold text-[#09090b] font-heading">100%</p>
               <p className="text-[12px] font-medium text-[#71717a] uppercase tracking-wider mt-1">
                 Applicants Screened
               </p>
             </div>
-            <div className="p-3 border-l border-[#e4e4e7]">
-              <p className="text-[28px] sm:text-[34px] font-extrabold text-[#09090b]">1 Platform</p>
+            <div className="p-2 sm:p-3 border-t md:border-t-0 border-l border-zinc-200/80">
+              <p className="text-[28px] sm:text-[36px] font-extrabold text-[#09090b] font-heading">1 Platform</p>
               <p className="text-[12px] font-medium text-[#71717a] uppercase tracking-wider mt-1">
                 Hiring to Development
               </p>
@@ -185,11 +185,11 @@ export default function Home() {
           </div>
 
           {/* -------------------- INTERACTIVE TALENT JOURNEY PREVIEW -------------------- */}
-          <div id="journey" className="mt-16 w-full max-w-5xl rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-5 sm:p-8 shadow-2xl text-left">
+          <div id="journey" className="mt-16 w-full max-w-5xl rounded-3xl glass-panel-dark text-white p-5 sm:p-8 shadow-2xl text-left">
             {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#27272a] pb-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa]">
+                <span className="text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa] font-mono">
                   The GreatCampus Engine
                 </span>
                 <h2 className="text-[22px] sm:text-[26px] font-extrabold text-white mt-1">
@@ -198,14 +198,14 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xs text-[#a1a1aa]">Continuous Loop Mode:</span>
-                <span className="px-2.5 py-1 rounded-md bg-white/10 text-white text-xs font-bold font-mono">
+                <span className="px-2.5 py-1 rounded-full bg-white/10 text-white text-xs font-bold font-mono border border-white/15">
                   ACTIVE
                 </span>
               </div>
             </div>
 
             {/* Stepper Buttons */}
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-5 gap-2">
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-5 gap-2.5">
               {[
                 { id: "assess", step: "01", name: "ASSESS", question: "Who can do the job?" },
                 { id: "interview", step: "02", name: "INTERVIEW", question: "Who is the right fit?" },
@@ -217,12 +217,12 @@ export default function Home() {
                   key={s.id}
                   type="button"
                   onClick={() => setActiveJourneyStep(s.id as any)}
-                  className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
+                  className={`p-3 rounded-2xl border text-left transition-all cursor-pointer ${
                     idx === 4 ? "col-span-2 sm:col-span-1" : ""
                   } ${
                     activeJourneyStep === s.id
-                      ? "bg-white text-[#09090b] border-white shadow-lg"
-                      : "bg-[#121215] text-[#a1a1aa] border-[#27272a] hover:border-[#3f3f46] hover:text-white"
+                      ? "bg-white text-[#09090b] border-white shadow-xl scale-[1.02]"
+                      : "bg-white/[0.04] text-[#a1a1aa] border-white/10 hover:border-white/25 hover:text-white hover:bg-white/[0.08]"
                   }`}
                 >
                   <span className="text-[10px] font-mono font-bold block opacity-70">
@@ -239,7 +239,7 @@ export default function Home() {
             </div>
 
             {/* Dynamic Step Content Showcase */}
-            <div className="mt-6 rounded-2xl border border-[#27272a] bg-[#121215] p-6">
+            <div className="mt-6 rounded-2xl glass-panel-dark border border-white/10 p-5 sm:p-7 shadow-inner">
               {activeJourneyStep === "assess" && (
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                   <div className="md:col-span-6 space-y-3">
@@ -506,9 +506,9 @@ export default function Home() {
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Challenge 1 */}
-            <div className="card-hover-lift rounded-2xl border border-[#e4e4e7] bg-white p-7 shadow-sm transition-all flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover rounded-3xl p-7 sm:p-8 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
               <div className="space-y-4">
-                <div className="h-12 w-12 rounded-xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base">
+                <div className="h-12 w-12 rounded-2xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base shadow-sm">
                   01
                 </div>
                 <h3 className="text-[20px] font-bold text-[#09090b]">
@@ -518,15 +518,15 @@ export default function Home() {
                   Resumes are embellished and unreliable. Keyword filters miss high-potential individuals while advancing candidates who lack actual practical capability for the job.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#e4e4e7] text-xs font-semibold text-[#71717a]">
+              <div className="mt-6 pt-4 border-t border-zinc-200/60 text-xs font-semibold text-[#71717a]">
                 Problem: Unstructured initial screening
               </div>
             </div>
 
             {/* Challenge 2 */}
-            <div className="card-hover-lift rounded-2xl border border-[#e4e4e7] bg-white p-7 shadow-sm transition-all flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover rounded-3xl p-7 sm:p-8 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
               <div className="space-y-4">
-                <div className="h-12 w-12 rounded-xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base">
+                <div className="h-12 w-12 rounded-2xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base shadow-sm">
                   02
                 </div>
                 <h3 className="text-[20px] font-bold text-[#09090b]">
@@ -536,15 +536,15 @@ export default function Home() {
                   First-round phone interviews eat hundreds of recruiter hours. High applicant volume forces recruiters to interview only a fraction of applicants, introducing human fatigue and bias.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#e4e4e7] text-xs font-semibold text-[#71717a]">
+              <div className="mt-6 pt-4 border-t border-zinc-200/60 text-xs font-semibold text-[#71717a]">
                 Problem: Scaling interview workload
               </div>
             </div>
 
             {/* Challenge 3 */}
-            <div className="card-hover-lift rounded-2xl border border-[#e4e4e7] bg-white p-7 shadow-sm transition-all flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover rounded-3xl p-7 sm:p-8 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
               <div className="space-y-4">
-                <div className="h-12 w-12 rounded-xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base">
+                <div className="h-12 w-12 rounded-2xl bg-[#09090b] text-white flex items-center justify-center font-bold text-base shadow-sm">
                   03
                 </div>
                 <h3 className="text-[20px] font-bold text-[#09090b]">
@@ -554,19 +554,19 @@ export default function Home() {
                   Recruitment data disappears the moment an offer letter is signed. L&D starts from zero with generic training seminars that fail to address the specific skill gaps identified during hiring.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#e4e4e7] text-xs font-semibold text-[#71717a]">
+              <div className="mt-6 pt-4 border-t border-zinc-200/60 text-xs font-semibold text-[#71717a]">
                 Problem: Broken post-hire development
               </div>
             </div>
           </div>
 
           {/* Unified Solution Banner */}
-          <div className="mt-10 rounded-2xl border border-[#27272a] bg-[#09090b] text-white p-8 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="mt-10 rounded-3xl glass-panel-dark text-white p-8 sm:p-12 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-6 border border-white/10">
             <div className="space-y-2 max-w-2xl">
-              <span className="text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa]">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa] font-mono">
                 The GreatCampus Solution
               </span>
-              <h3 className="text-[24px] sm:text-[30px] font-extrabold text-white">
+              <h3 className="text-[24px] sm:text-[32px] font-extrabold text-white">
                 GreatCampus brings all three together in one integrated platform.
               </h3>
               <p className="text-[15px] text-[#a1a1aa] leading-relaxed">
@@ -576,7 +576,7 @@ export default function Home() {
             <button
               type="button"
               onClick={() => setDemoModalOpen(true)}
-              className="inline-flex h-12 shrink-0 items-center justify-center rounded-xl bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#e4e4e7] transition-colors cursor-pointer"
+              className="btn-gleam inline-flex h-12 shrink-0 items-center justify-center rounded-2xl bg-white px-8 text-[14px] font-bold text-[#09090b] hover:bg-[#e4e4e7] transition-all cursor-pointer shadow-lg w-full sm:w-auto"
             >
               See the Platform in Action
             </button>
@@ -601,7 +601,7 @@ export default function Home() {
 
           <div className="space-y-14">
             {/* ----------------- PILLAR 01: ASSESS ----------------- */}
-            <article className="card-hover-lift rounded-3xl border border-[#e4e4e7] bg-white p-7 sm:p-12 shadow-sm transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <article className="glass-panel glass-panel-hover rounded-3xl border border-zinc-200/80 p-6 sm:p-12 shadow-sm transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               <div className="lg:col-span-6 space-y-6">
                 <div>
                   <span className="rounded-full bg-[#09090b] text-white px-3 py-1 font-mono font-bold text-[11px] uppercase tracking-wider">
@@ -743,7 +743,7 @@ export default function Home() {
               </div>
 
               {/* Assessment Visual Sandbox */}
-              <div className="lg:col-span-6 rounded-2xl border border-[#27272a] bg-[#09090b] text-white p-6 shadow-xl space-y-4">
+              <div className="lg:col-span-6 rounded-3xl glass-panel-dark text-white p-6 sm:p-7 shadow-2xl space-y-4 border border-white/10">
                 <div className="flex items-center justify-between border-b border-[#27272a] pb-3 text-xs">
                   <div className="flex items-center gap-2">
                     <span className="h-2.5 w-2.5 rounded-full bg-white animate-pulse"></span>
@@ -1608,14 +1608,14 @@ export default function Home() {
 
       {/* -------------------- BOOK A DEMO MODAL -------------------- */}
       {demoModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm">
-          <div className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-5 sm:p-7 shadow-2xl space-y-4 sm:space-y-5">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-xl animate-in fade-in duration-200">
+          <div className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto rounded-3xl glass-panel-dark text-white p-6 sm:p-8 shadow-2xl space-y-4 sm:space-y-5 border border-white/15">
             <button
               type="button"
               onClick={() => setDemoModalOpen(false)}
-              className="absolute top-4 right-4 sm:top-5 sm:right-5 text-[#a1a1aa] hover:text-white"
+              className="absolute top-4 right-4 sm:top-5 sm:right-5 h-8 w-8 rounded-full glass-pill-dark flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all cursor-pointer"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4" />
             </button>
 
             <div>
@@ -1626,14 +1626,14 @@ export default function Home() {
                   className="h-7 sm:h-8 w-auto object-contain"
                 />
               </div>
-              <span className="text-[10.5px] font-mono font-bold text-[#a1a1aa] uppercase">
+              <span className="text-[10.5px] font-mono font-bold text-[#a1a1aa] uppercase tracking-wider">
                 EXECUTIVE DEMO & BRIEFING
               </span>
-              <h3 className="text-[20px] sm:text-[22px] font-extrabold text-white mt-0.5">
+              <h3 className="text-[20px] sm:text-[24px] font-extrabold text-white mt-0.5 font-heading">
                 Schedule an Executive Walkthrough
               </h3>
               <p className="text-xs text-[#a1a1aa] mt-1">
-                Direct consultation with <strong>GreatCampus</strong> (+91-8810418647 · contact@greatcampus.tech).
+                Direct consultation with <strong>GreatCampus</strong> (+91-8810418647 · info@greatcampus.tech).
               </p>
             </div>
 

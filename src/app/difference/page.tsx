@@ -26,7 +26,7 @@ export default function DifferencePage() {
       {/* -------------------- HERO -------------------- */}
       <section className="relative overflow-hidden bg-white pt-16 pb-20 sm:pt-24 sm:pb-28 border-b border-[#e4e4e7] bg-grid-pattern">
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[11px] font-bold tracking-wide text-white font-mono shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-4 py-2 text-[11px] font-bold tracking-wide text-white font-mono shadow-md">
             THE STRATEGIC ADVANTAGE
           </div>
 
@@ -71,8 +71,8 @@ export default function DifferencePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="p-7 rounded-3xl border border-[#e4e4e7] bg-white space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-7 rounded-3xl glass-panel glass-panel-hover border border-zinc-200/80 shadow-xs space-y-4">
               <span className="text-xs font-mono font-bold text-[#71717a]">TRADITIONAL TESTING</span>
               <h3 className="text-lg font-extrabold text-[#09090b]">
                 "Can this person perform?"
@@ -82,7 +82,7 @@ export default function DifferencePage() {
               </p>
             </div>
 
-            <div className="p-7 rounded-3xl border border-[#e4e4e7] bg-white space-y-4">
+            <div className="p-7 rounded-3xl glass-panel glass-panel-hover border border-zinc-200/80 shadow-xs space-y-4">
               <span className="text-xs font-mono font-bold text-[#71717a]">STANDALONE VIDEO INTERVIEWS</span>
               <h3 className="text-lg font-extrabold text-[#09090b]">
                 "Is this person the right fit?"
@@ -92,7 +92,7 @@ export default function DifferencePage() {
               </p>
             </div>
 
-            <div className="p-7 rounded-3xl border border-[#e4e4e7] bg-white space-y-4">
+            <div className="p-7 rounded-3xl glass-panel glass-panel-hover border border-zinc-200/80 shadow-xs space-y-4">
               <span className="text-xs font-mono font-bold text-[#71717a]">CORPORATE LMS TOOLS</span>
               <h3 className="text-lg font-extrabold text-[#09090b]">
                 "How can we develop this person?"
@@ -102,8 +102,8 @@ export default function DifferencePage() {
               </p>
             </div>
 
-            <div className="p-7 rounded-3xl border border-[#27272a] bg-[#09090b] text-white space-y-4 shadow-xl">
-              <span className="text-xs font-mono font-bold text-white bg-white/10 px-2 py-0.5 rounded">
+            <div className="p-7 rounded-3xl glass-panel-dark glass-panel-dark-hover border border-white/20 text-white space-y-4 shadow-2xl">
+              <span className="text-xs font-mono font-bold text-white bg-white/10 px-2 py-0.5 rounded border border-white/15">
                 GREATCAMPUS
               </span>
               <h3 className="text-lg font-extrabold text-white">
@@ -133,7 +133,7 @@ export default function DifferencePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-3xl border border-[#e4e4e7] bg-[#fafafa] space-y-5">
+            <div className="p-8 rounded-3xl glass-panel border border-zinc-200/80 space-y-5 shadow-xs">
               <div className="flex items-center justify-between">
                 <span className="px-3 py-1 rounded-full bg-[#09090b] text-white text-xs font-bold font-mono">
                   BEFORE HIRING
@@ -159,12 +159,12 @@ export default function DifferencePage() {
               </ul>
             </div>
 
-            <div className="p-8 rounded-3xl border border-[#09090b] bg-white space-y-5 shadow-sm">
+            <div className="p-8 rounded-3xl glass-panel-dark text-white space-y-5 shadow-2xl border border-white/10">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full border border-[#09090b] text-[#09090b] text-xs font-bold font-mono">
+                <span className="px-3 py-1 rounded-full bg-white text-[#09090b] text-xs font-bold font-mono">
                   AFTER HIRING
                 </span>
-                <span className="text-xs font-semibold text-[#71717a]">Capability Loop</span>
+                <span className="text-xs font-semibold text-[#a1a1aa]">Capability Loop</span>
               </div>
               <h3 className="text-2xl font-bold text-[#09090b]">
                 Assess → Develop → Reassess
@@ -227,7 +227,7 @@ export default function DifferencePage() {
             Experience the GreatCampus Architecture
           </h2>
           <p className="text-xs sm:text-sm text-[#52525b] max-w-xl mx-auto">
-            Speak directly with <strong>GreatCampus</strong> (+91-8810418647 · contact@greatcampus.tech).
+            Speak directly with <strong>GreatCampus</strong> (+91-8810418647 · info@greatcampus.tech).
           </p>
           <div className="pt-2">
             <Link

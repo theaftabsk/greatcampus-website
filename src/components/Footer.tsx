@@ -42,8 +42,8 @@ export default function Footer() {
               </p>
               <p>
                 <span className="text-[#71717a]">Corporate:</span>{" "}
-                <a href="mailto:contact@greatcampus.in" className="text-white hover:underline">
-                  contact@greatcampus.in
+                <a href="mailto:info@greatcampus.tech" className="text-white hover:underline">
+                  info@greatcampus.tech
                 </a>
               </p>
             </div>

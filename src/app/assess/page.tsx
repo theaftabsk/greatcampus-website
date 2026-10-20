@@ -29,7 +29,7 @@ export default function AssessPage() {
       {/* -------------------- HERO -------------------- */}
       <section className="relative overflow-hidden bg-white pt-16 pb-20 sm:pt-24 sm:pb-28 border-b border-[#e4e4e7] bg-grid-pattern">
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[11px] font-bold tracking-wide text-white font-mono shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-4 py-2 text-[11px] font-bold tracking-wide text-white font-mono shadow-md">
             PILLAR 01 · OBJECTIVE EVALUATION
           </div>
 
@@ -45,34 +45,34 @@ export default function AssessPage() {
           <div className="mt-9 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-7 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
+              className="btn-gleam w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
             >
               Configure an Assessment
             </Link>
             <Link
               href="/interview"
-              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
+              className="glass-panel w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl px-8 text-[14px] font-bold text-[#09090b] hover:bg-white transition-all shadow-sm"
             >
               Explore Next Step: 02 Interview →
             </Link>
           </div>
 
-          {/* Key Stat Badges */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl border-y border-[#e4e4e7] py-6 text-left">
-            <div>
-              <p className="text-2xl font-extrabold text-[#09090b]">30,000+</p>
+          {/* Key Stat Badges with Glassmorphism */}
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl glass-panel rounded-3xl p-6 sm:p-8 border border-zinc-200/80 shadow-md text-left">
+            <div className="p-2 sm:p-3">
+              <p className="text-2xl sm:text-3xl font-extrabold text-[#09090b] font-heading">30,000+</p>
               <p className="text-xs text-[#71717a] font-mono mt-0.5">Validated Questions</p>
             </div>
-            <div className="border-l border-[#e4e4e7] pl-4">
-              <p className="text-2xl font-extrabold text-[#09090b]">500+</p>
+            <div className="p-2 sm:p-3 border-l border-zinc-200/80">
+              <p className="text-2xl sm:text-3xl font-extrabold text-[#09090b] font-heading">500+</p>
               <p className="text-xs text-[#71717a] font-mono mt-0.5">Role Competency Profiles</p>
             </div>
-            <div className="border-l-0 md:border-l border-[#e4e4e7] md:pl-4">
-              <p className="text-2xl font-extrabold text-[#09090b]">15+ Languages</p>
+            <div className="p-2 sm:p-3 border-t md:border-t-0 md:border-l border-zinc-200/80">
+              <p className="text-2xl sm:text-3xl font-extrabold text-[#09090b] font-heading">15+ Languages</p>
               <p className="text-xs text-[#71717a] font-mono mt-0.5">Cloud Code Sandbox</p>
             </div>
-            <div className="border-l border-[#e4e4e7] pl-4">
-              <p className="text-2xl font-extrabold text-[#09090b]">99.8%</p>
+            <div className="p-2 sm:p-3 border-t md:border-t-0 border-l border-zinc-200/80">
+              <p className="text-2xl sm:text-3xl font-extrabold text-[#09090b] font-heading">99.8%</p>
               <p className="text-xs text-[#71717a] font-mono mt-0.5">Proctoring Accuracy</p>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function AssessPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Category 1: Aptitude */}
-            <div className="rounded-3xl border border-[#e4e4e7] bg-white p-8 shadow-sm hover:border-[#09090b] transition-all flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover rounded-3xl p-8 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#09090b] text-white flex items-center justify-center font-bold text-sm mb-5">
                   01
@@ -162,7 +162,7 @@ export default function AssessPage() {
             </div>
 
             {/* Category 3: Behavioural */}
-            <div className="rounded-3xl border border-[#e4e4e7] bg-white p-8 shadow-sm hover:border-[#09090b] transition-all flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover rounded-3xl p-8 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#09090b] text-white flex items-center justify-center font-bold text-sm mb-5">
                   03
@@ -246,7 +246,7 @@ export default function AssessPage() {
             </div>
 
             {/* Proctoring Visual Audit Log */}
-            <div className="lg:col-span-6 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-7 shadow-2xl space-y-4">
+            <div className="lg:col-span-6 rounded-3xl glass-panel-dark text-white p-7 shadow-2xl space-y-4 border border-white/10">
               <div className="flex items-center justify-between border-b border-[#27272a] pb-3 text-xs">
                 <div className="flex items-center gap-2">
                   <span className="h-2.5 w-2.5 rounded-full bg-white animate-pulse"></span>

@@ -30,7 +30,7 @@ export default function InterviewPage() {
       {/* -------------------- HERO -------------------- */}
       <section className="relative overflow-hidden bg-white pt-16 pb-20 sm:pt-24 sm:pb-28 border-b border-[#e4e4e7] bg-grid-pattern">
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[11px] font-bold tracking-wide text-white font-mono shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-4 py-2 text-[11px] font-bold tracking-wide text-white font-mono shadow-md">
             PILLAR 02 · AI-POWERED INTERVIEWS AT SCALE
           </div>
 
@@ -46,30 +46,30 @@ export default function InterviewPage() {
           <div className="mt-9 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-7 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
+              className="btn-gleam w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
             >
               Experience an AI Interview
             </Link>
             <Link
               href="/develop"
-              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
+              className="glass-panel w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl px-8 text-[14px] font-bold text-[#09090b] hover:bg-white transition-all shadow-sm"
             >
               Explore Next Step: 03 Develop →
             </Link>
           </div>
 
-          {/* Channels Row */}
-          <div className="mt-12 flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-xs font-mono font-bold text-[#52525b]">
-            <span className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[#e4e4e7] bg-[#fafafa]">
+          {/* Channels Row with Glassmorphism */}
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-3 sm:gap-4 text-xs font-mono font-bold text-[#52525b]">
+            <span className="flex items-center gap-2 px-3.5 py-2 rounded-xl glass-panel shadow-xs">
               <Phone className="w-3.5 h-3.5 text-[#09090b]" /> Direct Automated Phone Call
             </span>
-            <span className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[#e4e4e7] bg-[#fafafa]">
+            <span className="flex items-center gap-2 px-3.5 py-2 rounded-xl glass-panel shadow-xs">
               <MessageSquare className="w-3.5 h-3.5 text-[#09090b]" /> WhatsApp Voice Messaging
             </span>
-            <span className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[#e4e4e7] bg-[#fafafa]">
+            <span className="flex items-center gap-2 px-3.5 py-2 rounded-xl glass-panel shadow-xs">
               <Globe className="w-3.5 h-3.5 text-[#09090b]" /> Web Browser Video Room
             </span>
-            <span className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[#27272a] bg-[#09090b] text-white">
+            <span className="flex items-center gap-2 px-3.5 py-2 rounded-xl glass-pill-dark text-white shadow-xs">
               14 Indian & Global Languages
             </span>
           </div>
@@ -104,7 +104,7 @@ export default function InterviewPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl border border-[#e4e4e7] bg-white p-6 shadow-sm hover:border-[#09090b] transition-all"
+                className="glass-panel glass-panel-hover rounded-3xl p-6 border border-zinc-200/80 shadow-xs"
               >
                 <span className="text-xs font-mono text-[#71717a] block mb-2 font-bold">
                   EVAL_0{index + 1}
@@ -138,7 +138,7 @@ export default function InterviewPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Legacy Approach */}
-            <div className="p-8 rounded-3xl border border-[#e4e4e7] bg-[#fafafa] space-y-4">
+            <div className="p-8 rounded-3xl glass-panel border border-zinc-200/80 shadow-xs space-y-4">
               <span className="px-3 py-1 rounded-full bg-slate-200 text-[#52525b] font-mono text-xs font-bold">
                 THE OLD WAY
               </span>
@@ -159,7 +159,7 @@ export default function InterviewPage() {
             </div>
 
             {/* GreatCampus Approach */}
-            <div className="p-8 rounded-3xl border border-[#09090b] bg-[#09090b] text-white space-y-4 shadow-xl">
+            <div className="p-8 rounded-3xl glass-panel-dark text-white space-y-4 shadow-2xl border border-white/10">
               <span className="px-3 py-1 rounded-full bg-white text-[#09090b] font-mono text-xs font-bold">
                 THE GREATCAMPUS WAY
               </span>

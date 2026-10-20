@@ -33,7 +33,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const fromEmail = process.env.RESEND_FROM_EMAIL || "GreatCampus <contact@greatcampus.tech>";
+    const fromEmail = process.env.RESEND_FROM_EMAIL || "GreatCampus <info@greatcampus.tech>";
     const rawAdminEmails = process.env.ADMIN_EMAILS || "aftabsk0005@gmail.com,mvasir@gmail.com";
     const adminEmails = rawAdminEmails.split(",").map((e) => e.trim()).filter(Boolean);
 
@@ -143,7 +143,7 @@ export async function POST(req: Request) {
               <div class="step-title">Direct Touchpoints</div>
               <div class="contact-item">🏢 GreatCampus — Strategic Partnerships & Growth</div>
               <div class="contact-item">📞 Direct / WhatsApp: +91-8810418647</div>
-              <div class="contact-item">✉️ Corporate: contact@greatcampus.tech</div>
+              <div class="contact-item">✉️ Corporate: info@greatcampus.tech</div>
             </div>
 
             <p class="paragraph" style="font-size: 13px; color: #71717a;">
@@ -180,7 +180,7 @@ export async function POST(req: Request) {
     const welcomeResponse = await resend.emails.send({
       from: fromEmail,
       to: email,
-      replyTo: "contact@greatcampus.tech",
+      replyTo: "info@greatcampus.tech",
       subject: "Thank you for contacting GreatCampus | Executive Briefing Request",
       html: welcomeMailHtml,
     });

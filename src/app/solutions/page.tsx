@@ -26,7 +26,7 @@ export default function SolutionsPage() {
       {/* -------------------- HERO -------------------- */}
       <section className="relative overflow-hidden bg-white pt-16 pb-20 sm:pt-24 sm:pb-28 border-b border-[#e4e4e7] bg-grid-pattern">
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[11px] font-bold tracking-wide text-white font-mono shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-4 py-2 text-[11px] font-bold tracking-wide text-white font-mono shadow-md">
             BUILT FOR THE COMPLETE TALENT LIFECYCLE
           </div>
 
@@ -42,25 +42,25 @@ export default function SolutionsPage() {
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <a
               href="#recruitment"
-              className="inline-flex h-10 items-center px-4 rounded-lg border border-[#e4e4e7] bg-[#fafafa] text-xs font-bold text-[#09090b] hover:border-[#09090b]"
+              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
             >
               Talent Acquisition ↓
             </a>
             <a
               href="#staffing"
-              className="inline-flex h-10 items-center px-4 rounded-lg border border-[#e4e4e7] bg-[#fafafa] text-xs font-bold text-[#09090b] hover:border-[#09090b]"
+              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
             >
               Staffing Agencies ↓
             </a>
             <a
               href="#universities"
-              className="inline-flex h-10 items-center px-4 rounded-lg border border-[#e4e4e7] bg-[#fafafa] text-xs font-bold text-[#09090b] hover:border-[#09090b]"
+              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
             >
               Universities & Campuses ↓
             </a>
             <a
               href="#ld"
-              className="inline-flex h-10 items-center px-4 rounded-lg border border-[#e4e4e7] bg-[#fafafa] text-xs font-bold text-[#09090b] hover:border-[#09090b]"
+              className="inline-flex h-10 items-center px-4 rounded-xl glass-panel text-xs font-bold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
             >
               Learning & Development ↓
             </a>
@@ -93,7 +93,7 @@ export default function SolutionsPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-8 space-y-4 shadow-xl">
+            <div className="lg:col-span-5 rounded-3xl glass-panel-dark text-white p-8 space-y-4 shadow-2xl border border-white/10">
               <p className="text-xs font-mono text-[#a1a1aa] uppercase">Enterprise Recruitment Impact</p>
               <h3 className="text-2xl font-extrabold text-white">
                 80% Faster Time-to-Shortlist
@@ -137,7 +137,7 @@ export default function SolutionsPage() {
               </p>
             </div>
 
-            <div className="lg:col-span-5 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-8 space-y-4 shadow-xl">
+            <div className="lg:col-span-5 rounded-3xl glass-panel-dark text-white p-8 space-y-4 shadow-2xl border border-white/10">
               <p className="text-xs font-mono text-[#a1a1aa] uppercase">Agency Differentiation</p>
               <h3 className="text-2xl font-extrabold text-white">
                 Higher Client Placement Velocity
@@ -181,7 +181,7 @@ export default function SolutionsPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-8 space-y-4 shadow-xl">
+            <div className="lg:col-span-5 rounded-3xl glass-panel-dark text-white p-8 space-y-4 shadow-2xl border border-white/10">
               <p className="text-xs font-mono text-[#a1a1aa] uppercase">Institutional Placement Success</p>
               <h3 className="text-2xl font-extrabold text-white">
                 3x Higher Placement Clearance
@@ -251,7 +251,7 @@ export default function SolutionsPage() {
             Ready to deploy GreatCampus for your organization?
           </h2>
           <p className="text-xs sm:text-sm text-[#52525b] max-w-xl mx-auto">
-            Directly consult with <strong>GreatCampus</strong> (+91-8810418647 · contact@greatcampus.tech).
+            Directly consult with <strong>GreatCampus</strong> (+91-8810418647 · info@greatcampus.tech).
           </p>
           <div className="pt-2">
             <Link

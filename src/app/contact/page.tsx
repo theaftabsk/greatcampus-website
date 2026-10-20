@@ -75,12 +75,12 @@ export default function ContactPage() {
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
             {/* Leadership Card */}
-            <div className="card-dark-lift md:col-span-6 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-6 sm:p-10 lg:p-12 flex flex-col justify-between shadow-2xl">
+            <div className="glass-panel-dark md:col-span-6 rounded-3xl border border-white/15 text-white p-6 sm:p-10 lg:p-12 flex flex-col justify-between shadow-2xl">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-[11px] font-mono text-[#a1a1aa] mb-5">
+                <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-3.5 py-1 text-[11px] font-mono text-[#a1a1aa] mb-5 border border-white/15">
                   STRATEGIC PARTNERSHIPS
                 </div>
-                <h2 className="text-[26px] sm:text-[32px] font-extrabold text-white">
+                <h2 className="text-[26px] sm:text-[32px] font-extrabold text-white font-heading">
                   GreatCampus
                 </h2>
                 <p className="text-xs sm:text-sm text-[#a1a1aa] mt-1.5">
@@ -91,9 +91,9 @@ export default function ContactPage() {
                   {/* Phone */}
                   <a
                     href="tel:+918810418647"
-                    className="flex items-center gap-4 p-3.5 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
+                    className="flex items-center gap-4 p-3.5 rounded-2xl border border-white/10 bg-white/[0.04] hover:border-white/30 transition-all group backdrop-blur-md"
                   >
-                    <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
+                    <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0 shadow-sm">
                       <Phone className="w-4.5 h-4.5" />
                     </div>
                     <div>
@@ -106,32 +106,30 @@ export default function ContactPage() {
 
                   {/* Official Corporate Email */}
                   <a
-                    href="mailto:contact@greatcampus.in"
-                    className="flex items-center gap-4 p-3.5 rounded-2xl border border-[#27272a] bg-[#121215] hover:border-white transition-all group"
+                    href="mailto:info@greatcampus.tech"
+                    className="flex items-center gap-4 p-3.5 rounded-2xl border border-white/10 bg-white/[0.04] hover:border-white/30 transition-all group backdrop-blur-md"
                   >
-                    <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0">
+                    <div className="h-10 w-10 rounded-xl bg-white text-[#09090b] flex items-center justify-center shrink-0 shadow-sm">
                       <Mail className="w-4.5 h-4.5" />
                     </div>
                     <div>
                       <span className="text-[10px] text-[#a1a1aa] block uppercase font-mono">Corporate Official Desk</span>
                       <span className="font-bold text-white text-[15px] group-hover:underline">
-                        contact@greatcampus.in
+                        info@greatcampus.tech
                       </span>
                     </div>
                   </a>
-
-
                 </div>
               </div>
 
-              <div className="mt-8 pt-5 border-t border-[#27272a] text-xs text-[#a1a1aa] flex items-center gap-2">
+              <div className="mt-8 pt-5 border-t border-white/10 text-xs text-[#a1a1aa] flex items-center gap-2">
                 <Clock className="w-4 h-4 text-white" />
                 <span>Executive response turnaround: under 4 business hours.</span>
               </div>
             </div>
 
             {/* Interactive Demo Request Form */}
-            <div className="card-hover-lift md:col-span-6 rounded-3xl border border-[#e4e4e7] bg-white p-8 sm:p-12 flex flex-col justify-between shadow-sm">
+            <div className="glass-panel md:col-span-6 rounded-3xl border border-zinc-200/80 p-6 sm:p-10 lg:p-12 flex flex-col justify-between shadow-xs">
               <div>
                 <h3 className="text-[24px] font-bold text-[#09090b]">
                   Schedule an Executive Walkthrough

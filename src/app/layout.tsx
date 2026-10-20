@@ -1,11 +1,26 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Outfit, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const font = Plus_Jakarta_Sans({
+const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+const fontHeading = Outfit({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800", "900"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const fontMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,10 +40,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${font.variable} h-full antialiased scroll-smooth`}>
-      <body className="flex min-h-full flex-col bg-white text-[#09090b] font-sans">
+    <html
+      lang="en"
+      className={`${fontSans.variable} ${fontHeading.variable} ${fontMono.variable} h-full antialiased scroll-smooth`}
+    >
+      <body className="flex min-h-full flex-col bg-white text-[#09090b] font-sans selection:bg-[#09090b] selection:text-white">
         {children}
       </body>
     </html>
   );
 }
+

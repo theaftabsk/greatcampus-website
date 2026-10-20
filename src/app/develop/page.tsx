@@ -28,7 +28,7 @@ export default function DevelopPage() {
       {/* -------------------- HERO -------------------- */}
       <section className="relative overflow-hidden bg-white pt-16 pb-20 sm:pt-24 sm:pb-28 border-b border-[#e4e4e7] bg-grid-pattern">
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-5 text-center sm:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#09090b] px-4 py-1.5 text-[11px] font-bold tracking-wide text-white font-mono shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full glass-pill-dark px-4 py-2 text-[11px] font-bold tracking-wide text-white font-mono shadow-md">
             PILLAR 03 · CONTINUOUS WORKFORCE DEVELOPMENT
           </div>
 
@@ -44,20 +44,20 @@ export default function DevelopPage() {
           <div className="mt-9 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-7 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
+              className="btn-gleam w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl bg-[#09090b] px-8 text-[14px] font-bold text-white shadow-lg hover:bg-[#27272a] transition-all border border-[#09090b]"
             >
               Build a Microlearning Journey
             </Link>
             <Link
               href="/difference"
-              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl border border-[#27272a] bg-white px-7 text-[14px] font-bold text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
+              className="glass-panel w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-xl px-8 text-[14px] font-bold text-[#09090b] hover:bg-white transition-all shadow-sm"
             >
               See the GreatCampus Difference →
             </Link>
           </div>
 
-          {/* Loop Diagram Pill */}
-          <div className="mt-12 p-3 sm:p-4 rounded-2xl border border-[#27272a] bg-[#09090b] text-white font-mono text-xs max-w-2xl w-full text-center shadow-lg">
+          {/* Loop Diagram Pill with Glassmorphism */}
+          <div className="mt-12 p-3.5 sm:p-4 rounded-2xl glass-panel-dark text-white font-mono text-xs max-w-2xl w-full text-center shadow-xl border border-white/10">
             Identify gaps → Develop capability → Reinforce learning → Reassess progress
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function DevelopPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Suite 1: Sales */}
-            <div className="rounded-3xl border border-[#e4e4e7] bg-white p-7 shadow-sm hover:border-[#09090b] transition-all flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover rounded-3xl p-7 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
               <div>
                 <span className="text-xs font-mono font-bold text-[#71717a] block mb-2">MODULE SUITE 01</span>
                 <h3 className="text-[20px] font-bold text-[#09090b] mb-4">Sales Enablement</h3>
@@ -98,7 +98,7 @@ export default function DevelopPage() {
             </div>
 
             {/* Suite 2: Customer Service */}
-            <div className="rounded-3xl border border-[#e4e4e7] bg-white p-7 shadow-sm hover:border-[#09090b] transition-all flex flex-col justify-between">
+            <div className="glass-panel glass-panel-hover rounded-3xl p-7 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
               <div>
                 <span className="text-xs font-mono font-bold text-[#71717a] block mb-2">MODULE SUITE 02</span>
                 <h3 className="text-[20px] font-bold text-[#09090b] mb-4">Customer Service</h3>
@@ -201,7 +201,7 @@ export default function DevelopPage() {
             </div>
 
             {/* Reassessment Metrics Card */}
-            <div className="lg:col-span-6 rounded-3xl border border-[#27272a] bg-[#09090b] text-white p-8 shadow-2xl space-y-5">
+            <div className="lg:col-span-6 rounded-3xl glass-panel-dark text-white p-8 shadow-2xl space-y-5 border border-white/10">
               <div className="flex items-center justify-between border-b border-[#27272a] pb-3 text-xs">
                 <span className="font-bold font-mono">VERIFIED TALENT DELTA REPORT</span>
                 <span className="text-white bg-white/10 px-2 py-0.5 rounded font-mono">+28% GROWTH</span>

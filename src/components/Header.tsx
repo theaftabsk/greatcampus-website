@@ -81,18 +81,18 @@ export default function Header({ onOpenDemo }: HeaderProps) {
             </a>
             <span className="hidden md:inline text-[#3f3f46]">|</span>
             <a
-              href="mailto:contact@greatcampus.in"
+              href="mailto:info@greatcampus.tech"
               className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors font-mono text-xs"
             >
-              <Mail className="w-3 h-3 text-white shrink-0" /> contact@greatcampus.in
+              <Mail className="w-3 h-3 text-white shrink-0" /> info@greatcampus.tech
             </a>
           </div>
         </div>
       </aside>
 
       {/* -------------------- STICKY HEADER -------------------- */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#e4e4e7]">
-        <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 sm:px-8">
+      <header className="sticky top-0 z-50 glass-header">
+        <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-8">
           {/* Brand Logo & Main Nav */}
           <div className="flex items-center gap-7" ref={navRef}>
             <Link href="/" className="flex items-center gap-3 group shrink-0">
@@ -141,7 +141,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
 
                 {/* Products Mega Menu Container */}
                 {productsOpen && (
-                  <div className="absolute top-[calc(100%+4px)] left-[-140px] w-[900px] bg-white rounded-3xl border border-[#e4e4e7] shadow-[0_30px_70px_rgba(0,0,0,0.14)] p-6 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <div className="absolute top-[calc(100%+6px)] left-[-140px] w-[900px] glass-panel rounded-3xl border border-zinc-200/80 shadow-[0_30px_70px_rgba(0,0,0,0.12)] p-6 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                     {/* Header Strip */}
                     <div className="flex items-center justify-between border-b border-[#f4f4f5] pb-3.5 mb-5">
                       <div className="flex items-center gap-2.5">
@@ -471,7 +471,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
 
                 {/* Solutions Dropdown Menu */}
                 {solutionsOpen && (
-                  <div className="absolute top-[calc(100%+4px)] left-[-50px] w-[460px] bg-white rounded-3xl border border-[#e4e4e7] shadow-[0_30px_70px_rgba(0,0,0,0.14)] p-4 z-50 animate-in fade-in slide-in-from-top-2 duration-150 space-y-1">
+                  <div className="absolute top-[calc(100%+6px)] left-[-50px] w-[460px] glass-panel rounded-3xl border border-zinc-200/80 shadow-[0_30px_70px_rgba(0,0,0,0.12)] p-4 z-50 animate-in fade-in slide-in-from-top-2 duration-150 space-y-1">
                     <Link
                       href="/solutions#recruitment"
                       onClick={() => setSolutionsOpen(false)}
@@ -603,105 +603,130 @@ export default function Header({ onOpenDemo }: HeaderProps) {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#09090b] hover:bg-[#f4f4f5] lg:hidden border border-[#e4e4e7]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#09090b] glass-pill hover:bg-black/[0.05] lg:hidden transition-all"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Dropdown Menu with Luxury Frosted Glass Layer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-[#e4e4e7] bg-white px-6 py-5 shadow-xl space-y-4 max-h-[85vh] overflow-y-auto">
+          <div className="lg:hidden mx-3 sm:mx-6 my-2 glass-drawer rounded-3xl border border-zinc-200/80 p-5 sm:p-6 space-y-4 max-h-[82vh] overflow-y-auto shadow-2xl animate-in fade-in slide-in-from-top-3 duration-200">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="block font-bold text-[15px] text-[#09090b] py-1 border-b border-slate-100"
+              className="flex items-center justify-between font-bold text-[15px] text-[#09090b] py-2 border-b border-zinc-200/60"
             >
-              Home
+              <span>Home</span>
+              <span className="text-[11px] font-mono text-[#71717a]">GreatCampus</span>
             </Link>
 
             {/* Mobile Products Accordion */}
-            <div className="border-b border-slate-100 pb-3">
+            <div className="border-b border-zinc-200/60 pb-3">
               <button
                 type="button"
                 onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                className="w-full flex items-center justify-between text-[13px] font-mono font-bold uppercase tracking-wider text-[#09090b] py-1"
+                className="w-full flex items-center justify-between text-[12px] font-mono font-bold uppercase tracking-wider text-[#09090b] py-1.5 cursor-pointer"
               >
-                <span>ALL PRODUCTS</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileProductsOpen ? "rotate-180" : ""}`} />
+                <span className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#09090b]"></span>
+                  <span>THE CORE PRODUCTS</span>
+                </span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileProductsOpen ? "rotate-180" : ""}`} />
               </button>
 
               {mobileProductsOpen && (
-                <div className="mt-2 space-y-2 pl-2">
+                <div className="mt-2.5 space-y-2.5 pl-1 animate-in fade-in duration-150">
                   <Link
                     href="/assess"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block p-2.5 rounded-xl bg-[#fafafa] border border-[#e4e4e7]"
+                    className="block p-3 rounded-2xl glass-panel glass-panel-hover border border-zinc-200/80 group"
                   >
-                    <span className="font-bold text-xs text-[#09090b] block">01 - ASSESS (Digital Tests & AI Proctoring)</span>
-                    <span className="text-[11px] text-[#71717a]">Aptitude, 15+ coding languages sandbox & anti-cheat.</span>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-xs text-[#09090b] group-hover:underline flex items-center gap-1.5">
+                        <span className="px-1.5 py-0.5 rounded bg-[#09090b] text-white text-[10px] font-mono">01</span>
+                        <span>ASSESS · Digital Assessments</span>
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#71717a] group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                    <span className="text-[11px] text-[#52525b] mt-1 block">Aptitude, 15+ coding languages sandbox & anti-cheat proctoring.</span>
                   </Link>
 
                   <Link
                     href="/interview"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block p-2.5 rounded-xl bg-[#fafafa] border border-[#e4e4e7]"
+                    className="block p-3 rounded-2xl glass-panel glass-panel-hover border border-zinc-200/80 group"
                   >
-                    <span className="font-bold text-xs text-[#09090b] block">02 - INTERVIEW (AI Voice & Video First-Round)</span>
-                    <span className="text-[11px] text-[#71717a]">Phone, WhatsApp & Web interviews in 14 languages.</span>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-xs text-[#09090b] group-hover:underline flex items-center gap-1.5">
+                        <span className="px-1.5 py-0.5 rounded bg-[#09090b] text-white text-[10px] font-mono">02</span>
+                        <span>INTERVIEW · AI Voice & Video</span>
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#71717a] group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                    <span className="text-[11px] text-[#52525b] mt-1 block">Phone, WhatsApp & Web first-round interviews in 14 languages.</span>
                   </Link>
 
                   <Link
                     href="/develop"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block p-2.5 rounded-xl bg-[#fafafa] border border-[#e4e4e7]"
+                    className="block p-3 rounded-2xl glass-panel glass-panel-hover border border-zinc-200/80 group"
                   >
-                    <span className="font-bold text-xs text-[#09090b] block">03 - DEVELOP (Microlearning & Reassessment)</span>
-                    <span className="text-[11px] text-[#71717a]">5-min daily modules & verified 30/60/90-day progress.</span>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-xs text-[#09090b] group-hover:underline flex items-center gap-1.5">
+                        <span className="px-1.5 py-0.5 rounded bg-[#09090b] text-white text-[10px] font-mono">03</span>
+                        <span>DEVELOP · Microlearning & Reassess</span>
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#71717a] group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                    <span className="text-[11px] text-[#52525b] mt-1 block">5-min daily modules & verified 30/60/90-day skill progress.</span>
                   </Link>
                 </div>
               )}
             </div>
 
             {/* Mobile Solutions Accordion */}
-            <div className="border-b border-slate-100 pb-3">
+            <div className="border-b border-zinc-200/60 pb-3">
               <button
                 type="button"
                 onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
-                className="w-full flex items-center justify-between text-[13px] font-mono font-bold uppercase tracking-wider text-[#09090b] py-1"
+                className="w-full flex items-center justify-between text-[12px] font-mono font-bold uppercase tracking-wider text-[#09090b] py-1.5 cursor-pointer"
               >
-                <span>LIFECYCLE SOLUTIONS</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileSolutionsOpen ? "rotate-180" : ""}`} />
+                <span className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#71717a]"></span>
+                  <span>LIFECYCLE SOLUTIONS</span>
+                </span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileSolutionsOpen ? "rotate-180" : ""}`} />
               </button>
 
               {mobileSolutionsOpen && (
-                <div className="mt-2 space-y-1 pl-2 text-xs">
+                <div className="mt-2 space-y-1.5 pl-2 text-xs">
                   <Link
                     href="/solutions#recruitment"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-[#52525b] hover:text-[#09090b]"
+                    className="block py-2 px-3 rounded-xl hover:bg-black/[0.04] text-[#52525b] hover:text-[#09090b] transition-colors"
                   >
                     • Corporate Talent Acquisition
                   </Link>
                   <Link
                     href="/solutions#staffing"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-[#52525b] hover:text-[#09090b]"
+                    className="block py-2 px-3 rounded-xl hover:bg-black/[0.04] text-[#52525b] hover:text-[#09090b] transition-colors"
                   >
                     • Staffing & Recruitment Agencies
                   </Link>
                   <Link
                     href="/solutions#universities"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-[#52525b] hover:text-[#09090b]"
+                    className="block py-2 px-3 rounded-xl hover:bg-black/[0.04] text-[#52525b] hover:text-[#09090b] transition-colors"
                   >
                     • Universities & Higher Education
                   </Link>
                   <Link
                     href="/solutions#ld"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-[#52525b] hover:text-[#09090b]"
+                    className="block py-2 px-3 rounded-xl hover:bg-black/[0.04] text-[#52525b] hover:text-[#09090b] transition-colors"
                   >
                     • Learning & Development (L&D)
                   </Link>
@@ -712,25 +737,25 @@ export default function Header({ onOpenDemo }: HeaderProps) {
             <Link
               href="/difference"
               onClick={() => setMobileMenuOpen(false)}
-              className="block font-medium text-[14.5px] text-[#09090b] py-1 border-b border-slate-100"
+              className="block font-medium text-[14.5px] text-[#09090b] py-2 border-b border-zinc-200/60 hover:text-black transition-colors"
             >
               The GreatCampus Difference
             </Link>
             <Link
               href="/pricing"
               onClick={() => setMobileMenuOpen(false)}
-              className="block font-medium text-[14.5px] text-[#09090b] py-1 border-b border-slate-100"
+              className="block font-medium text-[14.5px] text-[#09090b] py-2 border-b border-zinc-200/60 hover:text-black transition-colors"
             >
               Pricing & ROI
             </Link>
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block font-medium text-[14.5px] text-[#09090b] py-1"
+              className="block font-medium text-[14.5px] text-[#09090b] py-2 hover:text-black transition-colors"
             >
               Contact Us
             </Link>
-            <div className="pt-3 border-t border-[#e4e4e7] flex flex-col gap-2.5">
+            <div className="pt-3 border-t border-zinc-200/80 flex flex-col gap-2.5">
               {onOpenDemo ? (
                 <button
                   type="button"
@@ -738,7 +763,7 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                     setMobileMenuOpen(false);
                     onOpenDemo();
                   }}
-                  className="w-full text-center py-3 rounded-xl bg-[#09090b] text-white font-bold text-[14px] cursor-pointer shadow-md"
+                  className="btn-gleam w-full text-center py-3.5 rounded-2xl bg-[#09090b] text-white font-bold text-[14px] cursor-pointer shadow-lg hover:bg-[#27272a] transition-all"
                 >
                   Book a Demo
                 </button>
@@ -746,30 +771,30 @@ export default function Header({ onOpenDemo }: HeaderProps) {
                 <Link
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full text-center py-3 rounded-xl bg-[#09090b] text-white font-bold text-[14px] shadow-md"
+                  className="btn-gleam w-full text-center py-3.5 rounded-2xl bg-[#09090b] text-white font-bold text-[14px] shadow-lg hover:bg-[#27272a] transition-all"
                 >
                   Book a Demo
                 </Link>
               )}
 
               {/* Direct Leadership Access for Mobile */}
-              <div className="pt-2 border-t border-slate-100 space-y-2">
+              <div className="pt-3 border-t border-zinc-200/60 space-y-2">
                 <span className="text-[10px] font-mono font-bold text-[#71717a] uppercase tracking-wider block">
                   Direct Call / Contact
                 </span>
                 <div className="grid grid-cols-1 gap-2">
                   <a
                     href="tel:+918810418647"
-                    className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-[#fafafa] border border-[#e4e4e7] text-xs font-mono font-semibold text-[#09090b]"
+                    className="flex items-center justify-center gap-2 p-2.5 rounded-2xl glass-panel text-xs font-mono font-semibold text-[#09090b] hover:border-black/30 transition-all shadow-xs"
                   >
                     <Phone className="w-3.5 h-3.5" /> +91-8810418647
                   </a>
                 </div>
                 <a
-                  href="mailto:contact@greatcampus.in"
-                  className="flex items-center justify-center gap-2 p-2 rounded-xl bg-[#fafafa] border border-[#e4e4e7] text-xs font-mono text-[#09090b]"
+                  href="mailto:info@greatcampus.tech"
+                  className="flex items-center justify-center gap-2 p-2.5 rounded-2xl glass-panel text-xs font-mono text-[#09090b] hover:border-black/30 transition-all shadow-xs"
                 >
-                  <Mail className="w-3.5 h-3.5" /> contact@greatcampus.in
+                  <Mail className="w-3.5 h-3.5" /> info@greatcampus.tech
                 </a>
               </div>
             </div>
